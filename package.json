@@ -1,0 +1,59 @@
+{
+	"name": "porschuetz",
+	"author": "Mandy Mozart",
+	"license": "MIT",
+	"description": "Personal blog",
+	"version": "0.1.0",
+	"type": "module",
+	"main": "dist/index.esm.js",
+	"bin": {
+		"markdown-to-png": "./dist/index.esm.js"
+	},
+	"dependencies": {
+		"@zachleat/heading-anchors": "^1.0.1"
+	},
+	"scripts": {
+		"build:images": "vite build",
+		"dev:images": "node dist/index.esm.js",
+		"prepublishOnly:images": "vite build",
+		"build": "npx @11ty/eleventy",
+		"build-nocolor": "cross-env NODE_DISABLE_COLORS=1 npx @11ty/eleventy",
+		"build-ghpages": "npx @11ty/eleventy --pathprefix=/eleventy-base-blog/",
+		"start": "npx @11ty/eleventy --serve --quiet",
+		"start-ghpages": "npx @11ty/eleventy --pathprefix=/eleventy-base-blog/ --serve --quiet",
+		"debug": "cross-env DEBUG=Eleventy* npx @11ty/eleventy",
+		"debugstart": "cross-env DEBUG=Eleventy* npx @11ty/eleventy --serve --quiet",
+		"benchmark": "cross-env DEBUG=Eleventy:Benchmark* npx @11ty/eleventy"
+	},
+	"files": [
+		"dist",
+		"README.md",
+		"src/index.js",
+		"src/sample.md",
+		"src/layout.html"
+	],
+	"devDependencies": {
+		"@11ty/eleventy": "^3.0.0",
+		"@11ty/eleventy-img": "^5.0.0",
+		"@11ty/eleventy-navigation": "^0.3.5",
+		"@11ty/eleventy-plugin-rss": "^2.0.2",
+		"@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+		"cross-env": "^7.0.3",
+		"luxon": "^3.5.0",
+		"zod": "^3.23.8",
+		"zod-validation-error": "^3.3.1",
+		"markdown-to-png": "^0.1.9",
+		"vite": "^6.0.6"
+	},
+	"keywords": [
+		"markdown",
+		"png",
+		"convert",
+		"instagram",
+		"twitter",
+		"tiktok",
+		"social media",
+		"image post",
+		"cli"
+	]
+}

@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Tagged &#39;music therapy&#39;</title>
+		<meta name="description" content="Tilman Porschütz aka Mandy Mozart. I am writing about my work as artist, UX designer, programmer and passionate composer.">
+		<link rel="alternate" href="feed/feed.xml" type="application/atom+xml" title="Tilman M. Porschütz æsthetical Therapy">
+		
+		<style>.postlist { counter-reset: start-from 2 }
+/* This is an arbitrary CSS string added to the bundle */
+:root {
+	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono,
+		Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono,
+		Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New,
+		Courier, monospace;
+
+	--dark-purple: #2a004e;
+	--medium-purple: #500073;
+	--dark-orange: #c62300;
+	--bright-orange: #f14a00;
+	--substack-orange: #ff6719;
+
+	--text-color: var(--dark-orange);
+	--primary-color: var(--dark-purple);
+	--text-color-link: var(--text-color);
+	--text-color-link-active: var(--text-color);
+	--text-color-link-visited: var(--text-color);
+
+	--color-gray-10: #f5f5f5;
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #c0c0c0;
+	--color-gray-90: var(--medium-purple);
+
+	--background-color: var(--primary-color);
+	--padding: 2rem;
+
+	--page-width: 100%;
+	--page-height: 100%;
+	--page-padding-top: 10rem;
+	--page-padding-bottom: 4rem;
+
+	--syntax-tab-size: 2;
+}
+
+* {
+	transition: all 0.2s;
+}
+
+html {
+	font-size: 16px;
+}
+body {
+	font-family: var(--font-family);
+	margin: 0;
+	padding: 0;
+	background: var(--primary-color);
+	color: var(--text-color);
+}
+.inner {
+	width: 100%;
+	padding: var(--page-padding-top) 4rem var(--page-padding-bottom) 4rem;
+}
+p {
+	font-size: 1.25rem;
+	line-height: 1.3;
+	color: var(--text-color);
+}
+.properties .property {
+}
+.properties .property.property--title {
+	color: var(--text-color);
+	font-size: 7rem;
+	font-weight: 700;
+	margin-bottom: 2rem;
+}
+.properties .property.property--tagline {
+	color: var(--text-color);
+	font-family: "Times New Roman", Times, serif;
+	font-size: 4rem;
+}
+
+@layer main {
+	main {
+		padding: 0 1rem;
+	}
+}
+
+@layer footer {
+	footer {
+		width: 100%;
+		display: flex;
+		align-items: left;
+		gap: 2rem;
+		padding: 1rem;
+	}
+	footer .caption {
+		font-size: 3rem;
+		padding: 0 2rem var(--page-padding-bottom) 2rem;
+		color: var(--text-color);
+	}
+	footer .logo {
+		display: inline-block;
+		width: 2rem;
+		height: 2rem;
+		padding: 0 4rem var(--page-padding-bottom) 0;
+		fill: var(--text-color);
+	}
+	footer ul {
+		padding: 0;
+		list-style: none;
+	}
+	footer li {
+		padding: 0;
+		margin: 0;
+	}
+	footer a[href],
+	footer a[href]:visited,
+	footer {
+		text-decoration: none;
+		color: var(--medium-purple);
+	}
+	footer a:hover {
+		color: var(--text-color);
+	}
+}
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 40em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img {
+	max-width: 100%;
+}
+img[width][height] {
+	height: auto;
+}
+img[src$=".svg"] {
+	width: 100%;
+	height: auto;
+	max-width: none;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+header {
+	justify-content: center;
+	flex-direction: column;
+}
+header > a:first-of-type {
+	word-wrap: break-word;
+	width: 12rem;
+	text-align: center;
+	font-size: 2rem;
+	margin: 0;
+	line-height: 0.9;
+	text-decoration: none;
+}
+header > a:first-of-type:hover {
+	color: var(--medium-purple);
+	text-decoration: none;
+}
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: 0.5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: 0.5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em 0.5em;
+	flex-wrap: wrap;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+	margin-right: 2em;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+	margin-right: 1em;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	list-style: none;
+	padding: 0;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	margin-bottom: 1em;
+	font-size: 1rem;
+	padding: 1rem;
+	background: transparent;
+	border-radius: 2rem;
+	border: 1px solid var(--medium-purple);
+}
+.postlist-item:hover {
+	border: 1px solid var(--dark-orange);
+}
+.postlist-date {
+	font-size: 0.875rem;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	text-decoration: none;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 0.5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}</style>
+	</head>
+	<body data-theme="dark-purple">
+		<a href="#skip" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">Tilman M. Porschütz æsthetical Therapy</a>
+			<nav>
+				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/">Home</a></li>
+					<li class="nav-item"><a href="/blog/">Archive</a></li>
+					<li class="nav-item"><a href="/about/">About</a></li>
+					<li class="nav-item"><a href="/feed/feed.xml">Feed</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="skip">
+			<heading-anchors>
+				
+<p>Articles, posts, albums, stories and artworks</p>
+
+<h1 id="tagged-music-therapy">Tagged “music therapy”</h1>
+
+
+
+<ol reversed="" class="postlist">
+	<li class="postlist-item">
+		<a href="/blog/articles-of-interest-1/" class="postlist-link">Articles of Interest Nº1</a>
+		<time class="postlist-date" datetime="2024-12-30">December 2024</time>
+	</li>
+</ol>
+
+
+<p>See <a href="/tags/">all tags</a>.</p>
+
+
+			</heading-anchors>
+		</main>
+
+		<footer>
+			<div>
+				<h4 id="support">Support</h4>
+				<ul>
+					<li><a href="https://porschuetz.substack.com">Subscribe via Substack</a></li>
+					<li><a href="https://mandymozart.bandcamp.com">Buy music via Bandcamp</a></li>
+				</ul>
+			</div>
+			<div>
+				<h4 id="portfolios">Portfolios</h4>
+				<ul>
+					<li><a href="https://design.porschuetz.de/">Design Portfolio</a></li>
+					<li><a href="https://www.mandymozart.com/">Art Portfolio</a></li>
+				</ul>
+			</div>
+		</footer>
+
+		<!-- This page `/tags/music-therapy/` was built on 2024-12-31T12:27:57.034Z -->
+		<script type="module" src="/dist/rJ3_G-2ArF.js"></script>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+	
+	<url>
+		<loc>https://blog.porschuetz.de/blog/articles-of-interest-1/</loc>
+		<lastmod>2024-12-30</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://blog.porschuetz.de/about/</loc>
+		<lastmod>2024-12-31</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://blog.porschuetz.de/blog/</loc>
+		<lastmod>2024-12-31</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://blog.porschuetz.de/</loc>
+		<lastmod>2024-12-31</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://blog.porschuetz.de/tags/</loc>
+		<lastmod>2024-12-31</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://blog.porschuetz.de/feed/feed.xml</loc>
+		<lastmod>2024-12-31</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://blog.porschuetz.de/blog/i-liked-1/</loc>
+		<lastmod>2025-12-22</lastmod>
+	</url>
+</urlset>
