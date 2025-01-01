@@ -1,0 +1,31 @@
+@layer release {
+	.release-title {
+		font-size: 1.25rem;
+	}
+	.release-description {
+		font-size: 1.5rem;
+		line-height: 1.3;
+		font-family: var(--font-family-serif);
+		margin-bottom: 1rem;
+	}
+	.release-metadata {
+		display: flex;
+		gap: 0.5em;
+		padding: 0;
+		margin: 0;
+		justify-content: space-between;
+		font-size: 0.875rem;
+		margin-bottom: 7rem;
+	}
+	/* Tags list */
+	.release-taglist {
+		display: inline;
+		text-align: right;
+	}
+	.release-tag {
+		text-transform: capitalize;
+		font-style: italic;
+	}
+	.release-metadata time {
+	}
+}

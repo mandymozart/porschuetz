@@ -1,19 +1,21 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Tilman M. Porschütz æsthetical Therapy</title>
-		<meta name="description" content="Tilman Porschütz aka Mandy Mozart. I am writing about my work as artist, UX designer, programmer and passionate composer.">
-		<link rel="alternate" href="feed/feed.xml" type="application/atom+xml" title="Tilman M. Porschütz æsthetical Therapy">
-		
-		<style>/* This is an arbitrary CSS string added to the bundle */
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tilman M. Porschütz æsthetical Therapy</title>
+        <meta name="description" content="Tilman Porschütz aka Mandy Mozart. I am writing about my work as artist, UX designer, programmer and passionate composer.">
+        <link rel="alternate" href="feed/feed.xml" type="application/atom+xml" title="Tilman M. Porschütz æsthetical Therapy">
+        
+        <style>
+        /* This is an arbitrary CSS string added to the bundle */
 :root {
 	--font-family: -apple-system, system-ui, sans-serif;
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono,
 		Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono,
 		Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New,
 		Courier, monospace;
+	--font-family-serif: "Times New Roman", serif;
 
 	--dark-purple: #2a004e;
 	--medium-purple: #500073;
@@ -24,7 +26,7 @@
 	--text-color: var(--dark-orange);
 	--primary-color: var(--dark-purple);
 	--text-color-link: var(--text-color);
-	--text-color-link-active: var(--text-color);
+	--text-color-link-active: var(--bright-orange);
 	--text-color-link-visited: var(--text-color);
 
 	--color-gray-10: #f5f5f5;
@@ -43,23 +45,50 @@
 	--syntax-tab-size: 2;
 }
 
+[data-theme="monochrome"] {
+	--text-color: var(--color-gray-90);
+	--primary-color: var(--color-gray-10);
+	--text-color-link: var(--text-color);
+	--text-color-link-active: var(--color-gray-90);
+	--text-color-link-visited: var(--text-color);
+	--background-color: var(--primary-color);
+}
+
 * {
 	transition: all 0.2s;
 }
 
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
 html {
+	overflow-y: scroll;
 	font-size: 16px;
 }
+
+html,
 body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
 	font-family: var(--font-family);
 	margin: 0;
 	padding: 0;
 	background: var(--primary-color);
 	color: var(--text-color);
 }
-.inner {
-	width: 100%;
-	padding: var(--page-padding-top) 4rem var(--page-padding-bottom) 4rem;
+
+main {
+	max-width: 40em;
+	padding: 0 1rem;
+	margin: 0 auto;
 }
 p {
 	font-size: 1.25rem;
@@ -80,74 +109,50 @@ p {
 	font-size: 4rem;
 }
 
-@layer main {
-	main {
-		padding: 0 1rem;
-	}
+footer {
+	width: 100vw;
+	padding: 1rem;
 }
-
-@layer footer {
-	footer {
-		width: 100%;
-		display: flex;
-		align-items: left;
-		gap: 2rem;
-		padding: 1rem;
-	}
-	footer .caption {
-		font-size: 3rem;
-		padding: 0 2rem var(--page-padding-bottom) 2rem;
-		color: var(--text-color);
-	}
-	footer .logo {
-		display: inline-block;
-		width: 2rem;
-		height: 2rem;
-		padding: 0 4rem var(--page-padding-bottom) 0;
-		fill: var(--text-color);
-	}
-	footer ul {
-		padding: 0;
-		list-style: none;
-	}
-	footer li {
-		padding: 0;
-		margin: 0;
-	}
-	footer a[href],
-	footer a[href]:visited,
-	footer {
-		text-decoration: none;
-		color: var(--medium-purple);
-	}
-	footer a:hover {
-		color: var(--text-color);
-	}
+footer h3 {
+	font-size: 4rem;
+	font-family: var(--font-family-serif);
+}
+footer .footer-links {
+	display: flex;
+	align-items: left;
+	gap: 2rem;
+}
+footer .caption {
+	font-size: 3rem;
+	padding: 0 2rem var(--page-padding-bottom) 2rem;
+	color: var(--text-color);
+}
+footer .logo {
+	display: inline-block;
+	width: 2rem;
+	height: 2rem;
+	padding: 0 4rem var(--page-padding-bottom) 0;
+	fill: var(--text-color);
+}
+footer ul {
+	padding: 0;
+	list-style: none;
+}
+footer li {
+	padding: 0;
+	margin: 0;
+}
+footer a[href],
+footer a[href]:visited,
+footer {
+	text-decoration: none;
+	color: var(--medium-purple);
+}
+footer a:hover {
+	color: var(--text-color-link-active);
 }
 
 /* Global stylesheet */
-* {
-	box-sizing: border-box;
-}
-
-@view-transition {
-	navigation: auto;
-}
-
-html,
-body {
-	padding: 0;
-	margin: 0 auto;
-	font-family: var(--font-family);
-	color: var(--text-color);
-	background-color: var(--background-color);
-}
-html {
-	overflow-y: scroll;
-}
-body {
-	max-width: 40em;
-}
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
 .visually-hidden {
@@ -184,34 +189,17 @@ li {
 	line-height: 1.5;
 }
 
-a[href] {
+a {
 	color: var(--text-color-link);
 }
-a[href]:visited {
+a:visited {
 	color: var(--text-color-link-visited);
 }
-a[href]:hover,
-a[href]:active {
+a:hover,
+a:active {
 	color: var(--text-color-link-active);
 }
 
-header {
-	justify-content: center;
-	flex-direction: column;
-}
-header > a:first-of-type {
-	word-wrap: break-word;
-	width: 12rem;
-	text-align: center;
-	font-size: 2rem;
-	margin: 0;
-	line-height: 0.9;
-	text-decoration: none;
-}
-header > a:first-of-type:hover {
-	color: var(--medium-purple);
-	text-decoration: none;
-}
 .links-nextprev {
 	display: flex;
 	justify-content: space-between;
@@ -266,13 +254,22 @@ header {
 	flex-wrap: wrap;
 	align-items: center;
 	padding: 1em;
+	justify-content: center;
+	flex-direction: column;
+	margin-bottom: 2rem;
 }
-.home-link {
-	font-size: 1em; /* 16px /16 */
+header > a.home-link {
+	word-wrap: break-word;
+	width: 12rem;
+	text-align: center;
+	font-size: 2rem;
 	font-weight: 700;
-	margin-right: 2em;
+	margin: 0;
+	line-height: 0.9;
+	text-decoration: none;
 }
-.home-link:link:not(:hover) {
+header > a.home-link:hover {
+	color: var(--text-color-link-active);
 	text-decoration: none;
 }
 
@@ -287,6 +284,9 @@ header {
 	display: inline-block;
 	margin-right: 1em;
 }
+.nav-item:last-of-type {
+	margin-right: 0;
+}
 .nav-item a[href]:not(:hover) {
 	text-decoration: none;
 }
@@ -294,87 +294,76 @@ header {
 	text-decoration: underline;
 }
 
-/* Posts list */
-.postlist {
-	list-style: none;
-	padding: 0;
+p.lead {
+	text-align: center;
 }
-.postlist-item {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: baseline;
-	margin-bottom: 1em;
-	font-size: 1rem;
-	padding: 1rem;
-	background: transparent;
+
+.subscribe {
+	margin: 1rem;
 	border-radius: 2rem;
 	border: 1px solid var(--medium-purple);
+	padding: 3rem;
+	text-align: center;
+	font-size: 1rem;
 }
-.postlist-item:hover {
-	border: 1px solid var(--dark-orange);
+.subscribe p {
+	margin-bottom: 2rem;
 }
-.postlist-date {
-	font-size: 0.875rem;
-}
-.postlist-link {
-	font-size: 1.1875em; /* 19px /16 */
-	font-weight: 700;
-	flex-basis: calc(100% - 1.5rem);
+a.subscribe-button {
+	line-height: 3rem;
+	display: inline-block;
+	padding: 0 2rem;
+	font-size: 1.25rem;
 	text-decoration: none;
+	border-radius: 2rem;
+	background-color: var(--text-color-link);
+	color: var(--background-color);
+	border: 1px solid var(--text-color-link);
 }
-.postlist-item-active .postlist-link {
-	font-weight: bold;
-}
-
-/* Tags */
-.post-tag {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	text-transform: capitalize;
-	font-style: italic;
-}
-.postlist-item > .post-tag {
-	align-self: center;
-}
-
-/* Tags list */
-.post-metadata {
-	display: inline-flex;
-	flex-wrap: wrap;
-	gap: 0.5em;
-	list-style: none;
-	padding: 0;
-	margin: 0;
-}
-.post-metadata time {
-	margin-right: 1em;
+a.subscribe-button:hover {
+	background-color: var(--background-color);
+	color: var(--text-color-link-active);
+	border-color: var(--text-color-link-active);
 }</style>
-	</head>
-	<body data-theme="dark-purple">
-		<a href="#skip" class="visually-hidden">Skip to main content</a>
-
-		<header>
-			<a href="/" class="home-link">Tilman M. Porschütz æsthetical Therapy</a>
-			<nav>
-				<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
-				<ul class="nav">
-					<li class="nav-item"><a href="/">Home</a></li>
-					<li class="nav-item"><a href="/blog/">Archive</a></li>
-					<li class="nav-item"><a href="/about/">About</a></li>
-					<li class="nav-item"><a href="/feed/feed.xml">Feed</a></li>
-				</ul>
-			</nav>
-		</header>
-
-		<main id="skip">
-			<heading-anchors>
-				
-<p>Articles, posts, albums, stories and artworks</p>
+    </head>
+        <body data-theme="dark-purple"> <a href="#skip" class="visually-hidden">Skip to main content</a>
+        <header>
+            <a href="/" class="home-link">Tilman M. Porschütz æsthetical Therapy</a>
+            <nav>
+                <h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+                <ul class="nav">
+                        <li class="nav-item">
+                            <a href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/blog/">Archive</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/about/">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/releases/">Releases</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/feed/feed.xml">Feed</a>
+                        </li>
+                </ul>
+            </nav>
+        </header>
+        <main id="skip">
+            <heading-anchors>
+                
+<p class="lead">Hyper toxic encyclopedia of <i>non-shortform content</i>. Made for the <i>real</i> internet since 1998.</p>
 
 <h1 id="tags">Tags</h1>
 
 <ul>
+
+	
+	<li><a href="/tags/release/" class="post-tag">release</a></li>
+
+	
+	<li><a href="/tags/mv/" class="post-tag">mv</a></li>
 
 	
 	<li><a href="/tags/music-therapy/" class="post-tag">music therapy</a></li>
@@ -391,30 +380,41 @@ header {
 	
 	<li><a href="/tags/culture/" class="post-tag">culture</a></li>
 
+	
+	<li><a href="/tags/ux-design-visual-communication-presets-frameworks/" class="post-tag">ux design, visual communication, presets, frameworks</a></li>
+
 </ul>
 
 
-			</heading-anchors>
-		</main>
-
-		<footer>
-			<div>
-				<h4 id="support">Support</h4>
-				<ul>
-					<li><a href="https://porschuetz.substack.com">Subscribe via Substack</a></li>
-					<li><a href="https://mandymozart.bandcamp.com">Buy music via Bandcamp</a></li>
-				</ul>
-			</div>
-			<div>
-				<h4 id="portfolios">Portfolios</h4>
-				<ul>
-					<li><a href="https://design.porschuetz.de/">Design Portfolio</a></li>
-					<li><a href="https://www.mandymozart.com/">Art Portfolio</a></li>
-				</ul>
-			</div>
-		</footer>
-
-		<!-- This page `/tags/` was built on 2024-12-31T12:27:57.032Z -->
-		<script type="module" src="/dist/rJ3_G-2ArF.js"></script>
-	</body>
+            </heading-anchors>
+            <div class="subscribe">
+                <p>The edgyness of my content needs your help. By pledging a small monthly donation or with a
+                    <i>free subscribtion</i>
+                    to my newsletter you can help me staying independent from brand endorsements, platforms monetization or institutional
+                    funding.</p>
+                <a class="subscribe-button" href="#subscribe">Subscribe</a>
+            </div>
+        </main>
+        <footer>
+            <h3 id="cant-get-enough">Can't get enough?</h3>
+            <div class="footer-links">
+                <div>
+                    <h4 id="support">Support</h4>
+                    <ul>
+                        <li><a href="https://porschuetz.substack.com">Subscribe via Substack</a></li>
+                        <li><a href="https://mandymozart.bandcamp.com">Buy music via Bandcamp</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 id="portfolios">Portfolios</h4>
+                    <ul>
+                        <li><a href="https://design.porschuetz.de/">Design Portfolio</a></li>
+                        <li><a href="https://www.mandymozart.com/">Art Portfolio</a></li>
+                    </ul>
+                </div>
+            </div></footer>
+            <!-- This page `/tags/` was built on 2025-01-01T19:49:02.673Z -->
+            <script type="module" src="/dist/rJ3_G-2ArF.js"></script>
+        </body>
+    
 </html>

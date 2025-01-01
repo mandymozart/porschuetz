@@ -1,0 +1,914 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nothing to Sell — Kulturelle Presets</title>
+        <meta name="description" content="Diplomarbeit der Visuellen Kommunikation, Bauhaus-Universität Weimar">
+        <link rel="alternate" href="feed/feed.xml" type="application/atom+xml" title="Tilman M. Porschütz æsthetical Therapy">
+        
+        <style>
+        @layer post {
+	.post-title {
+		font-size: 1.25rem;
+	}
+	.post-description {
+		font-size: 1.5rem;
+		line-height: 1.3;
+		font-family: var(--font-family-serif);
+		margin-bottom: 1rem;
+	}
+	.post-metadata {
+		display: flex;
+		gap: 0.5em;
+		padding: 0;
+		margin: 0;
+		justify-content: space-between;
+		font-size: 0.875rem;
+		margin-bottom: 7rem;
+	}
+	/* Tags list */
+	.post-taglist {
+		display: inline;
+		text-align: right;
+	}
+	.post-tag {
+		text-transform: capitalize;
+		font-style: italic;
+	}
+	.post-metadata time {
+	}
+}
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}
+/* This is an arbitrary CSS string added to the bundle */
+:root {
+	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono,
+		Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono,
+		Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New,
+		Courier, monospace;
+	--font-family-serif: "Times New Roman", serif;
+
+	--dark-purple: #2a004e;
+	--medium-purple: #500073;
+	--dark-orange: #c62300;
+	--bright-orange: #f14a00;
+	--substack-orange: #ff6719;
+
+	--text-color: var(--dark-orange);
+	--primary-color: var(--dark-purple);
+	--text-color-link: var(--text-color);
+	--text-color-link-active: var(--bright-orange);
+	--text-color-link-visited: var(--text-color);
+
+	--color-gray-10: #f5f5f5;
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #c0c0c0;
+	--color-gray-90: var(--medium-purple);
+
+	--background-color: var(--primary-color);
+	--padding: 2rem;
+
+	--page-width: 100%;
+	--page-height: 100%;
+	--page-padding-top: 10rem;
+	--page-padding-bottom: 4rem;
+
+	--syntax-tab-size: 2;
+}
+
+[data-theme="monochrome"] {
+	--text-color: var(--color-gray-90);
+	--primary-color: var(--color-gray-10);
+	--text-color-link: var(--text-color);
+	--text-color-link-active: var(--color-gray-90);
+	--text-color-link-visited: var(--text-color);
+	--background-color: var(--primary-color);
+}
+
+* {
+	transition: all 0.2s;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+html {
+	overflow-y: scroll;
+	font-size: 16px;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+	font-family: var(--font-family);
+	margin: 0;
+	padding: 0;
+	background: var(--primary-color);
+	color: var(--text-color);
+}
+
+main {
+	max-width: 40em;
+	padding: 0 1rem;
+	margin: 0 auto;
+}
+p {
+	font-size: 1.25rem;
+	line-height: 1.3;
+	color: var(--text-color);
+}
+.properties .property {
+}
+.properties .property.property--title {
+	color: var(--text-color);
+	font-size: 7rem;
+	font-weight: 700;
+	margin-bottom: 2rem;
+}
+.properties .property.property--tagline {
+	color: var(--text-color);
+	font-family: "Times New Roman", Times, serif;
+	font-size: 4rem;
+}
+
+footer {
+	width: 100vw;
+	padding: 1rem;
+}
+footer h3 {
+	font-size: 4rem;
+	font-family: var(--font-family-serif);
+}
+footer .footer-links {
+	display: flex;
+	align-items: left;
+	gap: 2rem;
+}
+footer .caption {
+	font-size: 3rem;
+	padding: 0 2rem var(--page-padding-bottom) 2rem;
+	color: var(--text-color);
+}
+footer .logo {
+	display: inline-block;
+	width: 2rem;
+	height: 2rem;
+	padding: 0 4rem var(--page-padding-bottom) 0;
+	fill: var(--text-color);
+}
+footer ul {
+	padding: 0;
+	list-style: none;
+}
+footer li {
+	padding: 0;
+	margin: 0;
+}
+footer a[href],
+footer a[href]:visited,
+footer {
+	text-decoration: none;
+	color: var(--medium-purple);
+}
+footer a:hover {
+	color: var(--text-color-link-active);
+}
+
+/* Global stylesheet */
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img {
+	max-width: 100%;
+}
+img[width][height] {
+	height: auto;
+}
+img[src$=".svg"] {
+	width: 100%;
+	height: auto;
+	max-width: none;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a {
+	color: var(--text-color-link);
+}
+a:visited {
+	color: var(--text-color-link-visited);
+}
+a:hover,
+a:active {
+	color: var(--text-color-link-active);
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: 0.5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: 0.5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em 0.5em;
+	flex-wrap: wrap;
+	align-items: center;
+	padding: 1em;
+	justify-content: center;
+	flex-direction: column;
+	margin-bottom: 2rem;
+}
+header > a.home-link {
+	word-wrap: break-word;
+	width: 12rem;
+	text-align: center;
+	font-size: 2rem;
+	font-weight: 700;
+	margin: 0;
+	line-height: 0.9;
+	text-decoration: none;
+}
+header > a.home-link:hover {
+	color: var(--text-color-link-active);
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+	margin-right: 1em;
+}
+.nav-item:last-of-type {
+	margin-right: 0;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+p.lead {
+	text-align: center;
+}
+
+.subscribe {
+	margin: 1rem;
+	border-radius: 2rem;
+	border: 1px solid var(--medium-purple);
+	padding: 3rem;
+	text-align: center;
+	font-size: 1rem;
+}
+.subscribe p {
+	margin-bottom: 2rem;
+}
+a.subscribe-button {
+	line-height: 3rem;
+	display: inline-block;
+	padding: 0 2rem;
+	font-size: 1.25rem;
+	text-decoration: none;
+	border-radius: 2rem;
+	background-color: var(--text-color-link);
+	color: var(--background-color);
+	border: 1px solid var(--text-color-link);
+}
+a.subscribe-button:hover {
+	background-color: var(--background-color);
+	color: var(--text-color-link-active);
+	border-color: var(--text-color-link-active);
+}</style>
+    </head>
+        <body data-theme="dark-purple"> <a href="#skip" class="visually-hidden">Skip to main content</a>
+        <header>
+            <a href="/" class="home-link">Tilman M. Porschütz æsthetical Therapy</a>
+            <nav>
+                <h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+                <ul class="nav">
+                        <li class="nav-item">
+                            <a href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/blog/">Archive</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/about/">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/releases/">Releases</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/feed/feed.xml">Feed</a>
+                        </li>
+                </ul>
+            </nav>
+        </header>
+        <main id="skip">
+            <heading-anchors>
+                
+
+<h1 class="post-title" id="nothing-to-sell-kulturelle-presets">Nothing to Sell — Kulturelle Presets</h1>
+<div class="post-description">Diplomarbeit der Visuellen Kommunikation, Bauhaus-Universität Weimar</div>
+<div class="post-metadata">
+    <time datetime="2011-10-10">10 October 2011</time>
+    <div class="post-taglist">
+            <a href="/tags/ux-design-visual-communication-presets-frameworks/" class="post-tag">ux design, visual communication, presets, frameworks</a>
+    </div>
+</div>
+<div class="post-content">
+    <p>Tilman Porschuetz</p>
+<p>Nothing to Sell — Kulturelle Presets</p>
+<p>Diplomarbeit der Visuellen Kommunikation, Bauhaus-Universität Weimar</p>
+<p>Betreuung: Prof. Herrmann Stamm, Leo Merz</p>
+<p>For all English readers, heavy apologize, but I will have a translation out as soon as possible, since I haven’t done any other serious work anyhow, this is all I have. Use google translate for the time being, please.</p>
+<p>October, 10th 2011</p>
+<hr>
+<p>Inhaltsverzeichnis</p>
+<p>Grundlegende Annahmen</p>
+<p>1         preset, Definition, XML, Wikipedia, Mensch, Maschine, Kultur</p>
+<p>Exemplarische Beispiele</p>
+<p>1.1          Preset-Auswähler, Preset-Dirigent, intellektueller Diebstahl, keine zufälligen Muster</p>
+<p>1.2          Spektakle, Performance, Input, Output, party mode </p>
+<p>1.3         Preset-Familie, Definition, Anwendung, MEM, Preset-Gedanke</p>
+<p>Tiefere Deutungsebenen</p>
+<p>2.1          Fraktale, Rekursion, Preset-Familie</p>
+<p>2.2          Diletantismus, Avatare, Preset-Forscher, Indentität, Genius Komplex</p>
+<p>2.3        Didaktik, Lernkurve, Interface, Metaphern</p>
+<p>2.4        Plasma Modell, versus, style space, features</p>
+<p>2.5        Preset-Typen</p>
+<p>“Theory by Practice”</p>
+<p>3.         Dilletantismus, Archivierbarkeit</p>
+<p>3.1         Template, Fülltext, Paper-Generator, Drogeriemarkt</p>
+<p>4.        Video-Skript, Demonstration, Doppelter und Dreifacher Regenbogen-Uhr, Installation, Funktionsweise</p>
+<p>Auswertung</p>
+<p>5.          Thesen-Text, Preset-Gedanke</p>
+<p>Anhang</p>
+<p>I         Begriffsregister</p>
+<p>II          DVD Inhalt</p>
+<p>III          Medienverzeichnis</p>
+<p>Dank für die zahlreichen Denkansätze geht an:</p>
+<p>Leo Merz, Philipp Schöpfer, Familie Porschütz, Manuel Odendahl, Axel Roitzsch, Björn Jung, Kyu Hee Baik, Stefan Kraus, Bahadir Hamdemir, James Cui, Adrian Sierra Garcia, James Powderly, Dennis Knopf, Manuel Bürger, Prof. Hermann Stamm, Prof. Dae Soo Kim, Prof. Walter Bergmoser, Prof. Kai Uwe Schütz, Prof. Olaf Weber, Alexander Lembke, Lutz Liszt Preset Orchester, Cem Tan, Marc Sauter, Franziska Dierschke, Marie Zeise, Robert Gerschnok, Alexander Klose, Takahito Irie, Benjamin Domrich, Rayan Malik, Anatol Kempker, Birgitt Kempker, Bernd Kempker, Ute Holl, Dr. Wolfgang Bock, Thomas Mader, Mi-Hye Cho, E Hyun Joon &amp;amp; E Yun Joung, Hana Choi, Kim Ryung Seong, Christoph Frank, Heidrun Frank, Udo Lee, Platoon Seoul, Platoon Berlin, Christopher McFarland, Lenny Correa, Jamie Bruno, Emeli Theander, Stefan Klaus, Katharina &amp;amp; Wieland Jubelt, Christian Guder, Leonard Oschütz, Ali Chibli, Jakob Hoff, Otto Oscar Hernandez, Ju Hwan You, David Bönsch, Mathias Nowak, Alexander Klosch, Christoph Klan, Evelina Racja, Locco Lee, Tres Kim, Ji Hyun Kwon, dasSchmott, Martin Bomba, Lucas Cappelli, Alexander Husche, Julia Förster, Sophia Gräfe, Oh Hyun Kwan, Tom Ka Hee Jeong, Novo, Ida &amp;amp; KangHee Grändås-Rhee, Itta &amp;amp; Marqido, Vaclav-Karel Harsa, Nobumichi Tosa, Benedikt Braun, Konstantin Bayer, Caucasso Lee, Christoph Höfferl, Eckehart Fritsch, Stefan Nordheim, Michael Zai, Marc Brinkmeier, Sebastian Klink, Juliane Eirich, Oh Suk Kuhn, Roger Linn, Rufxxx, Stephen Roach, Lie Ti Qiao, Kristian Mondrup Nielsen, Daniel Celeb Thompson, Sebastian Helm, Maximilian Sauerbier, Paz Dean, Nimrod Vardi, Vakki Park, Yong Sam Yoo, Pedro Zaz, Hojung Song, Elena Galitsch, Stefan Karl, Franziska Wilke, Valentin Heun, Rhea Jeong, James Jack, Antonio Lucaciu, Robert Lucaciu, Sascha Stiehler, Martin Hirsch, Frauke Klinker, Florian Lepa, Hans Peter Grossmann, Daniel Rossa, Daito Manabe, Soo Lee, Hendrik Wendler, Gregor Sauer, Canan Yilmaz, Claudia Neuhaus, Pierlo, Marcus Misselwitz, Henning Gründel, Chang Park, HJ Cho, Elsée Dall'ava, Boris Kislitsin, Laura Belker, Daniel Klapsing, Christian Rottler, Eddy Vajarakitipongse, Min Koo Kang, Aya Irizuki, Miwa Kutsuna, Nikki S. Lee &amp;amp; Teo Yoo, Ana Kim, Sean Patrick Maylone, Nicholas Anzivino, Jiin Ko, Marie Kristin Thile, Oli Fenn, Niklas Kraft, Aida Makoto, Watanabe Atsushi, Shoko Toda, Philipp Martin, Christian Rothe, Dae Young Kang, Jonas Dorn, Martin Schwengler, Emir Ersahin, Ludwig Giersch, Magazine King, Shi Yuan Lui, Imran Haniff, Ayo Aloba, Karsten Brühl, Hang Feng Chen, Dwig und mein Bruder Alexander Porschütz</p>
+<hr>
+<p>Kapitel 1</p>
+<p>„In my work I try to combine different styles. It’s pretty hard! I tell you.”</p>
+<p>Um den discours über presets und deren Wechselwirkung mit Kultur, Maschinen und Menschen anzuregen, wird versucht eine Definition zur allgemeinen Verwendung vorwegzunehmen, um einschränken zu können wann von preset gesprochen wird.</p>
+<p>Nachdem zusammentragen einer Vielzahl von Attributen und Funktion, die ein preset in sich tragen kann, ist es vertretbar, daß:</p>
+<p>Ein preset ein Parametersatz ist, der Extrema innerhalb einer Maschine nach ästhetischen oder anderen Überlegungen festlegt.</p>
+<p>Ein preset als Container für weitere presets fungieren kann und sich nicht auf algorhythmische (sic) Logik beschränkt, wie dies etwa bei einer reinen Maschinen Entität der Fall wäre.</p>
+<p>Diese ist das Interface zwischen der Person und dem kollektivem Geschmack - ein generisches Werkzeug das uns erlaubt die Funktionsweise der Maschine zu verstehen und auszunutzen.</p>
+<p>Ein preset ist beeinflusst von Idolen, Replika natürlicher Phänomene und der Quiddität Märkte-kontrollierender Monopolen und vererbt sich.</p>
+<p>Ein preset ist naive, jedoch falls notwendig evolviert genug sich zu verstecken.</p>
+<p>Ein preset ist eine Idee.</p>
+<p>Keywords: preset, Definition, Wikipedia, Mensch, Maschine, Kultur</p>
+<hr>
+<p>Kapitel 1.1</p>
+<p>„Die Maschine erlaubt mir mehr so etwas wie ein Moderator zu sein.”</p>
+<p>Henry Ford</p>
+<p>Jemand der mehr Einsicht in die Dinge gibt, als sie vermeintlich selbst preis geben — eine zweite Leitebene (Anhang I-8) wird zu einem notwendigen Dienst in jeder progressiven Kultur. Beispielsweise beinhaltet das preset nur limitierte Informationen über seine Anwendungsmöglichkeiten, bzw. wird mehr oder weniger optional belassen und bedarf eines tieferen Verständnis der Sache. (siehe auch Keyword Preset-Familie)</p>
+<p>Das Dilemma des Szenarios ist folgendes - es gibt nicht nur eine Option. Dazu führen wir eine Personalisierung ein, sozusagen eine reale menschliche Entität, die Werner als „Preset Auswähler” (Anhang I-2) bezeichnet.</p>
+<p>Werner definiert den „Preset Auswähler” als Identifikationsfigur einer kreativen Musikkultur, in der Maschinen die Hauptquelle der Klangerzeugung sind. Er scheint ein vehementer Kritiker des potentiellen Genius, die diese Entität womöglich inne haben kann. Das Anpassen von Parametern sei kein basiskreativer Prozess (Anhang I-7), wie in etwa das Programmieren eines Maschinenzykluses oder einer Software-Umgebung. Er nennt diese Art der Produktion intellektuellen Diebstahl — den offensichtlichen „Preset Nutzer” (Anhang I-6) einen Dieb, der von der Maschine stehlt. Dieses äußerst konservative Eigentumsdenken sollte man besonders unter Berücksichtigung der Erfolge der open-source community (Anhang I-4), bei der die Entwicklung neuer Software lediglich eine Art copy-and-paste Prozess aus weltweit verfügbaren Klassen, Bibliotheken, code snippets, Routinen oder der Implementation ganzer Teile anderer Software in die eigene Architektur ist, überdenkend betrachten. Der kreative Prozess, welcher sich durch das grundlegende Einverständnis des Veröffentlichen eigenen Erfahrungswerte ohne den klassischen Besitzanspruch auszeichnet, fördert einen regen globalen Austausch, eine sogenannte SI<a href="#ftnt1">[1]</a>. Der Erfolg dieser ist nicht einfach so von der Hand zuweisen, und unsere Abwehr etwa dem täglichen Neuerfinden des Rades gleichzusetzen. Kann man doch eindeutig sagen, daß Medien die Träger unserer Kultur sind, und Werkzeuge ebenfalls auch solche Träger<a href="#ftnt2">[2]</a> sein können.</p>
+<p>So könnte man beispielsweise die Ausgangslage des musikalischen Genies Mozart’s bereits im zarten Knabenalter dadurch übersetzen, dass durch die Erfindung der Klaviatur<a href="#ftnt3">[3]</a>, dem pianoforte<a href="#ftnt4">[4]</a> des wohltemperierten Klavier, ohne großartige Vorkenntnisse eine Melodie innerhalb der 12-Tonleiter für jeder man spielbar sei. Man stelle sich Mozart beim Pferdeschwanzschälen vor, oder würde er vielleicht doch direkt die goldig lockigen Haare seines Stanzel gerben und über einen Kleiderschrank spannen, und all das bei einem solche extravaganten Lebensstil? Diese dogmatische Art eines allumfassenden Lebensgestus ist allenfalls für den esoterischen beinahe meditativen null-progressiven ultra-konservativen Gebrauch von Nutzen.</p>
+<p>Für die Kunstwelt jedoch ist es eine Frage der Selbstüberzeugung in den eigenen konzeptionellen Rahmen, ad-hoc Verständnis und Rockstar-ähnlicher Ignoranz gegenüber den Kritikern. Der Autor würde den MC in einer Hip Hop-Show nicht etwa nur mehr in seiner ursprünglichen Form als reine Repräsentation oder Interface für den Inhalt, ihn oder sie jedoch in einer Art abstrakten Ebene als unabhängige Form für den künstlerischen Ausdruck sehen - seien die Chancen auf einen Erfolg noch so klein.</p>
+<p>Die Performance des Autors als „VJ Preset Selecta” im Rahmen des internationalen Videokunstfestivals „Mapping Festival” (Genf, 2011) ist eine experimentelle Demonstration der Einfachheit und des Amüsements, die die Benutzung von presets mit-sich bringt. Erst das Offensichtlich-machen der Eingabe-Interfaces führt dazu, daß eine neue Erzählebene beim Betrachter aufgezogen wird. Besser gesagt, erst dadurch ist eine Art Instant Schwarm Intelligenz (ISI) denkbar, bzw. wäre „ohne das Offensichtlich-Machen hätten die Betrachter nur halb so viel davon, und weitere ‘Preset Auswähler’ gar nichts.”<a href="#ftnt5">[5]</a> So sind etwa die Erfolge sogenannter Making-Off Videos zu erklären.</p>
+<p>Hierzu zwei Video-Beispiele:</p>
+<p>Im ersten Video „Making of ‘The Prodigy - Smack My Bitch Up’ in Ableton by Jim Pavloff” wird eine sekundärer Aufmerksamkeitsebene dadurch generiert, dass der „Preset Auswähler” die original Samples auflöst und die Art und Weise der Manipulation an Hand einer bekannten Prosumer Software „Ableton Live” vorführt. Interessant dabei ist, dass das nachgebaute Stück von Prodigy 1993 mit enormen technischen Know-How und Equipment realisierbar worden war und die Undurchsichtigkeit das primäre Aufmerksamkeitspotential war. Im Sekundären Schritt wird dem Betrachter eins klar „das könntest du auch”. Es ist die Suggestion mit, der der „Preset Auswähler” sein Publikum begeistert. Die Anleitung wird selbst zur Performance.</p>
+<p>Im zweiten Video „Bossmonster Part [One|Two], Andrew Jones” ist die Inszenierung des „Preset Auswähler” von besonderem Interesse, da dieser auch in kleinen Einspielungen mit zu sehen ist. Andrew Jones sieht aus wie eine Art Peter Pan mit Patronengürteln aus WACOM Stiften und einem ledernen Gurt der sein WACOM Tablet in Verkaufsposition hält wie bei ein Bauchladen. Doch was er zu verkaufen hat, das ist nichts materielles, sondern das sind sekundäre Option und seine Art und Weise mit all diesen sich einen Weg leiten zu lassen. Interessant dabei ist, dass er anders als Jim Pavloff nicht etwa nur anonym seine samples zusammen recheriert, sondern als Kreativer Leiter eines 3D-Studios für ihn viel versprechende 3D-Modelle und Formen von Pratikaten und Bewerbern bauen läßt, sprich er weiß bestens Bescheid über die primäre Aufmerksamkeitsebene. Diese Art und Weise können wir ebenfalls bei anderen etablierten Künstler, wie beispielsweise Alva Noto<a href="#ftnt6">[6]</a> bemerken. Dessen musikalische Live-Performances gleichen den Produktpräsentationen eines Steve Jobs -— Das musikalische und visuelle Material wird von Angestellten maßgeschneidert. Andrew Jones’ Arbeiten sind andersartig in einen massenhaften preset-generierenden Prozeß eingebettet, da seine Firma diese in Form von Model-Bibliotheken vertreibt. Alva Noto agiert als Künstler der [Moderne|Post-Moderne], und bewahrt seinen Arbeiten eine Aura im Benjaminchen Sinne. Dies zu kokettieren ist das Kapital des „Preset Auswählers”.</p>
+<p>Diese Art der preset-Verwendung hat vor allem auch in die Unterhaltungsmusik Einzug gefunden. </p>
+<p>Für den deutschen Leser sollten hier drei populärkulturelle Beispiele die an Deutung triefende Lektüre erleichtern.</p>
+<p>Gottfried Wendehals<a href="#ftnt7">[7]</a> kokettiert in seinem TV Sketch „Herbert” (Beatklub, 1980) die Einfachheit populärer Musik und demonstriert wie er mit Hilfe seiner Rhythmusmaschine, genannt Herbert, jederzeit und mit wenig Aufwand sofort für ein weites Spektrum an Gelegenheiten gebucht werden kann.</p>
+<p>Desweiteren hat sich aus Deutschland ein weiterer Superhit zu internationalem Ruhm hochgearbeitet. „Dadada”<a href="#ftnt8">[8]</a> (1982) der Band „TRIO” basiert auf den Preset-Sounds, Melodien und Rhythmen des Casio VL-1 Keyboards.</p>
+<p>Als drittes Beispiel erinnern sie sich kurz an „de Lambada”, der zu den Rhythmuspresets im Sketch der hessischen Kommikertruppe Badesalz gehörend, schlußendlich die Kundin überzeugt und den Verkauf des „Rhythmusgerät” (Album „Och Joh”, 1996) besiegelt. Der Witz besteht darin, daß alle vom Verkäufer angespielten presets absolut identisch ein „Bum bum tschak bum bum tschak” im Vierviertel-Takt abspielen, und eine Unterscheidung nur durch die Namen der presets stattfindet.</p>
+<hr>
+<p>Ein allerletztes Beispiel aus der Welt der Grafik und den wilden 90igern. Dort gelangte ein Microsoft ClipArt zu weltweitem Ruhm, als dies zum Logo der Love-Parade ernannt wurde.</p>
+<p>Keywords: Preset-Auswähler, Preset-Dirigent, intellektueller Diebstahl, keine zufälligen Muster</p>
+<hr>
+<p>Kapitel 1.2</p>
+<p>Der Autor versucht die Verhaltensweise von presets zu ergründen und später zu kategorisieren um deren bewußte Anwendung in [Gestaltungs|Planungs]prozeßen zu verdeutlichen. Im Folgenden wird angenommen das presets dualistische und rekursive Eigenschaften besitzen können. Aus dieser Annahme heraus leitet sich die Anwendung ab, eben wie gesagt rekursiv. Ergo, wir definieren die Definition zur Anwendung um und wenn die Anwendung ausgeführt wird, wird sie wieder als Definition verstanden (siehe auch Keyword generische presets, ).</p>
+<p>Wir sollten diese stark technokratisierte Ausdrucksform an folgendem künstlerischen Umgang nocheinmal deutlicher betrachten. Presets können aus bestimmten Parametern und Betriebsmodi (operation modes) bestehen um vordefinierte Effekte/Ausgaben zu erzeugen. In diesem Fall sind Modi ein Teil des preset, die Operationen oder Betriebsarten innerhalb der Maschine abrufen. Es wird erwartet, dass das Ergebnis immer in einer mehr oder weniger ähnlichen Art und Weise innerhalb eines begrenzten Rahmens oder um einen Rahmen abzugrenzen abrufbar bleibt. Ihre Sensation ist unter normaler Funktionsweise bei jedem Abrufen gleich.</p>
+<p>Ein Modus kann aber auch solche presets in sich tragen, die weitere Adjustierungen des users (Anhang I-2) erlauben. Im folgendem wird versucht die verwendete Terminologie und den Ursprung des Gedankens zu erläutern. Wir sprechen von „Ich bin im Party-Modus“, die Sensation vorimplementiert. Eine Party ist ein wiederkehrendes Ereignis das mit „Improvisation” wenig zu tun hat. Ähnlich einem Spiel gelten Regeln. Jedoch sind innerhalb des Ereignisses Party gewisse Parameter nicht fixiert und dienen dem Interagieren mit den Besuchern. Einige werden von „Preset-Szenarien“(Anhang I-9) definiert, andere sind frei vom Gastgeber und Besucher gleichermaßen zu belegen. Sozusagen könnte die Party bei jedem Besuch von Grund auf verschieden aussehen. Der Grad an Abstraktion einer Situation an die Menschen gewöhnt sind, spaltet unsere persönliche Erfahrung von etwa „angenehm“ bis „ausrasten“ oder primitiven subjektiven Attributen wie „gut“ oder „schlecht“.</p>
+<p>Parties, wie denen politischer, künstlerischer oder religiöser Dimensionen sind nur andersartig in ihren Motiven oder dem Effekt ihres Einflußes auf Teile des Partygeschehens. Das gewöhnliche „Fest“ baut auf Traditionen und Einflüße von Außen werden denen eines Aggressors gleichgesetzt. Die Künste, Politik, und Religion auf der anderen Seite suchen nach neuen Konzepten, oder der Wahrung alter, die der Gesellschaft dienen oder sie stören können.</p>
+<p>So wird eine Party zu einem Instrument. Die einzelnen Aufgaben und Interessen der Performator musikalischer oder visueller Unterhaltung folgen zwei Mustern. Die individuelle Freiheit innerhalb der künstlerischen Form oder überlegter Affektionen ihrer Performance auf die soziale Masse, deren Mitglieder unschwer unbekannt für den Performator bleiben. Dazu ein einfaches Kpop-Beispiel: Steve Goodmann<a href="#ftnt9">[9]</a>, auch als Kode9 bekannt bloggte darüber, daß Süd-Korea gigantische Hornlautsprecher an der Grenze zu Nord-Korea aufgestellt habe, und das dies ankündigte Süd-Koreanische Mädchenband<a href="#ftnt10">[10]</a> Popmusik von nun an täglich abzuspielen. Eine Propaganda-Unternehmung, die nicht im ursprünglichen persönlichen Interesse der performenden Mädchen lag. Gehen diese doch zu Beginn ihrer Karriere von Popularität, Musikalischer Darbietung, mit der Masse zu surfen, gut gestellt zu sein oder tiefere persönliche und schwer zu erratender Konzepte hinter dem Deckmantel der gesamten Szene aus. Das Spektakel verfolgt einen Zweck. Die Performance will mit Zweck gefüllt werden — Die Momentaufnahme<a href="#ftnt11">[11]</a> ist ein preset. </p>
+<p>Schauen wir kurz auf die Anfänge der Performance Kunst, so ist die Fluxus Kunst bekannt geworden für ihre von Technik überladenden Performances, in denen Paik Nam Jun beispielsweise erste Versuche der Video-Synthese unternahm (Paik-Abe Synthesizer) oder aber auch versuchte durch Telekommunikation Informationen auszutauschen zwischen verschiedenen Austragungsorten. Allein die Performance war Anlass genug. Mit dem Abspeicher von presets konnten einzelne Zustände wieder aufgerufen werden und die Performance wurde zumindest für die Kerngruppe der Performanten durchschaubarer, bzw. selber wieder Übertragbar an einen anderen Ort. (Jedoch will diese Arbeit an dieser Stelle kurz bemerken, daß es ihr nicht um eine Argumentation auf kunsthistorischen Vermarktungsstrategien aufbauend geht und deshalb intensiver einem breitem Feld an Ideen ihr Augenmerk schenkt!)</p>
+<p>Keywords: Spektakel, Performance, Input, Output, Party-Modus</p>
+<hr>
+<p>Kapitel 1.3</p>
+<p>Wir beobachten, daß ein preset einen Wirkungsradius besitzt, der durch die Regeln des ursprünglichen Systems gesteckt ist. Wird ein preset außerhalb dessen benutzt, beispielsweise die Anwendung eines Sounds ohne den dazugehörigen Rhythmuskanon, so ist zwar der Ursprung erkenntlich, jedoch die Wirkungsweise außer Kraft gesetzt und wirkt befremdlich.</p>
+<p>Man kann von einer Art Preset-Familie sprechen, die es wie eine Sprachfa- milie ermöglicht zu kommunizieren über die eigentlichen Maschinenwerte hinaus, das heißt das preset bekommt die Funktion eines Interfaces für die Kommunikationsparteien, -maschinen, -aktanten. Diese Überlegung nach der Abstammung und Vererbung von Gedanken findet man auch in der MEM-Theorie -— eine äußerst populärkulturelle Theorie des britischen Evolutionsbiologen Richard Dawkins. In „The Selfish Gene“ (1976) erfand Dawkins den Begriff MEM für Dinge, die sich eher durch Imitation als genetisch reproduzieren. Ein MEM ist eine Gedankeneinheit.</p>
+<p>Ein preset kann ein MEM sein. Vera von Birkenbühl, Gehirnforscherin, beschreibt es in ihrem Vortrag „Viren des Geistes” so, daß sich MEMe fortpflanzen und dabei genetisch weiterverarbeitet werden. Sie spricht vom morphogenetischen Feld, in dem Zugehörigkeiten zu einem gewissen MEM-Pool dadurch erreicht werden, sich von einer Norm abzusetzen, sozusagen, Zugehörigkeit durch Mutation. In einem ihrer Beispiele beschreibt sie was Kommunikation ist über die Inselmetapher. Die Inselmetapher steht dafür, dass wir alle auf unserer eigenen Inseln leben, jedoch trifft man auf jemanden von einer anderen Insel, so gibt es zwei Kontaktmöglichkeiten - eine oder keine. In der Regel, sagt sie, sei es nicht im geringsten interessant für die Lösung von Problem auf der eige- nen Insel, die Probleme der anderen Insel zu erfahren, jedoch ist alles was der Bewohner der anderen Insel anbieten kann genau das. Und das sei Kommuni- kation. MEMe können gutartig und bösartig sein, je nach ihrem ursprünglichen Wertesystem. Sie verhalten sich jedoch wie Viren, die ein anderes System befallen können. Dort können sie positive und negative Effekte hervorrufen.</p>
+<p>Wir sprechen beispielsweise auch wie bei der Vorlage zur Installation “Double Tripple Rainbow-Clock” dem “Double Rainbow”-Video von einem viral bzw. meme. Ein MEM kann auch ein musikalisches Thema oder eine einprägsames Symbol, bzw. Geste sein. Dazu eine letzte Bemerkung — presets werden immer dann benötigt, wenn eine Maschine zu Verbreitung eines MEMs beitragen soll. Man könnte deshalb die Maschine auch als potentiellen MEM-Träger beschreiben.</p>
+<p>Im Hörbeispiel „Robert Carter - Love, Truth, Pardon Error“ (Anhang II-DVD) - bestehend aus 10 Preset-Songs für 10 Preset-Cover erinnert jedes Stück an quasi alles was wir jemals gehört haben, jedoch lenkt die zerschlagene, bzw. unfähige Selecta/Spieler-Person das Ohrwerk auf das preset ohne seinen gewohnten Rahmen und entblößt somit das preset. „Ein Museum macht nichts anderes, in dem es Kunstwerke aus ihrem Entstehungsrahmen reißt und sie ausstellt, sie dadurch, dass sie ohne ihren Kontext noch bestehen, als Kunstwerk betitelt.” (Axel Roitzsch, Anmerkung zur Arbeit, Juli 2011) Diese Art der presets-Nutzung kategoriesiert der Autor als statische presets.</p>
+<p>Fazit, nur beim dilettantischen Einsatz eines gewohnten preset kann von einer künstlerischen Meta-Nutzung des Preset-Gedankens gesprochen werden und tritt immer auf, sobald ein preset außerhalb seiner Preset-Familie, seines MEM-Pools benutz wird. Hier unterscheidet sich dank der Aufweichung der Grenzen zwischen Produzent und Konsument gewollter kulturell-begründeter discours in seinen Mitteln und etwaigen sinnästhetischen Effekten nicht vom trivialen discours.</p>
+<p>Die Medienwirksame Benutzung eines der Masse unbekannten preset kann, wie im Beispiel des US Amerikanischen „Popsongs Popcorn“ (1976), zur Restriktion durch eine Bedeutungsvererbung führen. Im speziellen Fall handelt es sich um den preset-Sound „Popcorn“ des Roland Synthesizers SH-2000.</p>
+<p>Spielt man nun heutzutage diesen Synthesizer, so ist unsere Assoziation bereits ein Konglomerat aus Geräteeinstellung und Melodie. So in etwa haben auch Fraktale ihren Ursprung in graphischen Algorhythmen (sic), jedoch sind uns nur bestimmte selektive Zustände dieser Programme bekannt.</p>
+<p>Keywords: Preset-Familie, Definition, Benutzung, MEM, Preset-Gedanke</p>
+<hr>
+<h1 id="kapitel-2">Kapitel 2</h1>
+<p>Kapitel 2.1</p>
+<p>Die bildliche Darstellungsmöglichkeit moderner Rechenmaschinen hat wie keine andere Animations- und Illustrationstechnik die Fähigkeit uns in ihren Bann zu ziehen. Was ist der entscheidende Unterschied von programmgestützter zur manuellen graphischen Darstellung und warum hat etwa die Quantisierung des Produktionszykluses hierbei einen größeren Einfluß auf unsere Wahrnehmung und Gestaltungsprozeße als die flächendeckende Einführung der Fotografie zu Beginn des 20. Jahrhunderts?</p>
+<p>Dies liegt zum einen daran, daß der Benutzer einem Wissenaufbereitendem Generationszyklus gegenübertritt an deren Ende ein Interface auf ihn wartet („Die Mathematik ist im Photoshop“, Björn Jung, Küchengespräch am 20. Juni 2011). Folgende zwei Beispielen sollen kurz die Permutation solch einer Generationsfolge erläutern.</p>
+<p>Man stelle sich vier Generationen vor.</p>
+<p>In der ersten Generation sitzt ein Musiker an einem Schlagzeug um den gewünschten Rhythmus erklingen zu lassen.</p>
+<p>In der zweiten Generation erzeugt ein Synthesizer mit Hilfe eines Sequenzers den Rhythmus.</p>
+<p>In der dritten Generation haben wir dann eine weitere Kombination von Synthesizer, Filter und Sequenzer, die sich bereits</p>
+<p>in der vierten Generation zu einem Kombinationsgerät, wie beispielsweise der Roland TR-909 von Tadao Kikumoto entwickelt und mit presets ausgestattet per Knopfdruck bedienbar wird.</p>
+<p>Das zweite Beispiel hat</p>
+<p>in der ersten Generation die Mathematik in Form von Gleichungen, Definitionen, etc. und erfordert geschultes Vorstellungsvermögen.</p>
+<p>In der zweiten Generation wird diese Vorstellung visualisiert durch Kurvendiskussionen, Mandelbrot-Diagramme oder aber auch künstlerische Darstellungsversuch, wie denen M.C. Eschers.</p>
+<p>In der dritten Generation erfolgt eine Automation des Darstellungsprozeßes durch einen Algorhythmus (sic) und</p>
+<p>in der vierten Generation kombiniert man die Automation mit presets und landet erneut beim Knopfdruck, bzw. Mausklick.</p>
+<p>Dies ermöglicht zwei Evolutionsgedanken: Zum einen wurde Expertenwissen auf eine Popästhetische Ebene gebracht und wir können von einen Interface sprechen, daß uns hilft einen Vorgang in uniformierter Weise zu wiederholen<a href="#ftnt12">[12]</a>. Zusammenfassend kann man sagen, daß durch die Pionierarbeit einzelner Experten oder, wie im Fall der Open Source Communities (Anhang I-4) Extrema vorerst freigestellt erforscht werden, daß heißt auch erprobt werden im kleinen und später einer breiten Maße zur Verfügung stehen. Das gefährliche an einer fraktalen Betrachtungsweise des Preset-Gedankens wird deutlich durch zwei Beispiele aus der Softwarewelt; einmal das Programm &quot;Whorld&quot; von Chris Korda, das Versucht &quot;heilige Geometrien&quot;<a href="#ftnt13">[13]</a> darzustellen und das Programm &quot;Apophysis&quot;<a href="#ftnt14">[14]</a>.</p>
+<p>Ihre Absicht ist es ein gesamtweltliches Bild zu entwerfen basierend auf einer ethno-mathematischen Behauptung, das Universum verhalte sich in fraktaler Weise und ewiger Rekursion. Als Vertreter dieser Denkrichtung ist Ron Eglash<a href="#ftnt15">[15]</a> zu nennen, welcher versucht die manigfalltigen Schnittpunkte von Mathematik und Kultur zu studieren. Chris Korda, der vorallem durch seine konzeptionelle Gründung der &quot;Church of Euthanasia&quot; (CoE) bekannt geworden ist, versteht sich wortwörtlich als Prediger5<a href="#ftnt16">[16]</a> gegen eine rationalen Weltordnung, die wir durch unsere menschliche Intelligenz geschaffen haben. Betrachtet man die experimentelle Natur der Software<a href="#ftnt17">[17]</a> nundurch die politisierten Augen des Autors und ist sich zu dem noch bewußt, daß sich beispielsweise Dietmar Dath die Überschreitung der natürlichen Grenzen durch die Bedrohung der menschlichen Existenz mit etwa der Entwicklung und dem Einsatz der Atombombe bereits erreicht wurde (&quot;Vorgemischte Welt&quot;; S. 13), so könnte man beinahe Mutmaßen, daß Ziel der Preset-Pioniere sei ein absolutes Disaster.</p>
+<p>Keywords: Fraktale, Rekursion, Preset-Familie</p>
+<hr>
+<p><picture><source type="image/avif" srcset="/.11ty/image/?src=https%3A%2F%2Flh7-rt.googleusercontent.com%2Fdocsz%2FAD_4nXePBKSKr53nqFKi9L2KJd_cyOYjla07ijab2Bk3RX4oRANbQYTJzfBnZes-majUerD_NWvOpTVJdRZxNIdkeFpETnvk9ypDH46uUb2y_IoOZS2ag5Qm08afJr3kMMZpuCZ7sEs08MlYOavL%3Fkey%3Di2UCbwnp2mfJ99O83EnAIw&width=600&format=avif&via=transform 600w"><source type="image/webp" srcset="/.11ty/image/?src=https%3A%2F%2Flh7-rt.googleusercontent.com%2Fdocsz%2FAD_4nXePBKSKr53nqFKi9L2KJd_cyOYjla07ijab2Bk3RX4oRANbQYTJzfBnZes-majUerD_NWvOpTVJdRZxNIdkeFpETnvk9ypDH46uUb2y_IoOZS2ag5Qm08afJr3kMMZpuCZ7sEs08MlYOavL%3Fkey%3Di2UCbwnp2mfJ99O83EnAIw&width=600&format=webp&via=transform 600w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=https%3A%2F%2Flh7-rt.googleusercontent.com%2Fdocsz%2FAD_4nXePBKSKr53nqFKi9L2KJd_cyOYjla07ijab2Bk3RX4oRANbQYTJzfBnZes-majUerD_NWvOpTVJdRZxNIdkeFpETnvk9ypDH46uUb2y_IoOZS2ag5Qm08afJr3kMMZpuCZ7sEs08MlYOavL%3Fkey%3Di2UCbwnp2mfJ99O83EnAIw&width=600&format=jpeg&via=transform" alt="" width="600" height="695"></picture></p>
+<p>(Baumstammmodell)</p>
+<p>Taxonomie eines Preset-Zykluses</p>
+<p>“PLASMA/NEBEL/UNSCHÄRFE/VERWASCHUNG”</p>
+<hr>
+<p><picture><source type="image/avif" srcset="/.11ty/image/?src=https%3A%2F%2Flh7-rt.googleusercontent.com%2Fdocsz%2FAD_4nXdReDDPZXHS3EbP3hXYywU_Lc8WMiViexC1moYeqJWK5-XgOa0AXjlGHE6tNL4Mcjkbfr8ttEvlOk9V6AYPTmpdqDAVCK45OSJd2JVmo54K6oKOffEgRBgbs4sHO9y4ow9YzS82cc6vT18%3Fkey%3Di2UCbwnp2mfJ99O83EnAIw&width=600&format=avif&via=transform 600w"><source type="image/webp" srcset="/.11ty/image/?src=https%3A%2F%2Flh7-rt.googleusercontent.com%2Fdocsz%2FAD_4nXdReDDPZXHS3EbP3hXYywU_Lc8WMiViexC1moYeqJWK5-XgOa0AXjlGHE6tNL4Mcjkbfr8ttEvlOk9V6AYPTmpdqDAVCK45OSJd2JVmo54K6oKOffEgRBgbs4sHO9y4ow9YzS82cc6vT18%3Fkey%3Di2UCbwnp2mfJ99O83EnAIw&width=600&format=webp&via=transform 600w"><img loading="lazy" decoding="async" src="/.11ty/image/?src=https%3A%2F%2Flh7-rt.googleusercontent.com%2Fdocsz%2FAD_4nXdReDDPZXHS3EbP3hXYywU_Lc8WMiViexC1moYeqJWK5-XgOa0AXjlGHE6tNL4Mcjkbfr8ttEvlOk9V6AYPTmpdqDAVCK45OSJd2JVmo54K6oKOffEgRBgbs4sHO9y4ow9YzS82cc6vT18%3Fkey%3Di2UCbwnp2mfJ99O83EnAIw&width=600&format=jpeg&via=transform" alt="" width="600" height="627"></picture></p>
+<p>vereinfachtes Preset-Zyklus Modell:</p>
+<p>Die vier Generationen-Permutation eines Snare Sounds</p>
+<p>(etwa einer TR606, Airbeats Mechatronik)</p>
+<hr>
+<p>Kapitel 2.2</p>
+<p>Ein Beweggrund für das Schreiben dieser Arbeit, war die Selbstverständlichkeit mit der unsere Gesellschaft, Gemeinschaft und Künstlergarden das presets als Arbeitsmethode verinnerlicht haben. Bis man sich über den Ursprung eines bestimmten Standards bewußtsein verschafft, ist es selbstverständlich dies anzuwenden. Deshalb möchte der Autor über einen Gedanken zum Unterbewußtsein schreiben. Seit Siegmund Freud (Gedankenaufgabe: Wie oft haben sie diesen Satz schon gelesen in pseudo wissenschaftlichen bis wissenschaftlichen Texten?) sind wir uns bewußt, dass es etwas gibt was unbewußt bleibt, sollte man nicht versuchen dies zu erkunden —— mit oder ohne Hilfen. Das Lehrt uns die Psychoanalyse. Was sind aber die Arbeitsmethoden des Unbewußten? Die Technologie der Kybernetik erweitert die Bereiche des Bewußtseins (T.McKenna), ist jedoch nur existent, wenn man davon ausgeht, daß dem Thema, bzw. Inhalt der Form irgendeine Art von Bedeutung einzugestehen sei. Jedoch ist interessant, in Psychodelik und Kybernetik, daß es unscharfe Bereiche gibt, eine Art Plasma/Nebel in dem man mit Training und über spezielle Zugangsmethoden exemplarisch Verläufe oder Pfade nachvollziehen kann. Es ist sogar möglich und da steht ja auch die Kernidee der Kybernetik; Pfade vorraus zu planen. Das heißt innerhalb eines Computersystem kann man ziemlich genau berechnen, wie weit und zu was sich ein preset mutiert im Verlauf mehrer Generationen mit Simulationen die diversen weitere statischen oder generischen presets enthalten.</p>
+<p>Mit Hilfe der Kybernetik wurde versucht dies auch auf Bevölkerungsentwicklung anzuwenden. Erstmal ist dies eine rein statistische Erhebung, jedoch ist die große Hoffnung, daß wir in der Lage sein werden dank unserer Netzwerke und globalen allgemeinen Verständnisses Ereignisse, wie etwa dem von Heinz von Förster errechneten ins unendliche gestiegene Bevölkerungswachstum im Jahr 2025 entkommen zu können.</p>
+<p>Matthew Herberts Sozio-Utopien<a href="#ftnt18">[18]</a>, obwohl doch aus seiner Sichtweise mit einer Spur von Pessimismus behaftet, könne als Hoffnungsschimmer herhalten, daß solch geartete Entwicklung auch zu einer Aufweichung, bzw. dem Ausbleiben der prophezeiten gesellschaftsverändernden Ereignisse führen könnte. „...diese technische Entwicklung spiegelt den Weg einer Gesellschaft, die längst nur noch Konsum kennt und auf Gemeinschaft pfeift. [...] Statt dessen sollen ihre kleinen Erfolge unablässig reproduziert werden, von den endlosen Klonen der Hamburger bis zu den Modelinien à la Gap. (Jeden seine Uniform!)“ („Vorgemischte Welt“; S. 18ff)</p>
+<p>Klaus Sander relativiert die Untergangphantasien noch weiter und geht in keinster Weise von bahnbrechenden Entwicklungen in der Verwendung von presets aus. Er bezeichnet Preset-Nutzer (Anhang I-6) als diejenigen, die „ihr[en] Dilettantismus verstecke[n] [...] und auch nicht zugeben.“ („Vorgemischte Welt“; S. 20)</p>
+<p>Lassen wir zuletzt noch einmal den größten aller Genius-Pessimisten, sozusagen ein bekennender Blinder unter Einäugigen, Heinz von Förster<a href="#ftnt19">[19]</a> uns auch noch das letzte Fünkchen Technikglauben (Technospirtualität) rauben, den er schreibt in „Wahrheit ist die Erfindung eines Lügners“ (1998): „Das Experiment der Analyse ist trivial. Und das ist der eigentliche Grund für ihre Beliebtheit.“</p>
+<p>Könnte man aus der in diesem Kapitel angesprochenen Dialektik heraus schlussfolgern, daß sich die elektronischen Bilderwelten der Zukunft, wie eine Art Winamp-Visualizer, deren Menge aus presets nur durch weitere Algorhythmen (sic) noch zu differenzieren sind, gestalten werden? Sind die Klangwelten der Zukunft etwa die Stücke, die wir uns in Apple's Garage Band<a href="#ftnt20">[20]</a> selber je nach Tagesstimmung ähnlich einen indischem Raga ad-hoc zusammenmischen? Oder kann man darauf hoffen, daß Dietmar Dath's „Naturgesetz/grenze“ unseren Drang nach innovativen Motiven Einhalt bietet und wir wieder einer kindlichen Naivität gleich jahrhundertealten und bewährten Naturphänomenen und verinnerlichten und vermeintlichen Mustern unsere Aufmerksamkeit schenken können?</p>
+<p>Keywords: Diletantismus, Avatare, Preset-Forscher, Indentität, Genius Komplex</p>
+<hr>
+<p>Kapitel 2.3</p>
+<p>Der Autor schreibt in den Definitionen (Kapitel 1):</p>
+<p>Ein preset „ist das Interface zwischen der Person und dem kollektiven Geschmack (Nutzen/Verständnis) - ein generisches Werkzeug, daß uns befähigt die Funktionsweise der Maschine zu verstehen und auszunutzen.”</p>
+<p>Er geht also davon aus, daß ein preset eine Lernhilfe ist. Lernen besteht aus zwei Vorgängen, dem aktiven Verstehen und dem leiten des Lernvorgangs auf sein bestimmtes Lernziel. Lernen selber wird in der Psychologie in manigfaltigen Weisen erklärt und hängt stark mit der ideologischen Struktur der Gesellschaft zusammen.<a href="#ftnt21">[21]</a></p>
+<p>Beim Erlernen der Funktionsweise einer Maschine wollen wir ein bestimmtes Resultat, das man sich durch die Anschaffung dieser erhofft hat. Die Erschaffer der Maschine erstellen also einen Plan, der aus Oberfläche, den dort soll der Anwender in der Regel aggieren, Anleitung und Anwendungsbeispielen besteht. Diese Anwendungsbeispiele können templates, tutorials<a href="#ftnt22">[22]</a> und presets sein.</p>
+<p>Wir beobachten nun mit Beginn der Industrialisierung einen zunehmenden Gebrauch an Maschinen die uns das Erlernen von primitiven Techniken abnehmen. Zwar haben wir einen bestimmten Kanon an Grundkursen die uns &quot;Handwerk&quot; im Kontrast zu &quot;Maschinenwerk&quot; näherbringen sollen, so kann man doch nach wenigen Einführenden Worten zum Stechbeitel bereits sein erstes Model an der CNC Fräse in Auftrag geben. Und gerade beim Computergestützten Design in Architektur, Druck, oder von Gebrauchsprodukten ist eine didaktische Ungleichmäßigkeit erkennbar.</p>
+<p>Dazu betrachten wir kurz das traditionelle Bild des Lehrer-Schüler-Verhältnisses, wie zum Beispiel in der klassischen Antike bei diesen homosexuellen Greisen mit weißen Bärten und weißen Bettlagen und den jungfräulichen Knaben denen bevor es den Jungedschutz gab vor allem über das Rektum der Grundstock für ihre akademische Laufbahn implantiert wurde. Der Lehrer will ein bestimmtes Resultat also Lernziel, denn, und lassen wir die Nebeneffekte der Leibeslüste kurz beiseite, ohne dies fängt er die Lehre ja nicht an. Er erschafft also einen Schüler der später selbst Lehrer wird, also man könnte meinen er befruchtet ihn mit seinen Gedankengut. Dabei folgt das ganze einer strengen hierarchischen Ordnung, wie kämen wir den sonst auf eine solche Begriffsunterscheidung?</p>
+<p>Nun gehen wir in die Jetzt-Zeit. Die Schüler haben sich emanzipiert und zahlen Geld anstelle von sexuellen Diensten für den Lernservice, die Lehrer tragen schwarze Hemden und besuchen im Idealfall selber allerweilen Schullungen um mit den technischen Möglichkeiten, in deren Erlernen die jüngeren-reiner-Logik-schneller-mächtigen Gehirne der Schüler jedoch klar im Vorteil sind, mitzuhalten. Die Lehrer bekommen quasi einen neuen Gegenspieler. Nicht Gott oder die Kirche zeigen im die Grenzen für seine vor Ideen schwangeren Gedanken, sondern er muß sich dem gigantisch erfolgreichen Marketing Apparatus der Industrie, die ja nun mal Maschinen baut, stellen und muß sich in den meisten Fällen eingestehen, daß er nicht die selbe Person ist, wie der Erschaffer der Maschine. Und gerade wenn wir davon ausgehen, das die Lehre und Forschung unabhängig sein soll von den Interessen der Industrie können wir von Milchstraßensystemen zwischen Lehrern und Entwicklern ausgehen. Zumal erfolgreiche Entreprenuer, wie zum Beispiel Mister Fred Zuckerstein ihre Lehrer glatt im Naßen stehen lassen, sobald das Personen-Netzwerk der Lehreinrichtung auf potentielle Lichtblicke abgegraßt wurde. Des Lehrers Autorität wird in einen Dialog mit der auf dem Marketingkonzept aufbauenden Didaktik des Herstellers gezwungen, wobei jedoch die Maschine erfahrungsgemäß statischeren Konzepten folgt als der Mensch - Es sei den er denkt selbst wie eine Maschine. Hinzu kommen solche Herausforderungen, daß manche Maschinenkonzepte so entwurfen worden, daß ein ganz neues Konzept alle drei Monate auf den Marktgebracht werden kann, wobei wir nicht von einem Echtzeitprozeß von Entwicklungsabteilung zur Öffentlichmachung sprechen können. Die Schrittweise Einführung von Neuerungen steigert selbstverständlich die Absätze in 5 Generationen und mehr.</p>
+<p>Keywords: Didaktik, Lernkurve, Interface, Metaphern</p>
+<p>Weitere Keywords: Lernhilfe, Lernleitung, Lernkanal, Lernziel, Überleben und Instrumentalisieren</p>
+<hr>
+<p>Kapitel 2.4.</p>
+<p>Inwiefern findet sich das Plasma Modell, als multidimensional/rekursives Konzept im style space Konzept zur Analyse der Ausnutzung der Möglichkeiten einer linearen Maschine wieder?</p>
+<p>Lev Manovich beschreibt das style space Konzept als eine Methode mit der quantifizierbare kulturelle Artefakte in einer 2D Umgebung abgebildet und nach verschiedenen Bewertungskriterien untersucht werden können. Diese Kriterien müßen einer beschränkten aber einheitlichen [Ausgabe|Darstellungsmethode] entsprechen. Die Computerwissenschaft nennt diese Masseinheit features. L.M. entwickelte das style space Konzept um Bilder zu vergleichen und ihre Evolution nachzuvollziehen. Ähnliche Algorythmen (sic) können wir derzeit als neue Funktion der Google-Bildersuche eindrucksvoll in Aktion erleben. So kann ein Grafiker beispielsweise seinen Logoentwurf in das Bildersuchfeld laden und als Suchergebnis werden alle in der Google Suchdatenbank optisch ähnliche Bilder angezeigt. Die automatisierte Musiksuche diverser iPhone Apps (...) folgt ebenfalls solch gearteten Überlegungen zur Varianten innerhalb neuartiger Ordnungssysteme, die sich einer reinen Sprachzuordnung verweigern Die Verwendung des Alphabetes und dessen Ordnungsprinzips, obwohl die Reihenfolge der lateinischen Buchstaben 2700 Jahre lang die selbe geblieben ist, fand beispielsweise bis ins 20. Jahrhundert keinen Zugang in das Zugänglichmachen von Texten. (Ian Illich, Im Weinberg des Textes, Überlegungen zum Didaskalion des Hl. Hugo). Der Autor führt dies an, um zu verdeutlichen wie unterschiedlich unsere Vorstellungsmodelle auf die Interpretation der realen Welt sein können. (Im Alten China wurden Tierarten nach Schlanken, dicken, dünnen, weichen, lustigen, etc. unterteilt, und stehen in keinem Verhältnis der Ordnung der modernen Biologie.)</p>
+<p>L.M.: „Wir können Bilder in Räumen jeglicher Kombination dieser features katographieren.” Die Überlegungen Manovichs gehen auf die Forschungsdaten der Auswertung klassischer Meister, aber auch den Zeichenstylen japanischer Mangazeichner zurück.</p>
+<p>Dazu folgende hypothetische Aufgabe: Ein lineares Werkzeug, mit einem geeigneten Satz an presets, soll in seiner Gesamtheit am Möglichkeiten im 2D style space dargestellt werden. Im Vergleich können wir nun die existierenden presets auf dieser Karte verorten.</p>
+<p>Auswertung/Idee dieser Methode: Der rationale Ansatz ermöglicht eine Auswahl an bislang „unentdeckten” presets, da ein Mechanismus über die Offenlegung/Ausgabe einer Wertekombination entscheidet und nicht etwa der grobmotorische Benutzer/Preset Programmierer und stellt ins Verhaltnis, die potentielle Unfähigkeit dieser und der noch weiter limitierten Instanz des „Preset Auswählers” im Vergleich zum Potential der Maschine.</p>
+<p>Der Autor versucht mit diesem Modell, das auf dem style space Modell zur Analyse bereits existierender Bilderwelten basiert, zu zeigen, daß wir unsere Maschinenwelten nicht überblicken können. Zwar erlaubt die Methode das Darstellen aller möglichen Zustände (im Normal-Betrieb), jedoch hat die Komplexität der meisten untersuchenswerten Maschinen/Algorythmen/Funktionen erneut den Anspruch an eine universelle mathematische Faßbarkeit der Welt und verwäscht insich, sobald der Versuch auf zu viele nachvollziehbare Parameter trifft.</p>
+<p>Kartographien sind also die Aufzeichnung expeditioneller Erfahrungen und die konsequente Näherung durch limesartige Detailuntersuchungen. L.M. spricht von Ziel der „zu realen Darstellung der Realität&quot; bei der medialen Betrachtung, also der Betrachtung mit Hilfe von Medien (Optiken, 3D-Scanern, Repräsentationsmodellen, Filmen, etc.). Für die Überlegung sollte nicht aus dem Auge verloren welchen theoretischen Handstand die mediale Betrachtung von Medien selber dabei rekursieren kann.</p>
+<p>Vergleichen wir nun die Sehfahrt (sic) mit dem Definieren von presets, so schippern beide Disziplinen von verschiedenen bekannten und unbekannten Ankerplätzen zum nächsten durch ein Mehr (sic) an Möglichkeiten. Das Interessante dabei ist es, daß Pionierarbeit in unbekannten Gewässern zu hochgradiger Anerkennung und Erstaunen bei den Daheimgebliebenen führen kann - die Gradiente jedoch, zwischen den Ankerplätzen eine unbestimmte Menge an Anomalien bereithalten.</p>
+<p>Unsere progressive Gesellschaftsidee macht uns alle mehr oder minder zu Seefahrern. Die Digitalisierung hat uns eine neue Form der Reälität beschärt. Wir erforschen, und hier kommen wir auf das Gedankenmodell des style space zurück, nicht mehr ein analoges Universum an Möglichkeiten, und Anomalien, nein, wir untersuchen auf einer Karte eines Universums, daß wir uns selbst erschaffen haben. Die Lernpsychologie nennt diese Denkweise Konstruktivistisch. (Im monastischen Denken des Hl. Hugo's wäre dies der Gedankenpalast gewesen, der zum Erlernen des Auswendiglernens und spirituellen Verinnerlichung der heiligen Schriften dienen sollte.)</p>
+<p>Der Fetisch besteht darin, innerhalb der initialen binären Logik, Pfade und Ankerplätze zu schaffen, die unser Verständnis hinters Licht führen und uns dank ihrer Ähnlichkeit, bzw. Hyperrealität, fortlaufend vor scheinbar neue Probleme/Aufgaben stellen. Die Aufgabe der Arbeit ist es nun folgende zwei Annahmen zu beweisen, dass Kultur eine Maschine sein kann und daraufhin jegliche kulturelle Handlung zu einem potentiellen erfolgreichen preset dieser Maschine wird.</p>
+<p>Lernziele können folglich sein, eine bestimmte Handlung in gleicher Qualität ausführen zu können oder eben solche Handlungen definieren zu können. Rodrick Sims beschreibt in seinem Aufsatz &quot;Interactivity - A Lost Art Form&quot;, drei primäre Arten der Interaktion, die sich einfach auf die Qualität des Verhältnis von lernendem user und Software zurückführen laßen.</p>
+<p>        reaktiv                 - stimulus response Interaktion (Rhodes &amp;amp; Azbell, 1995)</p>
+<p>        proaktiv         - learner construction und generative Aktivität</p>
+<p>coaktiv         - artifizielles oder virtuelles Realitätdesigns, in denen der Lernende ein vollwertiger Fränchise-Bürger des instruktiven Rahmens wird                        (Schwier&amp;amp;Misanchuk, 1993:12)</p>
+<p>Die Ausführung erfordert jediglich das Auswendiglernen der Geste, beispielsweise wie man einen Blitz in Adobe After Effects erstellt oder einen Baum naturgemäß zeichnet mit dessen Merkmalen Verzweigung, Krone, Stamm. Oder wie man ein Haus gemäß einer DIN Norm zu bauen/konstruieren hat- Diese Art von Tätigkeiten können vollends von presets übernommen werden, daß heißt man könnte beispielsweise mit einem Automaten menschliche Tätigkeiten vollends ersetzen. (Beispiele: Japanische Toiletten Spühlung, robot assemble line)</p>
+<p>Kommen wir doch zurück zur Pionieridee. Handlungen zu definieren folg einer gewissen Intuition, also einer Fähigkeit, bzw. einer gewissen Motivation, gewisse experimentelle Zustände effektiv für das Widerabrufen festzuhalten. So ist etwa das Aufzeichnen der Sonnenstände in Abhängigkeit zum Horizont eine bewußte Parametereingrenzung innerhalb eines erdachten Vorstellungsraums zum Bestimmen der Zeit - eine exemplarische Glanzleistung für die Definition eines presets innerhalb eines Systems.</p>
+<p>Keywords: Plasma Modell, versus, style space, features</p>
+<hr>
+<p>Kapitel 2.5</p>
+<p>Arten von Presets</p>
+<p>tele(aktive) presets         - solche die dank Teleinteraktion aus dem Gedankenuniversum (System) an beliebiger Localität ausbrechen können</p>
+<p>ästhetische presets         - solche die einem ästhetischen Effekt beim user hervorrufen bzw. der Immitation dienen</p>
+<p>generische presets         - solche die autokrat neue Ausgangspunkte innerhalb des Systems definieren können</p>
+<p>passive presets         - solche die nur durch ihren Namen Bestand haben, deren Form und Aufbau sich durch äußere oder algorythmische (sic) Einflüße permanent ändert</p>
+<p>statische presets        - tote, historische presets, deren Verwendung musealer, archivarischer Natur ist</p>
+<p>Keywords: Preset-Typen</p>
+<hr>
+<h1 id="kapitel-3">Kapitel 3</h1>
+<p>In der hypothetischen Arbeit „Nothing to sell“ zeigt der Autor, wie eine gesellschaftsfähige Diplomarbeit in Zukunft aussehen könnte, sollte das preset seinen Platz in unserer technokratisierten Welt vollends gefunden haben.</p>
+<p>Der Versuch hat folgende zwei fatale Hypothesen:</p>
+<p>A - man kann nur durch einen dilettantischen, vom Entwickler der Systems nicht vorher gedachte Weise, dass preset offenbaren.</p>
+<p>B - in einer Gesellschaft, in denen Maschinen als Prothesen dienen, ist eine individuelle kulturelle Äußerung nicht mehr innerhalb der eigentlichen Form möglich.</p>
+<p>Keywords: Dilletantismus, Archivierbarkeit</p>
+<p>Kapitel 3.1</p>
+<p>Gedanken über die Aufführung eines theoretischen Teils der Diplomarbeit im Bezug auf den Preset-Gedanken</p>
+<p>Nimmt man nun die institutionalisierte Form der Abschlußarbeit, so sind darin Parameter, deren Erfüllung zur Erhalt des Bildungszertifikats benötigt werden, festgehalten. Man könnte nun jegliche in der Vergangenheit erfolgreich absolvierte Arbeit als preset betrachten, da die mit Inhalt gefüllte Form zur Funktion des Systems geführt haben und unter normalen Umständen, erneut in gleicher Weise verteidbar wäre. Dazu müßte man beweisen können, daß es Schnittmengen zwischen dem akademischen Lehrapparat und einem Maschinensystem gibt.</p>
+<p>Eine Maschine funktioniert ebenfalls durch Funktionen, Definitionen, Richtlinien, aber auch subjektiven Parametern die aus einer historischen Betrachtung stammen. Also, wir analysieren aus unserem Bewußtsein heraus. Erfahrungen definieren unser Bild vom Jetzt. Gehen wir jedoch von der Universität als eine progressive Institution aus, deren rationales Ziel es ist, Fortschritt zu generieren, könnte man von einer prinzipiellen Fehleinschätzung bzw. Ignoranz für eine ganze Generation von einflußreichen, jedoch gescheiterten Pessimisten, sprechen. Ludwig von Bertalanffy schreibt: „das Verfallen in repetitive Muster verleugnet unser Menschsein und unsere Individualität.“ Er geht davon aus, daß sich das menschliche Bewußtsein grundlegend von dem einer Maschine unterscheidet, aber wir dazu neigen unsere Denkweise auf bestimmte andere Denkmuster anpassen zu können, und dadurch ebenfalls wie Maschinen denken können. Vielleicht eben auch anderer Denkmuster auf unsere Denkweise anzupassen. McLuhan beschreibt den Vorgang als „wir navigieren unseren Weg in die Zukunft, wie jemand der nur mit dem Rückspiegel fährt.“ „Dies ist keine besonders erfolgreiche Strategie sich in die Zukunft zu bewegen.“ (&quot;Psychodelics in the Age of Intelligent Maschines&quot;, T.McKenna, 1999). Wie erweitert man dieses Bewußtsein? Die akademische Welt ist Prozeßen und Methoden, die dies aufweichen nicht abgeneigt, und man kann die Kombination der Disziplinen, als einen Versuch werten die Brücke zu schlagen von Bewußtseinserweiterung zu manifestiertem Bewußtsein. Fortschritt könnte nun also eine immer neue Fusion des bewußten und des vermeintlich Unbewußten sein.</p>
+<p>Keywords: Template, Fülltext, Paper-Generator, Drogeriemarkt</p>
+<hr>
+<h1 id="kapitel-4">Kapitel 4</h1>
+<p>Der folgende Text ist als Sprechertext für das Demonstrationsvideo „Double Tripple Rainbow - Funktionsweise“ auf der Begleit-DVD ausgelegt.</p>
+<p>[Erste Szene - Titel, Notation]</p>
+<p>Die Installation ist inspiriert zum einen vom viralen Youtube Video „Double Rainbow“<a href="#ftnt23">[23]</a>, dem Idyll deutscher Schreber- und Vorgärten, sowie der beliebten und der weit verbreitetem Glockenspielmelodie bekannt als „Westminsterschlag“<a href="#ftnt24">[24]</a> - eine Kombination aus reproduziertem Naturerlebnis, Cliché, Ready-Made und Maschinenpreset.</p>
+<p>Tilman Porschütz wählte die Funktionsweise einer Uhr um seiner Installation Rhythmus und Struktur zu verleihen, Zusammenhang zwischen Naturbeobachtungen, Definitionen, bis hin zu ästhetischen wie praktischen Voreinstellungen aufmerksam zu machen. Das Vorbild des Westminsterschlags ist eine in vielen Uhren verwendete Melodie, die aus fünf Permutationen vierer Töne - h’’, e’, fis’ und gis’ - besteht. Zu jeder vollen Viertelstunde wird eine andere Abfolge dieser Permutationen gespielt.</p>
+<p>[Melodiedemonstration]</p>
+<p>Zu jeder vollen Stunde kann dank der fünften Glocke (e°) die aktuelle Stunde gezählt werden.</p>
+<p>[Zweite Szene - Frontalansicht Aufbau]</p>
+<p>Die Regenbogenuhr ist nun aus einem üblichen GFK Teichbecken und vier Bächen mit Gardena Comfort Spritzen als Gartenteich inszeniert. Jeder Bachzulauf entspricht einer Glocke und wird über eine Elektronik angesteuert. Scheinwerfer vor jedem Bachlauf erzeugen später die lokalen Regenbögen, während ein weiterer großer Strahler über alle anderen Sprühnebelfelder hinweg den Stundenschlag „Big Ben“ in Form einen zusammenhängenden Regenbogens darstellt.</p>
+<p>[Dritte Szene - Installationsaufsicht]</p>
+<p>Die Installation ist für den Innenraum entworfen und verfügt über einen geschloßenen Wasserkreislauf mit einem Gardena Pumpsystem.</p>
+<p>[Vierte Szene - Wie entsteht der Regenbogen?]</p>
+<p>Bei einem „Glockenschlag“ öffnet sich das dem Bachlauf zugehörige Magnet-Ventil und die Gardena Comfort Spritzen sprühen einen feinen Nebel über die Teichfläche. Hier wurde drauf geachtet, daß die Tonhöhe des ausströmenden Wassers in etwa den Stimmungen der jeweiligen Glocken im original preset entsprechen. Durch gleichzeitiges, ebenfalls elektronisch gesteuertes Zuschalten der Strahler wird in einen begrenzten Betrachtungswinkel ein lokaler Regenbogen sichtbar. Man kann im Idealfall sogar einen Doppelregenbogen, sprich einen zweiten gespiegelten Regenbogen parallel zum primären Bogen erkennen.</p>
+<p>Im Video sehen Sie eine konzeptionelle Variante für 8 Strahler mit einem weiterem großen Strahler für den „Big Ben Regenbogen“ um Ausbau und mögliche Spiel und Aufbauvariationen zu demonstrieren.</p>
+<p>[Fünfte Szene - Demonstrationslauf 12 Uhr]</p>
+<p>Keywords: Video-Skript, Demonstration, Doppelter und Dreifacher Regenbogen-Uhr, Installation, Funktionsweise</p>
+<hr>
+<h1 id="kapitel-5">Kapitel 5</h1>
+<p>Auswertung</p>
+<p>Will man der fortschreitenden Technokratisierung, Quantifizierung und Anonymisierung der Gesellschaft und Homogenisierung unserer Kulturen förderlich gegenüberstehen, so sollte man versuchen den Preset-Gedanken ständig und überall anzuwenden. Der Autor versucht dies nicht zu proklarmieren, jedoch dient diese Auseinandersetzung vielmehr der Feststellung, in wie weit wir bereits menschliche Verhaltens- und Betrachtungsweisen aus der Computersprache und der Logik der Maschinenwelt in unser Bewußtsein übernommen haben.</p>
+<p>So ist es eben nicht verwunderlich, wenn einem das Ersetzen älterer Terminologien für das Vorherbestimmte durch den Anglizismus preset äußerst einfach fällt. Liegt hierin doch die Bestimmtheit und Zuversicht mehrere Generationen von Computerpionieren und Kybernetikern, Ordnungsstrukturen und Darstellungsarten soweit rationalisiert zu haben, sich bereit zu fühlen für die Aufgaben vor die uns die Industrialisierung und Computerisierung gestellt haben.</p>
+<p>Das preset erhält seine Beliebtheit eben gerade durch die Omnipräsenz Computer und Maschinen gestützter Systeme und der schreienden Naivität der binären Logik. So wurde eben gesagt, daß ein preset innerhalb eines abgesteckten Systems bis an die Grenzen dessen gehen kann, bzw. man mit gewissen Parametern ein System auch zum Abstürzen bringen kann, wie dies etwa in der mehr oder minder künstlerischen Praxen des circuit-bendings, code-bendings, hackings oder bei Beispielsweise informationspolitischer Aktionen, wie denen des spams möglich ist. Jedoch über weitere Bedeutungsvererbung und Verknüpfung mit anderen kulturellen Begriffen an Tragweite gewinnt und tatsächlich komplexe Sachverhalten dienen kann.</p>
+<p>Sieht man das Gestalten von Bild- und Klangwelten als eine wichtige Kulturtechnik an, so kann der gezielte und geschulte Umgang mit presets neue Erzählebenen eröffnen. Auf der anderen Seite offenbaren sich durch den Umgang mit dem Preset-Gedanken aber auch stagnierte Prozeße innerhalb unserer Kultur, die längs nicht mehr dynamisch, ja steif, statisch, im übertriebenen Maße institutionalisiert sind und man sich über deren Notwendigkeit Fragen stellen kann. Wie allen discoursen gemein, es hilft nichts einen vermeindlich fatalen Denkvorgang zu ignorieren, jedoch kann ein letztes Plädoyer für den gewissenhaften Selecta (sic) stehen. Und, was gäben wir nicht alles, wenn sich die Utopien der Futuristen endlich einstellen würden, und sich die Technologisierung endlich in ihrer verheißungsvollen Entlastung bemerkbar machen würde.</p>
+<p>Diese Arbeit soll zu diesem Punkt eine Einführung geben, in ein Feld der Erforschung des Taugenichts, des Müßiggangs und bewußtem Ungehorsam gegenüber der nutzlosen Beschäftigungstherapie und nach und nach Wege aufzeigen, an den verheißungsvollen Stellen anzusetzen und die Potentiale in unseren Kulturbegriffen und Werkzeugen zu erkennen.</p>
+<p>Gestaltern soll es Selbstbewußtsein zurückgeben, ihnen aber auch vermitteln, daß der Aktionsradius neu zu erfinden ist – Beziehungsweise, und daß ist jetzt absolute Anmaßung, unser Berufswunsch Anmaßung ist. Da kann man von Glück reden, daß Design institutionalisiert ist!</p>
+<p>Der Worte sind vorerst genug.</p>
+<p>Keywords: Thesen-Text, Preset-Gedanke</p>
+<hr>
+<p>Anhang I - Begriffsregister</p>
+<p>Die Arbeit ist entstanden aus der Perspektive einer Computersprache heraus. Daher ist es notwendig gewisse Begriffe in ihrer Ursprungsform, also aus dem Englischen heraus zu verorten. Um das Lesen der Arbeit zu erleichtern werden grundlegende Begriffe in diesem Register übersetzt und deren sprachliche bzw. gedankliche Herkunft falls notwendig erläutert. Die hier vorgeschlagenen Übersetzung entstammen dem Sprachverständnis des Autors unter Berücksichtigung gängiger Wörterbücher, publizierter Meinungsäußerungen und Internet-Lexika.</p>
+<p>1 Preset-Auswähler - preset selecter; Klaus Sander und Jan St. Werner bezeichnen damit im Buch „Vorgemischte Welt“ einen (Be)nutzer von Presets; select implementiert die Überlegenheit bzw. Exklusivität einer Entscheidung</p>
+<p>2 Nutzer - user; vom engl. to use; dem Benutzen etw. für einen Zweck; Dennis Knopf beschreibt in seinem Text „You as in User“ vielmehr eine Masse und spricht von einem Paradigma des Web 2.0 bei dem Produzenten und Konsumenten in ein und der selben Instanz zu suchen seien; (S. 44) seine pollemische Wortschöpfung „Youser“ besteht aus den Silben „Du“ und „Benutzer“, und ist ähnlich wie bei Matthew Herbert's Texten über die digitale Revolution ein Hinweis auf die Individualisierung der industrialisierten Gesellschaft, „jedem seine eigene Uniform“</p>
+<p>3 Erscheinungsbild - template; Internet Service Provider sind im Web 2.0 die tragende Kraft für das Erscheinungsbild des Inhaltes individueller Benutzer; Dennis Knopf beschreibt hier eine Art Zensur im Sinne der Effektivierung, besser gesagt spricht er von „discourage from experimentating with the given tools“, der Entmutigung vom Experimentieren mit den zu Verfügung stehenden Werkzeugen, da allein schon die Nutzung von urheberrechtlich geschütztem Material schnell zum Entfernen der gesamten damit direkt verflochtenen Inhalte führt. „An interesting aspect about templates, however, is the idea of separating content from the form of its presentation: while the user is in charge of the content that is being published, the provider of a template[...] is responsible for providing a clear and reliable form of presentation.“ (You as in User, S. 19) - Ein interessanter Aspekt der templates ist, dass sie den Inhalt von seiner Präsentationsform trennen. Während der user um die Aufbereitung des Inhalt kümmert, fällt die Bereitstellung einer zuverlässigen und klaren Form in die Hände des Internet Service Providers</p>
+<p>4 Open Source Community; Software unter der GNU oder einer ähnlichen offenen Lizenz, die das weiter entwickel in einer Art globalen Programmiergemeinschaft erlaubt und ermutigt nennt man Open Source; bspl. Linux, Mozilla Firefox, Wordpress, GIMP, etc.; Dieser Gedanke hat sich mittlerweile in Form der Creative Commons Lizenz auch im kommerziellen Umfeld, besonders auch wegen seiner Marketing-Erfolge etabliert; Phil Morton entwickelte als erstes Open Source Projekt das sogenannte „Notes on the aesthetics of 'copying-an-Image Processor'“ als er am von ihm gegründeten Video Lehrstuhl an der „School of the Art Institute of Chicago“ 1973 das Dokument „Distribution Religion“ mit Dan Sandin veröffentlichte, dem eigentlichen Erfinder des „Sandin Image Processors“</p>
+<p>5 Kulturelle Entblößung - culture jamming; damit bezeichnet man das Bloßstellen offensichtlich fraglicher politischer Annahmen hinter dem Deckmantel kommerzieller Kultur</p>
+<p>6 Preset-Nutzer - preset user; siehe Preset-Auswähler und Nutzer</p>
+<p>7 Basiskreativität - grassroots creativity; Analogie zum Wachstum von Gras; damit ist ein Kreativer Prozess gemeint, der an der „Wurzel“ des Gedanken ansetzt</p>
+<p>8 Leitebene - plane-of-control; Die Leitebene bildet im hierarchischen Ebenenmodell für die Automation die oberste Ebene mit der höchsten Funktionsvielfalt. (http://www.itwissen.info/definition/lexikon/Leitebene-plane-of-control.html)</p>
+<p>9 Preset-Szenario - (preset) scene; ist ein Sammlung von presets, deren Wortherkunft vom Theater her stammt und dort zum Beispiel für das Abspeichern von Lichtsituationen für die Szenen eines Stückes den Weg in unsere Umgangssprache findet. Bei komplexeren Maschinen können auch neue Funktionsweisen auf ein altes Interface angewandt werden. So hat beispielsweise der Sampler OCTATRACK des finnischen Herstellers Electron einen crossfader, ähnlich eines DJ Mixers, und morpht (griech.: die [Form| Gestalt] betreffend) die Parameter zwei aktueller Szenen in Echtzeit von der einen zur anderen.</p>
+<hr>
+<p>Anhang II - DVD Inhalt</p>
+<p>Demonstrationsvideo „Regenbogen-Uhr” MP4</p>
+<p>Video „Tha Preset Selecta“ in Genf MOV</p>
+<p>„Diplom Preset Book AdobeInDesign“ PDF</p>
+<p>„Thesen Text - Nothing-to-sell“ PDF</p>
+<p>10 Preset Covers to 10 Preset Songs</p>
+<p>Robert Carter - Love, Truth, and Pardon Error</p>
+<p>Preset Song 01 - Anne Clarke</p>
+<p>Preset Song 02 - Chilledomic</p>
+<p>Preset Song 03 - Ein Berliner</p>
+<p>Preset Song 04 - Dark Shadow</p>
+<p>Preset Song 05 - Grizzlebees!</p>
+<p>Preset Song 06 - New Wave</p>
+<p>Preset Song 07 - PL1 Riff</p>
+<p>Preset Song 08 - Save LA</p>
+<p>Preset Song 09 - Raegaytune</p>
+<p>Preset Song 10 - Super COOL</p>
+<hr>
+<p>Anhang III - Medien Katalog</p>
+<p>Videoverzeichnis:</p>
+<p>Sollte das ursprüngliche Erstellungsjahr der Videoaufnahme unbedeutend sein für seine digitale Reproduktion, so wird in Klammern das Jahr des Aufrufen vermerkt.</p>
+<p>ABEL Studios Hollywood California Demo 1982, Bill Kovacs (www.youtube.com, 2011)</p>
+<p>African fractals, in buildings and braid, Ron Eglash (www.ted.com, 2008?)</p>
+<p>Brüder, Rummelsnuff (www.youtube.com, 2011)</p>
+<p>Dadada, TRIO (www.youtube.com, 1982)</p>
+<p>Double Rainbow, Hungrybear9562 (www.youtube.com, 2010)</p>
+<p>Herbert, Gottfried Wendehals (Beatklub, 1980)</p>
+<p>Interview: Heinz von Förster (www.youtube.com, 2000)</p>
+<p>Making of &quot;The Prodigy - Smack My Bitch Up&quot; in Ableton, Jim Pavloff (www.youtube.com, 2009)</p>
+<p>My People, The Presets (www.youtube.com, 2011)</p>
+<p>On the acceleration to 2012, Robert Anton Wilson (www.youtube.com, 2011)</p>
+<p>PDCON Porcelain Carillon Weimar, Medien Wiki (www.uni-weimar.de/medien, 2011)</p>
+<p>Psychedelics In The Age Of Intelligent Machines, T.McKenna (www.youtube.com, 2011)</p>
+<p>SAIC Memo, Phil Morton (www.copying-it-right.org, 2011)</p>
+<p>Topological Holons, Dirk Laureyssens (www.youtube.com, 2011)</p>
+<p>Viren des Geistes, Vera von Birkenbühl (www.youtube.com, 2008)</p>
+<p>Bilderverzeichnis:</p>
+<p>Earth Grid, (....,198....)</p>
+<p>Buran rear view (Le Bourget, 1989)</p>
+<p>Fuck the Millenium Advert (K-Foundation, 1990)</p>
+<p>Scene, Wikipedia (www.wikipedia.org, 2011)</p>
+<p>The preset mechanism, Hammond Novachord 1938 (Phil Cirocco, 2006)</p>
+<p>Popcorn preset, Roland SH-2000 (Tilman Porschütz, 2011)</p>
+<p>Gradient Editor Dialog, Gimp (2011)</p>
+<p>Literaturverzeichnis:</p>
+<p>Cultural Software, Lev Manovich (http://www.softwarestudies.com, July 2011)</p>
+<p>Das Kunstwerk im Zeitalter seiner technischen Reproduzierbarkeit, Walter Benjamin (Zeitschrift für Sozialforschung, 1936)</p>
+<p>Digital Vintage, Leo Merz (Hochschule für Gestaltung Stuttgart, 2007)</p>
+<p>Distribution Religion - Notes on the Esthetics of copying an Image Processor, Phil Morton &amp;amp; Philipp Sandin (School of the Art Institute of Chicago, 1973)</p>
+<p>Human-Computer Interaction: from Reality Based Interaction to Blended Interaction (aus dem Forschungsrichtlinien des Lehrstuhls HCI http://www.uni-konstanz.de, 2011)</p>
+<p>Interactive Multimedia Instruction, Schwier &amp;amp; Misanchuk (Educational Technology Publications, 1993)</p>
+<p>Interactivity: A Forgotten Art?, Rodrick Sims (http://intro.base.org/docs/interact/, January 27, 1997)</p>
+<p>Interactivity, Sally J. McMillan (University of Tennessee, 2011)</p>
+<p>Language of New Media, Lev Manovich (MIT Press, 2001)</p>
+<p>Lernen mit Software, Peter Baumgartner und Sabine Payr (Innsbruck 1994)</p>
+<p>Psychedelic Information Theory - Shamanism in the Age of Reason, James L. Kent (PIT Press, 2010)</p>
+<p>Seven levels of interactivity: implications for the development of multimedia education and training, in Proceedings of the Asia Pacific Information Technology in Training and Education (APITITE) Conference, Rodrick Sims (APITITE, 1994)</p>
+<p> </p>
+<p>Softbook, Lev Manovich (http://lab.softwarestudies.com/2008/11/softbook.html, November 2008 Version, http://www.softwarestudies.com/softbook latest Version)</p>
+<p>Sonic Warfare: Sound, Affect, and the Ecology of Fear, Steve Goodmann (MIT Press, 2007)</p>
+<p>Style Space: How to compare Image sets and follow their evolution, Lev Manovich (http://www.softwarestudies.com, August 4-6 2001)</p>
+<p>The Engineering of Vision from Constructivim to Computers, Lev Manovich (http://www.softwarestudies.com, 2007)</p>
+<p>The Selfish Gene, Richard Dawkins (?,1976)</p>
+<p>Understanding Media, Marshall McLuhan (?, 1964)</p>
+<p>Vorgemischte Welt, Sanders &amp;amp; Werner (Suhrkamp, 2005)</p>
+<p>White Paper AutoCAD Darstellung, Autodesk (Autodesk Deutschland GmbH, 2009)</p>
+<p>White Paper, Wikipedia (www.wikipedia.org, 2011)</p>
+<p>You are not a Gadged, Jaron Lanier (?, 2010)</p>
+<p>You as in User, Dennis Knopf (Hochschule für Gestaltung Stuttgart, 2007)</p>
+<hr>
+<p><a href="#ftnt_ref1">[1]</a> Schwarmintelligenz (SI) ist das Kollektive Verhalten, dezentraler, sich selbst-organisierender</p>
+<p>Systeme; Das Konzept wurde erstmal vorgestellt von Gerardo Beni und Jing Wang im Jahre 1989; Interaktionen und scheinbar zufälliges Verhalten führen zu Notfällen innerhalb der Makro-Struktur und geben der globalen Masse eine intelligente Form, unbekannt und unbegreiflich für den einzelnen Agenten; Jaron Lanier, der dem Begriff virtual reality zur Verbreitung geholfen hat, spricht sich besonders mit Blick auf das „Web2.0” gegen die Effektivität der SI aus („You are not a Gadget”, 2010)</p>
+<p><a href="#ftnt_ref2">[2]</a> „The medium is the message” („Understanding Media”, 1964): damit will Marshall McLuhan den Fokus der wissenschaftlichen Erforschung von Information auf die Trägermedien richten</p>
+<p><a href="#ftnt_ref3">[3]</a> Klaviatur - (v. lat. clavis „Schlüssel“ oder „Schloss&quot;) ist eine besondere Anordnung von Tasten, die über eine dem jeweiligen Instrument entsprechende Mechanik oder Traktur zur Tonerzeugung führt. Von einer Klaviatur spricht man bei jener Anordnung der Tasten, deren bekanntestes Beispiel das moderne Klavier ist. Andere Tastenanordnungen – wie etwa auf dem Akkordeon – werden im Deutschen als Tastatur bezeichnet.</p>
+<p><a href="#ftnt_ref4">[4]</a> pianoforte ist eine Erfindung des italienischen Instrumentenbauers Bartolomeo Cristofori um 1700; der Name geht auf die Möglichkeit des leisen (piano) und lauten (forte) Spielens, durch die spezielle Hämmerchen Mechanik, zurück</p>
+<p><a href="#ftnt_ref5">[5]</a> Instant Schwarmintelligenz wurde als Kommentar zu dieser Arbeit vom Schriftsteller Axel Roitzsch beigesteuert und findet sich deshalb, in ungeschnittener Form wieder.</p>
+<p><a href="#ftnt_ref6">[6]</a> Alva Noto, bürgl. Carsten Nicolai ist ein Chemnitzer Künstler dessen Arbeiten die versuchen mögliche Limitationen, potentielle Schönheit und Kreativität innerhalb streng logischer Systeme zu zeigen.</p>
+<p><a href="#ftnt_ref7">[7]</a> Gottfried Wendehals; bekannt vorallem durch seine Polonaisse-Adaption bei der dem Käse die Löcher herausfliegen und in ständiger Begleitung eines Gummihuhnes</p>
+<p><a href="#ftnt_ref8">[8]</a> „TRIO” wurde von Stephan Remmler, Gert Krawinkel, und Peter Behrens 1982-1985 betrieben; produziert wurde die Band von Klaus Voormann, der ebenfalls das Plattencover des Beatles-Album „Revolver” entwarf</p>
+<p><a href="#ftnt_ref9">[9]</a> Steve Goodmann ist Begründer des Labels „Hyperdub“ und Autor des Buches „Sonic Warfare: Sound, Affect, and the Ecology of Fear“ (MITPress 2007, http://mitpress.mit.edu/catalog/item/default.asp?ttype=2&amp;amp;tid=11890);</p>
+<p><a href="#ftnt_ref10">[10]</a> explizit wurde die Band “2N1” (sprich: tweny-one) erwähnt; wobei sich die aktuelle Koreanische Popularmusik durch austauschbare Acts einen Namen gemacht hat; zu den beliebtesten presets zählen Dance-Musik, Vocoder, Autotune, RNB-Balladen, 4-9 Mädchen bzw. Jungen und einem je nach Trend angepasstem Äußeren inkl. plastischer Korrekturen; noch einiger Maßen en vogue waren 2010 Wondergirls, Brown Eyed Girls, Tiara, Afterschool, Big Bang, 2PM, 2AM, etc. Über die derzeitige Situation informieren Sie sich bitte wöchentlich. Der Autor erbittet sachdienliche Hinweise zur Ergreifung etwaiger aktueller Spitzenreiter für Features auf Coverfotos zu diesem Buch, Demo-Songs für deutsche Musikmaschinen und Promotion dieses Textes in Schulen ab Jahrgangsstufe 4.</p>
+<p><a href="#ftnt_ref11">[11]</a> Der Autor spricht deshalb von einer Momentaufnahme, da ähnlich einem Foto ein Abbild des Geschehens gemacht wird. Dies dürfte sich im übrigen auch als Definition für den Speicher (engl. memory) innerhalb eines Computer Systems eignen. Die Vorstellung des Speicherns von [Informationen|Erinnerungen] selbst ist jedoch ein ursprünglich aus der Psychologie entstammender Begriff, und gerade mit der Entwickelung von Mnemotechniken in Verbindung gebracht werden kann. So ist innerhalb der Assembler Sprache ein mnemonic eine Stütze die das Lernen von Zahlenfolgen unnötig macht.</p>
+<p><a href="#ftnt_ref12">[12]</a> Dietmar Dath beschreibt diesen Vorgang mit einer, und bleiben wir doch mathematisch</p>
+<p>in der Vorstellung, limesartigen experimentellen Annäherung an eine natürliche Grenze mit Hilfe von Technologien. „Wo wir heute hinbasteln, kann morgen jeder hinhören.“ (Vorgemischte Welt, S. 13) Dessen Kommentar zur technologischen Möglichkeit der Annäherung, bzw. des Überschreitens erinnert an einen Kommentar über die Arbeitsweise der NASA, des Ingenieurs und Freundes des Autors James Powderly. Dieser meinte, Weltraumforschung ist das Paradebeispiel für eine Trial-and-Error-, Input/Output-Spielweise ohne direkt erkenntliches konzeptionelles Ziel. Dort würde etwas irgendwo hingeschoßen und die Erkenntnis aus den entstanden Trümmern beinahe archäologisch gezogen.</p>
+<p><a href="#ftnt_ref13">[13]</a> aus dem Einleitungstext zu „Whorld“ Version 1.7: „Whorld is a free, open-source visualizer for sacred geometry. It uses math to create a seamless animation of mesmerizing psychedelic images. You can VJ with it, make unique digital artwork with it, or sit back and watch it like a screensaver.“</p>
+<p><a href="#ftnt_ref14">[14]</a> „Apophysis“ basiert auf dem Algorhythmus flame - cosmic recursive fractal flames (http://flam3.org) der ursprünglich von Scott Draves konzipiert wurde</p>
+<p><a href="#ftnt_ref15">[15]</a> in seinem Buch „African Fractales: Modern Computing and Indigenous Design“ (1999), beschreibt er die Verwendung fraktaler Muster in afrikanischer Architektur, Kunst und Religion</p>
+<p><a href="#ftnt_ref16">[16]</a> die „Kirche der Euthanasie“ ist eine von Reverend Chris Korda ins Leben gerufene politische Organisation, die im Bereich Bosten, Massachusetts in den Vereinigten Staaten von Amerika aggiert; laut ihrer Webseite ist die Kirche „eine unkommerzielle Bildungsstiftung, zur Wiederherstellung des Kräftegleichgewichtes zwischen Menschen und den übrigen Spezien auf der Erde“ verschrieben hat; zu den vier Grundpfeilern der Kirche gehören Suizid, Schwangerschaftsabbruch, Kannibalismus („nur bereits Toter“) und Sodomie („jeglicher sexueller Akt, der nicht der Fortpflanzung dient“); es wird jedoch ausschließlich die freiwillige Bevölkerungsreduzierung propagiert; Mord und unfreiwillige Sterilisation sind verboten per Kirchendoktrin; zu den Aktionen der CoE gehören Predigten, Musik, culture jamming (Anhang I-5), öffentlicher Aktionismus und direkte Taten zur Offenlegung der Überbevölkerung der Erde</p>
+<p><a href="#ftnt_ref17">[17]</a> aus dem „About“-Text von „Whorld“ Version 1.7.6.0 von 2006: „This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.“; Dieses Programm wurde in der Hoffnung veröffentlicht, daß es nützlich sei. Dies erfolgt jedoch ohne Gewähr. Überhaupt ohne jegliche Gewährleistung einer Marktfähigkeit oder Funktion für einen bestimmten Zweck. (Dies ist Teil der weitverbreiten GNU Standard Lizensierung für Open-Source Software.)</p>
+<p><a href="#ftnt_ref18">[18]</a> „Die elektronische Revolution in der Musik hat stattgefunden.“, wobei Matthew Herbert nicht von der experimentellen Anwendung elektronischer Musikinstrumente spricht, wie in etwa der Elektroakustik eines Karlheinz von und zu Stockhausen, sondern die populärkulturelle Omnipräsenz elektronischer Musik; beispielsweise vergleicht er die Musik Liverpooler Arbeiter-Blaskapellen mit der des Acid Techno‘s</p>
+<p><a href="#ftnt_ref19">[19]</a> österreicherischer Wissenschaftler, der Physik mit Philosophy kombinierte und Mitbegründer der Kybernetik war; er entwickelte mathematische Modelle zur Bevölkerungsdynamik „von Foerster Equation“ die zum Kontrollieren der Bevölkerungsentwicklung dient; ebenfalls war er jüngstes Mitglied der Macy Conferences (interdisziplinärer Think Tank, 1946-1953), welche versuchte eine general science of the workings of the human mind zu entwickeln und sozusagen die Amero-Zentristische Kybernetik und System Theorie, später als Kognitive Wissenschaft bekannt, fundierte</p>
+<p><a href="#ftnt_ref20">[20]</a> der Stuttgarter Rapper und Musiker Dennis Knopf produziert vorrangig zusammen mit Manuel Bürger Stücke, deren Grundstruktur komplett aus in Garage Band zusammengesteckten Samples und Presets bestehen; auffällig für die Beliebtheit des Apple Produktes ist die Vielzahl an übersichtlich geordneten und vor-arrangierten Patterns und Melodien, ein prinzipielles Verkaufs- und Designargument für die Apple Produktpalette; in seiner Anfangszeit produzierte er, man möchte behaupten wie jeder Computermusiker des neuen Millenniums, mit der Software „Fruity Loops“, die man als weiteren Vertreter sogenannter „Preset-Schleudern“ bezeichnen kann</p>
+<p><a href="#ftnt_ref21">[21]</a> „Die drei einflußreichsten Theoriesysteme dieses Jahrhunderts – Behaviorismus, Kognitivismus und Konstruktivismus.”; Baumgartner, P. und S. Payr (1997). Erfinden lernen. In: Konstruktivismus und Kognitionswissenschaft. Kulturelle Wurzeln und Ergebnisse. Zu Ehren Heinz von Foersters. K.; H. Müller und F. Stadler. Wien-New York, Springer. 8: 89-106.</p>
+<p>(http://www.blended-education.info/material/article/erfinden_lernen.pdf)</p>
+<p><a href="#ftnt_ref22">[22]</a> Das diese Art des Lerhrens mit tutorials eine Unterhaltungssparte sein kann, wurde ja bereits in Kapitel 1.1 Andrew Jones und Jim Pavloff angesprochen.</p>
+<p><a href="#ftnt_ref23">[23]</a>  2010 von Youtube-Benutzer Hungrybear9562 hochgeladen und in mannigfaltigen Kopien und Adaptionen zu millionenfacher Aufmerksamkeit gekommen; berühmteste Derivate sind der „Autotune Double Rainbow Song“ und eine Microsoft Quicksnap Photostiching Fernsehwerbung</p>
+<p><a href="#ftnt_ref24">[24]</a>  auch bekannt als „Cambridge Chime“ nach ihrer Herkunft; die Funktionsweise der Glockenschlagmechanik gibt die Rahmenbedienungen für die Möglichkeiten der Spielweise; dieses preset findet man zum Beispiel im Westminster, dem Weimar Rathaus, aber auch besonders häufig in Japanischen und Taiwanesischen Schulen</p>
+
+</div>
+        <ul class="links-nextprev">
+                    <li class="links-nextprev-next">Next →<br>
+                            <a href="/blog/2015-01-01-on-medium-syria/">Publishing Without Borders ”Torky Tork — Syria”</a><br>Re-issued By HHV | How An Open Source Album Came To Life Years After Its Creation</li>
+                    
+                </ul>
+            </heading-anchors>
+            <div class="subscribe">
+                <p>The edgyness of my content needs your help. By pledging a small monthly donation or with a
+                    <i>free subscribtion</i>
+                    to my newsletter you can help me staying independent from brand endorsements, platforms monetization or institutional
+                    funding.</p>
+                <a class="subscribe-button" href="#subscribe">Subscribe</a>
+            </div>
+        </main>
+        <footer>
+            <h3 id="cant-get-enough">Can't get enough?</h3>
+            <div class="footer-links">
+                <div>
+                    <h4 id="support">Support</h4>
+                    <ul>
+                        <li><a href="https://porschuetz.substack.com">Subscribe via Substack</a></li>
+                        <li><a href="https://mandymozart.bandcamp.com">Buy music via Bandcamp</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 id="portfolios">Portfolios</h4>
+                    <ul>
+                        <li><a href="https://design.porschuetz.de/">Design Portfolio</a></li>
+                        <li><a href="https://www.mandymozart.com/">Art Portfolio</a></li>
+                    </ul>
+                </div>
+            </div></footer>
+            <!-- This page `/blog/cultural-presets/` was built on 2025-01-01T19:49:02.677Z -->
+            <script type="module" src="/dist/rJ3_G-2ArF.js"></script>
+        </body>
+    
+</html>

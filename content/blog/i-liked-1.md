@@ -1,7 +1,7 @@
 ---
 title: I liked No 1
 description: What happened to sharing things that interest me? Time for good old blogging and newsletter.
-date: 2025-12-22
+date: 2024-12-22
 tags:
 ---
 
