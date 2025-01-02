@@ -64,23 +64,24 @@ export default async function (eleventyConfig) {
 		type: "atom", // or "rss", "json"
 		outputPath: "/feed/feed.xml",
 		stylesheet: "pretty-atom-feed.xsl",
-		templateData: {
-			eleventyNavigation: {
-				key: "Feed",
-				order: 4,
-			},
-		},
+		// templateData: {
+		// 	eleventyNavigation: {
+		// 		key: "Feed",
+		// 		order: 4,
+		// 	},
+		// },
 		collection: {
 			name: "posts",
 			limit: 10,
 		},
 		metadata: {
 			language: "en",
-			title: "Blog Title",
-			subtitle: "This is a longer description about your blog.",
-			base: "https://example.com/",
+			title: "æsthetical Therapy",
+			subtitle:
+				"Tilman Porschütz aka Mandy Mozart. I am writing about my work as artist, UX designer, programmer and passionate composer.",
+			base: "https://blog.porschuetz.de/",
 			author: {
-				name: "Your Name",
+				name: "Tilman Porschuetz",
 			},
 		},
 	});
