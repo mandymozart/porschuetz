@@ -3,12 +3,73 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Top Toy - Megaworld</title>
-        <meta name="description" content="Musicvideo">
+        <title>Tagged &#39;releases&#39;</title>
+        <meta name="description" content="Tilman Porschütz aka Mandy Mozart. I am writing about my work as artist, UX designer, programmer and passionate composer.">
         <link rel="alternate" href="feed/feed.xml" type="application/atom+xml" title="Tilman M. Porschütz æsthetical Therapy">
         
         <style>
-        /* This is an arbitrary CSS string added to the bundle */
+        /* Posts list */
+:root {
+	--image-height: 5.5rem;
+}
+.postslist-image {
+	display: block;
+	border-radius: 1rem;
+	overflow: hidden;
+	width: var(--image-height);
+	height: var(--image-height);
+}
+.postslist-image img[width][height] {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+.postslist-item {
+	display: grid;
+	grid-template-columns: var(--image-height) auto;
+	gap: 1rem;
+	margin-bottom: 1rem;
+	font-size: 1rem; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding: 1.25rem;
+	text-decoration: none;
+	background: transparent;
+	border-radius: 2rem;
+	border: 1px solid var(--medium-purple);
+}
+
+.postslist-item:hover {
+	border: 1px solid var(--text-color-link-active);
+}
+.postslist-title {
+	margin-bottom: 0.25rem;
+}
+.postslist-description {
+	font-weight: 300;
+	font-size: 1.25rem;
+	font-family: var(--font-family-serif);
+	text-overflow: ellipsis;
+	margin-bottom: 0.25rem;
+}
+.postslist-date {
+	font-size: 0.875rem;
+	font-weight: 300;
+}
+.postslist-item-active {
+	font-weight: bold;
+}
+.postslist-item:hover .postslist-title {
+	color: var(--text-color-link-active);
+}
+.postslist-item:hover .postslist-description {
+	color: var(--text-color-link-active);
+}
+.postslist-item:hover .postslist-date {
+	color: var(--text-color-link-active);
+}
+/* This is an arbitrary CSS string added to the bundle */
 :root {
 	--font-family: -apple-system, system-ui, sans-serif;
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono,
@@ -352,8 +413,30 @@ a.subscribe-button:hover {
                 
 <p class="lead">Hyper toxic encyclopedia of
     <i>non-shortform content</i>.</p>
-<p>we done it.</p>
-<p>here is a list of all available places to purchase.</p>
+<h1 id="tagged-releases">Tagged “releases”</h1>
+
+
+
+<div class="postslist">
+        <a href="/releases/toptoy-megaworld/" class="postslist-item">
+            <div class="postslist-image">
+                
+            </div>
+            <div>
+                <div class="postslist-title">
+                    
+                        Top Toy - Megaworld
+                    
+                </div>
+                
+                    <div class="postslist-description">Musicvideo</div>
+                
+                <time class="postslist-date" datetime="2024-03-01">March 2024</time>
+            </div>
+        </a>
+</div>
+
+<p>See <a href="/tags/">all tags</a>.</p>
 
             </heading-anchors>
             <div class="subscribe">
@@ -382,7 +465,7 @@ a.subscribe-button:hover {
                     </ul>
                 </div>
             </div></footer>
-            <!-- This page `/releases/toptoy-megaworld/` was built on 2025-01-01T23:53:05.797Z -->
+            <!-- This page `/tags/releases/` was built on 2025-01-01T23:53:05.909Z -->
             <script type="module" src="/dist/rJ3_G-2ArF.js"></script>
         </body>
     

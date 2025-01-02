@@ -8,8 +8,66 @@
         <link rel="alternate" href="feed/feed.xml" type="application/atom+xml" title="Tilman M. Porschütz æsthetical Therapy">
         
         <style>
-        .releaseslist { 
+        /* releases list */
+:root {
+	--image-height: 5.5rem;
+}
+.releaseslist-image {
+	display: block;
+	border-radius: 1rem;
+	overflow: hidden;
+	width: var(--image-height);
+	height: var(--image-height);
+}
+.releaseslist-image img[width][height] {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+.releaseslist-item {
+	display: grid;
+	grid-template-columns: var(--image-height) auto;
+	gap: 1rem;
+	margin-bottom: 1rem;
+	font-size: 1rem; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding: 1.25rem;
+	text-decoration: none;
+	background: transparent;
+	border-radius: 2rem;
+	border: 1px solid var(--medium-purple);
+}
 
+.releaseslist-item:hover {
+	border: 1px solid var(--text-color-link-active);
+}
+.releaseslist-title {
+	margin-bottom: 0.25rem;
+}
+.releaseslist-description {
+	font-weight: 300;
+	font-size: 1.25rem;
+	font-family: var(--font-family-serif);
+	text-overflow: ellipsis;
+	margin-bottom: 0.25rem;
+}
+.releaseslist-date {
+	font-size: 0.875rem;
+	font-weight: 300;
+}
+.releaseslist-item-active {
+	font-weight: bold;
+}
+.releaseslist-item:hover .releaseslist-title {
+	color: var(--text-color-link-active);
+}
+.releaseslist-item:hover .releaseslist-description {
+	color: var(--text-color-link-active);
+}
+.releaseslist-item:hover .releaseslist-date {
+	color: var(--text-color-link-active);
 }
 /* This is an arbitrary CSS string added to the bundle */
 :root {
@@ -98,23 +156,20 @@ p {
 	line-height: 1.3;
 	color: var(--text-color);
 }
-.properties .property {
-}
-.properties .property.property--title {
-	color: var(--text-color);
-	font-size: 7rem;
-	font-weight: 700;
-	margin-bottom: 2rem;
-}
-.properties .property.property--tagline {
-	color: var(--text-color);
-	font-family: "Times New Roman", Times, serif;
-	font-size: 4rem;
+
+p.more-posts-text {
+	text-align: center;
 }
 
 footer {
 	width: 100vw;
 	padding: 1rem;
+	text-decoration: none;
+	color: var(--medium-purple);
+	align-items: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
 }
 footer h3 {
 	font-size: 4rem;
@@ -302,7 +357,7 @@ p.lead {
 }
 
 .subscribe {
-	margin: 1rem;
+	margin: 5rem;
 	border-radius: 2rem;
 	border: 1px solid var(--medium-purple);
 	padding: 3rem;
@@ -319,8 +374,8 @@ a.subscribe-button {
 	font-size: 1.25rem;
 	text-decoration: none;
 	border-radius: 2rem;
-	background-color: var(--text-color-link);
-	color: var(--background-color);
+	background-color: var(--medium-purple);
+	color: var(--text-color-link);
 	border: 1px solid var(--text-color-link);
 }
 a.subscribe-button:hover {
@@ -356,22 +411,36 @@ a.subscribe-button:hover {
         <main id="skip">
             <heading-anchors>
                 
-<p class="lead">Hyper toxic encyclopedia of <i>non-shortform content</i>. Made for the <i>real</i> internet since 1998.</p>
-
+<p class="lead">Hyper toxic encyclopedia of
+    <i>non-shortform content</i>.</p>
  
 
 <h1 id="releases">Releases</h1>
 
 
 <div class="releaseslist">
+        <a href="/releases/toptoy-megaworld/" class="releaseslist-item">
+            <div class="releaseslist-image">
+                
+            </div>
+            <div>
+                <div class="releaseslist-title">
+                    
+                        Top Toy - Megaworld
+                    
+                </div>
+                
+                    <div class="releaseslist-description">Musicvideo</div>
+                
+                <time class="releaseslist-date" datetime="2024-03-01">March 2024</time>
+            </div>
+        </a>
 </div>
-
-
             </heading-anchors>
             <div class="subscribe">
-                <p>The edgyness of my content needs your help. By pledging a small monthly donation or with a
+                <p>My content is edgy. By pledging a small monthly donation or with a
                     <i>free subscribtion</i>
-                    to my newsletter you can help me staying independent from brand endorsements, platforms monetization or institutional
+                    to my newsletter you allow me to stay independent from brand endorsements, platform monetization or institutional
                     funding.</p>
                 <a class="subscribe-button" href="#subscribe">Subscribe</a>
             </div>
@@ -394,7 +463,7 @@ a.subscribe-button:hover {
                     </ul>
                 </div>
             </div></footer>
-            <!-- This page `/releases/` was built on 2025-01-01T19:49:02.672Z -->
+            <!-- This page `/releases/` was built on 2025-01-01T23:53:05.802Z -->
             <script type="module" src="/dist/rJ3_G-2ArF.js"></script>
         </body>
     

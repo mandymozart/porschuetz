@@ -8,57 +8,66 @@
         <link rel="alternate" href="feed/feed.xml" type="application/atom+xml" title="Tilman M. Porschütz æsthetical Therapy">
         
         <style>
-        @layer posts {
-	/* Posts list */
-	.postslist {
-		display: grid;
-		grid-template-columns: auto 6rem;
-	}
-	.postslist-image {
-		display: block;
-		border-radius: 1rem;
-	}
-	.postslist-item {
-		display: block;
-		margin-bottom: 1em;
-		font-size: 1rem; /* 19px /16 */
-		font-weight: 700;
-		flex-basis: calc(100% - 1.5rem);
-		padding: 1.25rem;
-		text-decoration: none;
-		background: transparent;
-		border-radius: 2rem;
-		border: 1px solid var(--medium-purple);
-	}
-	.postslist-item:hover {
-		border: 1px solid var(--text-color-link-active);
-	}
-	.postslist-title {
-		margin-bottom: 0.25rem;
-	}
-	.postslist-description {
-		font-weight: 300;
-		font-size: 1.25rem;
-		font-family: var(--font-family-serif);
-		text-overflow: ellipsis;
-		margin-bottom: 0.25rem;
-	}
-	.postslist-date {
-		font-size: 0.875rem;
-		font-weight: 300;
-	}
-	.postslist-item-active {
-		font-weight: bold;
-	}
-	.postslist-item:hover .postslist-title {
-		color: var(--text-color-link-active);
-	}
-	.postslist-item:hover .postslist-description {
-		color: var(--text-color-link-active);
-	}
-	.postslist-item:hover .postslist-date {
-		color: var(--text-color-link-active);
-	}
+        /* Posts list */
+:root {
+	--image-height: 5.5rem;
+}
+.postslist-image {
+	display: block;
+	border-radius: 1rem;
+	overflow: hidden;
+	width: var(--image-height);
+	height: var(--image-height);
+}
+.postslist-image img[width][height] {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+.postslist-item {
+	display: grid;
+	grid-template-columns: var(--image-height) auto;
+	gap: 1rem;
+	margin-bottom: 1rem;
+	font-size: 1rem; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding: 1.25rem;
+	text-decoration: none;
+	background: transparent;
+	border-radius: 2rem;
+	border: 1px solid var(--medium-purple);
+}
+
+.postslist-item:hover {
+	border: 1px solid var(--text-color-link-active);
+}
+.postslist-title {
+	margin-bottom: 0.25rem;
+}
+.postslist-description {
+	font-weight: 300;
+	font-size: 1.25rem;
+	font-family: var(--font-family-serif);
+	text-overflow: ellipsis;
+	margin-bottom: 0.25rem;
+}
+.postslist-date {
+	font-size: 0.875rem;
+	font-weight: 300;
+}
+.postslist-item-active {
+	font-weight: bold;
+}
+.postslist-item:hover .postslist-title {
+	color: var(--text-color-link-active);
+}
+.postslist-item:hover .postslist-description {
+	color: var(--text-color-link-active);
+}
+.postslist-item:hover .postslist-date {
+	color: var(--text-color-link-active);
 }
 /* This is an arbitrary CSS string added to the bundle */
 :root {
@@ -147,23 +156,20 @@ p {
 	line-height: 1.3;
 	color: var(--text-color);
 }
-.properties .property {
-}
-.properties .property.property--title {
-	color: var(--text-color);
-	font-size: 7rem;
-	font-weight: 700;
-	margin-bottom: 2rem;
-}
-.properties .property.property--tagline {
-	color: var(--text-color);
-	font-family: "Times New Roman", Times, serif;
-	font-size: 4rem;
+
+p.more-posts-text {
+	text-align: center;
 }
 
 footer {
 	width: 100vw;
 	padding: 1rem;
+	text-decoration: none;
+	color: var(--medium-purple);
+	align-items: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
 }
 footer h3 {
 	font-size: 4rem;
@@ -351,7 +357,7 @@ p.lead {
 }
 
 .subscribe {
-	margin: 1rem;
+	margin: 5rem;
 	border-radius: 2rem;
 	border: 1px solid var(--medium-purple);
 	padding: 3rem;
@@ -368,8 +374,8 @@ a.subscribe-button {
 	font-size: 1.25rem;
 	text-decoration: none;
 	border-radius: 2rem;
-	background-color: var(--text-color-link);
-	color: var(--background-color);
+	background-color: var(--medium-purple);
+	color: var(--text-color-link);
 	border: 1px solid var(--text-color-link);
 }
 a.subscribe-button:hover {
@@ -405,14 +411,17 @@ a.subscribe-button:hover {
         <main id="skip">
             <heading-anchors>
                 
-<p class="lead">Hyper toxic encyclopedia of <i>non-shortform content</i>. Made for the <i>real</i> internet since 1998.</p>
-
+<p class="lead">Hyper toxic encyclopedia of
+    <i>non-shortform content</i>.</p>
 <h1 id="tagged-ai">Tagged “AI”</h1>
 
 
 
 <div class="postslist">
-        <a href="/blog/articles-of-interest-1/" class="postslist-item">
+        <a href="/blog/2024/articles-of-interest-1/" class="postslist-item">
+            <div class="postslist-image">
+                
+            </div>
             <div>
                 <div class="postslist-title">
                     
@@ -424,22 +433,16 @@ a.subscribe-button:hover {
                 
                 <time class="postslist-date" datetime="2024-12-30">December 2024</time>
             </div>
-            <div>
-                <div class="postslist-image">
-                    
-                </div>
-            </div>
         </a>
 </div>
 
 <p>See <a href="/tags/">all tags</a>.</p>
 
-
             </heading-anchors>
             <div class="subscribe">
-                <p>The edgyness of my content needs your help. By pledging a small monthly donation or with a
+                <p>My content is edgy. By pledging a small monthly donation or with a
                     <i>free subscribtion</i>
-                    to my newsletter you can help me staying independent from brand endorsements, platforms monetization or institutional
+                    to my newsletter you allow me to stay independent from brand endorsements, platform monetization or institutional
                     funding.</p>
                 <a class="subscribe-button" href="#subscribe">Subscribe</a>
             </div>
@@ -462,7 +465,7 @@ a.subscribe-button:hover {
                     </ul>
                 </div>
             </div></footer>
-            <!-- This page `/tags/ai/` was built on 2025-01-01T19:49:02.887Z -->
+            <!-- This page `/tags/ai/` was built on 2025-01-01T23:53:05.902Z -->
             <script type="module" src="/dist/rJ3_G-2ArF.js"></script>
         </body>
     

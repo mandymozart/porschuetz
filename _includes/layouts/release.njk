@@ -33,9 +33,9 @@ layout: layouts/base.njk
                         {{ previousrelease.data.description }}</li>
                 {% endif %}
                 {%- if nextrelease %}
-                    <li class="links-nextprev-next">Next →<br>
-                            <a href="{{ nextrelease.url }}">{{ nextrelease.data.title }}</a><br/>{{ nextrelease.data.description }}</li>
-                    {% endif %}
-                </ul>
-            {%- endif %}
+                    <li class="links-nextprev-next">Next →<br/>
+                        <a href="{{ nextrelease.url }}">{{ nextrelease.data.title }}</a><br/>{{ nextrelease.data.description }}</li>
+                {% endif %}
+            </ul>
         {%- endif %}
+    {%- endif %}

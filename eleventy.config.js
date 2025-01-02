@@ -13,6 +13,11 @@ import pluginFirstImage from "eleventy-first-image-plugin";
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function (eleventyConfig) {
+	// Define a 'releases' collection that gathers all files with the 'release' tag
+	eleventyConfig.addCollection("releases", function (collectionApi) {
+		const releases = collectionApi.getFilteredByTag("release");
+		return releases.sort((a, b) => a.date - b.date);
+	});
 	// Drafts, see also _data/eleventyDataSchema.js
 	eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
 		if (data.draft && process.env.ELEVENTY_RUN_MODE === "build") {

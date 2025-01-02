@@ -41,7 +41,7 @@
 		"cross-env": "^7.0.3",
 		"luxon": "^3.5.0",
 		"zod": "^3.23.8",
-		"eleventy-first-image-plugin": "^1.0.2",
+		"eleventy-first-image-plugin": "^1.0.3",
 		"zod-validation-error": "^3.3.1",
 		"markdown-to-png": "^0.1.9",
 		"vite": "^6.0.6"
