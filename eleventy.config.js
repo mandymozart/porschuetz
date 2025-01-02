@@ -16,6 +16,9 @@ export default async function (eleventyConfig) {
 	// Define a 'releases' collection that gathers all files with the 'release' tag
 	eleventyConfig.addCollection("releases", function (collectionApi) {
 		const releases = collectionApi.getFilteredByTag("release");
+		releases.forEach((release) => {
+			release.data.layout = "layouts/release.njk";
+		});
 		return releases.sort((a, b) => a.date - b.date);
 	});
 	// Drafts, see also _data/eleventyDataSchema.js

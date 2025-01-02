@@ -3,23 +3,6 @@
 {% endcss %}
 <div class="releaseslist">
     {%- for release in releaseslist | reverse %}
-        <a href="{{ release.url }}" class="releaseslist-item{% if release.url == url %} releaseslist-item-active{% endif %}">
-            <div class="releaseslist-image">
-                {% first_image release %}
-            </div>
-            <div>
-                <div class="releaseslist-title">
-                    {% if release.data.title %}
-                        {{ release.data.title }}
-                    {% else %}
-                        <code>{{ release.url }}</code>
-                    {% endif %}
-                </div>
-                {% if release.data.description %}
-                    <div class="releaseslist-description">{{ release.data.description }}</div>
-                {% endif %}
-                <time class="releaseslist-date" datetime="{{ release.date | htmlDateString }}">{{ release.date | readableDate("LLLL yyyy") }}</time>
-            </div>
-        </a>
+        {% include "releaseslist-item.njk" %}
     {%- endfor %}
 </div>

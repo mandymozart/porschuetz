@@ -14,7 +14,7 @@
 	},
 	"scripts": {
 		"build:images": "vite build",
-		"dev:images": "node dist/index.esm.js",
+		"dev:images": "vite build && node dist/index.esm.js",
 		"prepublishOnly:images": "vite build",
 		"build": "npx @11ty/eleventy",
 		"build-nocolor": "cross-env NODE_DISABLE_COLORS=1 npx @11ty/eleventy",

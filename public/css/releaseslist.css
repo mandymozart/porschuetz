@@ -1,13 +1,14 @@
 /* releases list */
 :root {
-	--image-height: 5.5rem;
+	--image-height: 3rem;
 }
 .releaseslist-image {
 	display: block;
-	border-radius: 1rem;
+	border-radius: 0.5rem;
 	overflow: hidden;
 	width: var(--image-height);
 	height: var(--image-height);
+	background-color: var(--border-color);
 }
 .releaseslist-image img[width][height] {
 	width: 100%;
@@ -23,39 +24,25 @@
 	font-size: 1rem; /* 19px /16 */
 	font-weight: 700;
 	flex-basis: calc(100% - 1.5rem);
-	padding: 1.25rem;
+	padding: 0.5rem;
 	text-decoration: none;
 	background: transparent;
-	border-radius: 2rem;
-	border: 1px solid var(--medium-purple);
+	border-radius: 1rem;
+	border: 1px solid var(--border-color);
 }
 
 .releaseslist-item:hover {
 	border: 1px solid var(--text-color-link-active);
 }
 .releaseslist-title {
-	margin-bottom: 0.25rem;
-}
-.releaseslist-description {
-	font-weight: 300;
+	display: flex;
 	font-size: 1.25rem;
-	font-family: var(--font-family-serif);
-	text-overflow: ellipsis;
-	margin-bottom: 0.25rem;
-}
-.releaseslist-date {
-	font-size: 0.875rem;
-	font-weight: 300;
+	justify-content: flex-start;
+	align-items: center;
 }
 .releaseslist-item-active {
 	font-weight: bold;
 }
 .releaseslist-item:hover .releaseslist-title {
-	color: var(--text-color-link-active);
-}
-.releaseslist-item:hover .releaseslist-description {
-	color: var(--text-color-link-active);
-}
-.releaseslist-item:hover .releaseslist-date {
 	color: var(--text-color-link-active);
 }

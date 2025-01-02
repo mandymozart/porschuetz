@@ -3,39 +3,44 @@ layout: layouts/base.njk
 ---
 
 {%- css %}{% include "public/css/release.css" %}{%- endcss %}
+{%- css %}
+{% include "public/css/releaseslist.css" %}
+{% endcss %}
 {# Only include the syntax highlighter CSS on blog releases, included with the CSS per-page bundle #}
 {%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %}
 {%- css %}{% include "public/css/prism-diff.css" %}{%- endcss %}
 <h1 class="release-title">{{ title }}</h1>
-<div class="release-description">{{ description }}</div>
-<div class="release-metadata">
-    <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
-    <div class="release-taglist">
-        {%- for tag in tags | filterTagList %}
+<div class="release-taglist">
+    {%- for tag in tags | filterTagList %}
+        {%- if tag !== "release" %}
             {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
             <a href="{{ tagUrl }}" class="release-tag">{{ tag }}</a>
             {%- if not loop.last %},
             {% endif %}
-        {%- endfor %}
-    </div>
+        {%- endif %}
+    {%- endfor %}
 </div>
 <div class="release-content">
     {{ content | safe }}
 </div>
 {%- if collections.releases %}
-    {%- set previousrelease = collections.releases | getPreviousCollectionItem %}
-    {%- set nextrelease = collections.releases | getNextCollectionItem %}
-    {%- if nextrelease or previousrelease %}
-        <ul class="links-nextprev">
-            {%- if previousrelease %}
-                <li class="links-nextprev-prev">← Previous<br>
-                        <a href="{{ previousrelease.url }}">{{ previousrelease.data.title }}</a>
-                        {{ previousrelease.data.description }}</li>
+    {%- set previousRelease = collections.releases | getPreviousCollectionItem %}
+    {%- set nextRelease = collections.releases | getNextCollectionItem %}
+    {%- if nextRelease or previousRelease %}
+        <div class="links-nextprev">
+            {%- if previousRelease %}
+                <div class="links-nextprev-item links-nextprev-item--prev">
+                    <div class="links-nextprev-item-label">← Previous</div>
+                    {% set release = previousRelease %}
+                    {% include "./../releaseslist-item.njk" %}
+                </div>
+            {% endif %}
+            {%- if nextRelease %}
+                <div class="links-nextprev-item links-nextprev-item--next">
+                    <div class="links-nextprev-item-label">Next →</div>
+                    {% set release = nextRelease %}
+                    {% include "./../releaseslist-item.njk" %}
                 {% endif %}
-                {%- if nextrelease %}
-                    <li class="links-nextprev-next">Next →<br/>
-                        <a href="{{ nextrelease.url }}">{{ nextrelease.data.title }}</a><br/>{{ nextrelease.data.description }}</li>
-                {% endif %}
-            </ul>
+            </div>
         {%- endif %}
     {%- endif %}

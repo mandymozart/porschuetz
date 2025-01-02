@@ -17,11 +17,13 @@
 	--text-color-link: var(--text-color);
 	--text-color-link-active: var(--bright-orange);
 	--text-color-link-visited: var(--text-color);
+	--border-color: var(--medium-purple);
 
 	--color-gray-10: #f5f5f5;
 	--color-gray-20: #e0e0e0;
 	--color-gray-50: #c0c0c0;
-	--color-gray-90: var(--medium-purple);
+	--color-gray-70: #333;
+	--color-gray-90: #010101;
 
 	--background-color: var(--primary-color);
 	--padding: 2rem;
@@ -35,12 +37,13 @@
 }
 
 [data-theme="monochrome"] {
-	--text-color: var(--color-gray-90);
+	--text-color: var(--color-gray-70);
 	--primary-color: var(--color-gray-10);
 	--text-color-link: var(--text-color);
 	--text-color-link-active: var(--color-gray-90);
 	--text-color-link-visited: var(--text-color);
 	--background-color: var(--primary-color);
+	--border-color: var(--color-gray-50);
 }
 
 * {
@@ -79,6 +82,10 @@ main {
 	padding: 0 1rem;
 	margin: 0 auto;
 }
+h1 {
+	text-align: center;
+	font-size: 2rem;
+}
 p {
 	font-size: 1.25rem;
 	line-height: 1.3;
@@ -93,11 +100,10 @@ footer {
 	width: 100vw;
 	padding: 1rem;
 	text-decoration: none;
-	color: var(--medium-purple);
+	color: var(--color-gray-70);
 	align-items: center;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 1rem;
+	grid-template-columns: 2fr 1fr;
 }
 footer h3 {
 	font-size: 4rem;
@@ -132,10 +138,15 @@ footer a[href],
 footer a[href]:visited,
 footer {
 	text-decoration: none;
-	color: var(--medium-purple);
+	color: var(--color-gray-70);
 }
 footer a:hover {
 	color: var(--text-color-link-active);
+}
+@media screen and (max-width: 800px) {
+	footer {
+		grid-template-columns: 1fr;
+	}
 }
 
 /* Global stylesheet */
@@ -184,21 +195,6 @@ a:visited {
 a:hover,
 a:active {
 	color: var(--text-color-link-active);
-}
-
-.links-nextprev {
-	display: flex;
-	justify-content: space-between;
-	gap: 0.5em 1em;
-	list-style: "";
-	border-top: 0.5rem dashed var(--color-gray-20);
-	padding: 1em 0;
-}
-.links-nextprev > * {
-	flex-grow: 1;
-}
-.links-nextprev-next {
-	text-align: right;
 }
 
 table {
@@ -285,9 +281,10 @@ p.lead {
 }
 
 .subscribe {
-	margin: 5rem;
+	max-width: 27rem;
+	margin: 5rem auto;
 	border-radius: 2rem;
-	border: 1px solid var(--medium-purple);
+	border: 1px solid var(--border-color);
 	padding: 3rem;
 	text-align: center;
 	font-size: 1rem;

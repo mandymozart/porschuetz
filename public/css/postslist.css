@@ -8,6 +8,7 @@
 	overflow: hidden;
 	width: var(--image-height);
 	height: var(--image-height);
+	background: var(--color-gray-20);
 }
 .postslist-image img[width][height] {
 	width: 100%;
@@ -25,9 +26,9 @@
 	flex-basis: calc(100% - 1.5rem);
 	padding: 1.25rem;
 	text-decoration: none;
-	background: transparent;
+	background: var(--background-color);
 	border-radius: 2rem;
-	border: 1px solid var(--medium-purple);
+	border: 1px solid var(--border-color);
 }
 
 .postslist-item:hover {

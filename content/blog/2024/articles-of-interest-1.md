@@ -5,16 +5,16 @@ date: 2024-12-30
 tags:
   - music therapy
   - psychology
-  - UX design
-  - AI
+  - ux design
+  - ai
   - culture
 ---
 
-The article was written by Sophia Omarji, a psychologist researcher and UX designer until recently working at Spotify. Reading it made me reflect deeply on the impact of AI on culture and the importance of our concept of what “culture” is or is supposed to do. While globalization has brought the world "closer" in many ways, it has also led to a reduction in diversity on a macro scale, as cultures increasingly influence and homogenize each other. The prevalence of hegemonic pop music and its widespread normalization exemplifies this trend, a phenomenon heavily critiqued in post-colonial discourse on music.
+The article [Read on Medium](https://medium.com/illumination/culturally-competent-music-therapy-in-the-age-of-ai-a-pathway-to-personalised-interventions-b1ee05019716) was written by Sophia Omarji, a psychologist researcher and UX designer until recently working at Spotify. Reading it made me reflect deeply on the impact of AI on culture and the importance of our concept of what “culture” is or is supposed to do. While globalization has brought the world "closer" in many ways, it has also led to a reduction in diversity on a macro scale, as cultures increasingly influence and homogenize each other. The prevalence of hegemonic pop music and its widespread normalization exemplifies this trend, a phenomenon heavily critiqued in post-colonial discourse on music.
 
 Interestingly, the referenced research suggests a more optimistic view of AI. It posits that AI has the potential to carefully reflect cultural niches, acting as an impartial interpreter between professionals and their subjects in contexts like music therapy. However, this also raises concerns about treating culture and worldview as digital commodities, effectively "storing" them within recorded artifacts of music.
 
-The term "culture" itself warrants scrutiny. Sama Maani’s “Respektverweigerung: Warum wir fremde Kulturen nicht respektieren sollten. Und die eigene auch nicht.” argues that the concept of culture often serves to highlight and preserve otherness rather than bridge gaps. This stands in contrast to Sophia Omarji’s study, which advocates for finding commonalities. The purpose of music—whether to emphasize differences or discover universal connections—remains a matter of perspective.
+The term "culture" itself warrants scrutiny. Sama Maani’s [“Respektverweigerung: Warum wir fremde Kulturen nicht respektieren sollten. Und die eigene auch nicht.”](https://www.amazon.de/Respektverweigerung-fremde-Kulturen-respektieren-sollten/dp/3854357575) argues that the concept of culture often serves to highlight and preserve otherness rather than bridge gaps. This stands in contrast to Sophia Omarji’s study, which advocates for finding commonalities. The purpose of music—whether to emphasize differences or discover universal connections—remains a matter of perspective.
 
 For me, music is a ritual—an intimate interaction between performers, audience, instruments, and settings. Incorporating machines and samples into performances has undeniably altered the dynamics, sometimes detrimentally, particularly when these elements are imbued with meta-level considerations or power dynamics. This connects to therapeutic contexts, where authority is inherently conferred upon therapists by their clients, creating a complex interplay of power.
 

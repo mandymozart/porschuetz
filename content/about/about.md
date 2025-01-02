@@ -1,13 +1,11 @@
 ---
 eleventyNavigation:
   key: "About"
-  order: 3
+  order: 4
 ---
 
-# About
+This is the blog of Tilman Porschütz aka Mandy Mozart.
 
-I am a person that writes about design, music and technology.
-
-I am a person that does design, music and technology.
-
-I am a person.
+They are a person.
+They are a person that writes about design, music and technology.
+They are a person that does design, music and technology.

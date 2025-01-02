@@ -5,6 +5,8 @@ eleventyNavigation:
 numberOfLatestPostsToShow: 7
 --- 
 
+<p class="lead">Hyper toxic encyclopedia of
+    <i>non-shortform content</i>.</p>
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
 {% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}

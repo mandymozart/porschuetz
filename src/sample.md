@@ -1,6 +1,9 @@
 ---
 title: Articles of Interest #1
-tagline: Reacting to How AI Can Help Bridge Cultural Gaps in Music Therapy by Sophia Omarji
+description: Reacting to How AI Can Help Bridge Cultural Gaps in Music Therapy by Sophia Omarji
+date: 2024-12-29
+tags:
+  - articles of interest
 ---
 
 The article was written by Sophia Omarji, a psychologist researcher and UX designer until recently working at Spotify. Reading it made me reflect deeply on the impact of AI on culture and the importance of our concept of what “culture” is or is supposed to do. While globalization has brought the world "closer" in many ways, it has also led to a reduction in diversity on a macro scale, as cultures increasingly influence and homogenize each other. The prevalence of hegemonic pop music and its widespread normalization exemplifies this trend, a phenomenon heavily critiqued in post-colonial discourse on music.
