@@ -8,7 +8,7 @@
 	overflow: hidden;
 	width: var(--image-height);
 	height: var(--image-height);
-	background: var(--color-gray-20);
+	background: var(--border-color);
 }
 .postslist-image img[width][height] {
 	width: 100%;
@@ -33,6 +33,9 @@
 
 .postslist-item:hover {
 	border: 1px solid var(--text-color-link-active);
+}
+.postslist-item:hover .postslist-image {
+	background: var(--text-color-link-active);
 }
 .postslist-title {
 	margin-bottom: 0.25rem;

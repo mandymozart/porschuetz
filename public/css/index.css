@@ -12,18 +12,19 @@
 	--bright-orange: #f14a00;
 	--substack-orange: #ff6719;
 
+	--color-gray-10: #f5f5f5;
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #c0c0c0;
+	--color-gray-70: #333;
+	--color-gray-90: #010101;
+
 	--text-color: var(--dark-orange);
 	--primary-color: var(--dark-purple);
 	--text-color-link: var(--text-color);
 	--text-color-link-active: var(--bright-orange);
 	--text-color-link-visited: var(--text-color);
 	--border-color: var(--medium-purple);
-
-	--color-gray-10: #f5f5f5;
-	--color-gray-20: #e0e0e0;
-	--color-gray-50: #c0c0c0;
-	--color-gray-70: #333;
-	--color-gray-90: #010101;
+	--footer-color: var(--medium-purple);
 
 	--background-color: var(--primary-color);
 	--padding: 2rem;
@@ -44,6 +45,7 @@
 	--text-color-link-visited: var(--text-color);
 	--background-color: var(--primary-color);
 	--border-color: var(--color-gray-50);
+	--footer-color: var(--color-gray-70);
 }
 
 * {
@@ -100,7 +102,7 @@ footer {
 	width: 100vw;
 	padding: 1rem;
 	text-decoration: none;
-	color: var(--color-gray-70);
+	color: var(--footer-color);
 	align-items: center;
 	display: grid;
 	grid-template-columns: 2fr 1fr;
@@ -138,7 +140,7 @@ footer a[href],
 footer a[href]:visited,
 footer {
 	text-decoration: none;
-	color: var(--color-gray-70);
+	color: var(--footer-color);
 }
 footer a:hover {
 	color: var(--text-color-link-active);
@@ -307,4 +309,22 @@ a.subscribe-button:hover {
 	background-color: var(--background-color);
 	color: var(--text-color-link-active);
 	border-color: var(--text-color-link-active);
+}
+
+button#theme-toggle {
+	background: none;
+	color: var(--text-color);
+	position: fixed;
+	top: 1rem;
+	right: 1rem;
+	border: none;
+	cursor: pointer;
+}
+button#theme-toggle:hover {
+	background: none;
+	color: var(--text-color-link-active);
+	position: fixed;
+	top: 1rem;
+	right: 1rem;
+	border: none;
 }

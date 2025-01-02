@@ -2,7 +2,10 @@
 title: Nothing to Sell — Kulturelle Presets
 description: Diplomarbeit der Visuellen Kommunikation, Bauhaus-Universität Weimar
 date: 2011-10-10
-tags: ux design, visual communication, presets, frameworks
+tags:
+  - ux design
+  - visual communication
+  - bauhaus
 ---
 
 Tilman Porschuetz
