@@ -14,3 +14,5 @@ jobs:
           server: w00ea933.kasserver.com
           username: f017176b
           password: ${{ secrets.ftp_password }}
+          local-dir: "./_site"
+          server-dir: "/blog"
