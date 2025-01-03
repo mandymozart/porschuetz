@@ -16,7 +16,8 @@ numberOfLatestReleasesToShow: 3
 {% set morePosts = postsCount - numberOfLatestPostsToShow %}
 {% if morePosts > 0 %}
     <p class="more-posts-text">
-        {{ morePosts }} more post{% if morePosts != 1 %}s{% endif %}can be found in
+        {{ morePosts }} more post{% if morePosts != 1 %}s{% endif %}
+        can be found in
         <a href="/blog/">
             the archive
         </a>.</p>
@@ -29,8 +30,9 @@ numberOfLatestReleasesToShow: 3
 {% set moreReleases = releasesCount - numberOfLatestReleasesToShow %}
 {% if moreReleases > 0 %}
     <p class="more-posts-text">
-        {{ moreReleases }} more release{% if moreReleases != 1 %}s{% endif %}can be found in
-        <a href="/blog/">
-            the archive
+        {{ moreReleases }} more release{% if moreReleases != 1 %}s{% endif %}
+        can be found in
+        <a href="/releases/">
+            releases
         </a>.</p>
 {% endif %}

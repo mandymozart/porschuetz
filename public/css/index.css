@@ -12,6 +12,7 @@
 	--bright-orange: #f14a00;
 	--substack-orange: #ff6719;
 
+	--white: #fff;
 	--color-gray-10: #f5f5f5;
 	--color-gray-20: #e0e0e0;
 	--color-gray-50: #c0c0c0;
@@ -19,11 +20,11 @@
 	--color-gray-90: #010101;
 
 	--text-color: var(--color-gray-70);
-	--primary-color: var(--color-gray-10);
+	--primary-color: var(--dark-orange);
 	--text-color-link: var(--text-color);
 	--text-color-link-active: var(--color-gray-90);
 	--text-color-link-visited: var(--text-color);
-	--background-color: var(--primary-color);
+	--background-color: var(--white);
 	--border-color: var(--color-gray-50);
 	--footer-color: var(--color-gray-70);
 
@@ -60,11 +61,10 @@ body {
 	margin: 0 auto;
 	font-family: var(--font-family);
 	color: var(--text-color);
-	background-color: var(--background-color);
 	font-family: var(--font-family);
 	margin: 0;
 	padding: 0;
-	background: var(--primary-color);
+	background-color: var(--background-color);
 	color: var(--text-color);
 }
 

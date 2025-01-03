@@ -5,11 +5,8 @@ date: 2022-02-08
 tags:
   - release
   - Mandy Mozart
+image: /releases/loveforwomen/loveforwomen.jpg
 ---
-
-<a href="https://mandymozart.bandcamp.com/album/op-42-love-for-women">
-  <img src="./loveforwomen.jpg" alt="Mandy Mozart Op. 42 - Love for Women" width="320" height="320">
-</a>
 
 ## Listen on
 

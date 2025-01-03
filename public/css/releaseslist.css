@@ -1,13 +1,13 @@
 /* releases list */
 :root {
-	--image-height: 3rem;
+	--releaseslist-image-height: 3rem;
 }
 .releaseslist-image {
 	display: block;
 	border-radius: 0.5rem;
 	overflow: hidden;
-	width: var(--image-height);
-	height: var(--image-height);
+	width: var(--releaseslist-image-height);
+	height: var(--releaseslist-image-height);
 	background-color: var(--border-color);
 }
 .releaseslist-image img[width][height] {
@@ -18,7 +18,7 @@
 }
 .releaseslist-item {
 	display: grid;
-	grid-template-columns: var(--image-height) auto;
+	grid-template-columns: var(--releaseslist-image-height) auto;
 	gap: 1rem;
 	margin-bottom: 1rem;
 	font-size: 1rem; /* 19px /16 */
@@ -33,6 +33,9 @@
 
 .releaseslist-item:hover {
 	border: 1px solid var(--text-color-link-active);
+}
+.releaseslist-item:hover .releaseslist-image {
+	background: var(--text-color-link-active);
 }
 .releaseslist-title {
 	display: flex;

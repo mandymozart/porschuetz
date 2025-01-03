@@ -1,3 +1,6 @@
+.post {
+	position: relative;
+}
 .post-title {
 	font-size: 1.25rem;
 }

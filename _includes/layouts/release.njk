@@ -20,27 +20,31 @@ layout: layouts/base.njk
         {%- endif %}
     {%- endfor %}
 </div>
-<div class="release-content">
-    {{ content | safe }}
-</div>
-{%- if collections.releases %}
-    {%- set previousRelease = collections.releases | getPreviousCollectionItem %}
-    {%- set nextRelease = collections.releases | getNextCollectionItem %}
-    {%- if nextRelease or previousRelease %}
-        <div class="links-nextprev">
-            {%- if previousRelease %}
-                <div class="links-nextprev-item links-nextprev-item--prev">
-                    <div class="links-nextprev-item-label">← Previous</div>
-                    {% set release = previousRelease %}
-                    {% include "./../releaseslist-item.njk" %}
-                </div>
-            {% endif %}
-            {%- if nextRelease %}
-                <div class="links-nextprev-item links-nextprev-item--next">
-                    <div class="links-nextprev-item-label">Next →</div>
-                    {% set release = nextRelease %}
-                    {% include "./../releaseslist-item.njk" %}
+{% if image %}
+    <div class="release-image">
+        <img src="{{ image }}" alt="{{ title }}"></div>
+    {% endif %}
+    <div class="release-content">
+        {{ content | safe }}
+    </div>
+    {%- if collections.releases %}
+        {%- set previousRelease = collections.releases | getPreviousCollectionItem %}
+        {%- set nextRelease = collections.releases | getNextCollectionItem %}
+        {%- if nextRelease or previousRelease %}
+            <div class="links-nextprev">
+                {%- if previousRelease %}
+                    <div class="links-nextprev-item links-nextprev-item--prev">
+                        <div class="links-nextprev-item-label">← Previous</div>
+                        {% set release = previousRelease %}
+                        {% include "./../releaseslist-item.njk" %}
+                    </div>
                 {% endif %}
-            </div>
+                {%- if nextRelease %}
+                    <div class="links-nextprev-item links-nextprev-item--next">
+                        <div class="links-nextprev-item-label">Next →</div>
+                        {% set release = nextRelease %}
+                        {% include "./../releaseslist-item.njk" %}
+                    {% endif %}
+                </div>
+            {%- endif %}
         {%- endif %}
-    {%- endif %}

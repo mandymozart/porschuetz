@@ -2,6 +2,9 @@
 title: Notes On Shark Fin Soup & Genocide
 description: What the latest shark attacks in the Mediteranian reveal about humanities modus operandi.
 date: 2017-06-26
+tags:
+  - sustainbility
+image: /blog/2017/sharkfinsoup/sharkfinsoup.webp
 ---
 
 <img src="sharkfinsoup.webp" alt="Kids looking at shark in fishtank">

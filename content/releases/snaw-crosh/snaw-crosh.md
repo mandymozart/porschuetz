@@ -6,11 +6,8 @@ tags:
   - release
   - Mandy Mozart
   - Otto Oscar Hernandez
+image: /releases/snaw-crosh/snaw-crosh.jpg
 ---
-
-<a href="https://mandymozart.bandcamp.com/album/snaw-crosh">
-  <img src="./snaw-crosh.jpg" alt="Otto Oscar Hernandez, Mandy Mozart Snaw Crosh" width="320" height="320">
-</a>
 
 ## Listen on
 

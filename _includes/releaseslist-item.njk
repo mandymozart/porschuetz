@@ -1,12 +1,11 @@
 <a href="{{ release.url }}" class="releaseslist-item{% if release.url == url %} releaseslist-item-active{% endif %}">
     <div class="releaseslist-image">
-        {% first_image release %}
-    </div>
-    <div class="releaseslist-title">
-        {% if release.data.title %}
-            {{ release.data.title }}
-        {% else %}
-            <code>{{ release.url }}</code>
-        {% endif %}
-    </div>
-</a>
+        <img src="{{ release.data.image }}" alt="{{ release.data.title }}" width="88" height="88"></div>
+        <div class="releaseslist-title">
+            {% if release.data.title %}
+                {{ release.data.title }}
+            {% else %}
+                <code>{{ release.url }}</code>
+            {% endif %}
+        </div>
+    </a>

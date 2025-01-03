@@ -1,13 +1,13 @@
 /* Posts list */
 :root {
-	--image-height: 5.5rem;
+	--postslist-image-height: 5.5rem;
 }
 .postslist-image {
 	display: block;
 	border-radius: 1rem;
 	overflow: hidden;
-	width: var(--image-height);
-	height: var(--image-height);
+	width: var(--postslist-image-height);
+	height: var(--postslist-image-height);
 	background: var(--border-color);
 }
 .postslist-image img[width][height] {
@@ -17,9 +17,7 @@
 	object-position: center;
 }
 .postslist-item {
-	display: grid;
-	grid-template-columns: var(--image-height) auto;
-	gap: 1rem;
+	display: block;
 	margin-bottom: 1rem;
 	font-size: 1rem; /* 19px /16 */
 	font-weight: 700;
@@ -29,6 +27,11 @@
 	background: var(--background-color);
 	border-radius: 2rem;
 	border: 1px solid var(--border-color);
+}
+.postslist-item--has-image {
+	display: grid;
+	grid-template-columns: var(--postslist-image-height) auto;
+	gap: 1rem;
 }
 
 .postslist-item:hover {

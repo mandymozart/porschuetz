@@ -5,11 +5,8 @@ date: 2023-07-01
 tags:
   - release
   - top toy
+image: /releases/rumble-in-the-jumble/rumble-in-the-jumble.jpg
 ---
-
-<a href="https://toptoy.bandcamp.com/album/rumble-in-the-jumble">
-    <img src="rumble-in-the-jumble.jpg" alt="TOP TOY, Mandy Mozart, Buenoventura - Rumble In The Jumble">
-</a>
 
 ## Listen on
 

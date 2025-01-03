@@ -1,18 +1,19 @@
-<a href="{{ post.url }}" class="postslist-item{% if post.url == url %} postslist-item-active{% endif %}">
-    <div class="postslist-image">
-        {% first_image post %}
-    </div>
-    <div>
-        <div class="postslist-title">
-            {% if post.data.title %}
-                {{ post.data.title }}
-            {% else %}
-                <code>{{ post.url }}</code>
-            {% endif %}
-        </div>
-        {% if post.data.description %}
-            <div class="postslist-description">{{ post.data.description }}</div>
+<a href="{{ post.url }}" class="postslist-item{% if post.url == url %} postslist-item-active{% endif %} {% if post.data.image %}postslist-item--has-image{% endif %}">
+    {% if post.data.image %}
+        <div class="postslist-image">
+            <img src="{{ post.data.image }}" alt="{{ post.data.title }}"></div>
         {% endif %}
-        <time class="postslist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time>
-    </div>
-</a>
+        <div>
+            <div class="postslist-title">
+                {% if post.data.title %}
+                    {{ post.data.title }}
+                {% else %}
+                    <code>{{ post.url }}</code>
+                {% endif %}
+            </div>
+            {% if post.data.description %}
+                <div class="postslist-description">{{ post.data.description }}</div>
+            {% endif %}
+            <time class="postslist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time>
+        </div>
+    </a>

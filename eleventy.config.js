@@ -92,14 +92,15 @@ export default async function (eleventyConfig) {
 		extensions: "html",
 
 		// Output formats for each image.
-		formats: ["avif", "webp", "auto"],
+		formats: ["webp", "jpg"],
 
-		widths: ["600"],
+		widths: ["auto", 88, 320, 600],
 
 		defaultAttributes: {
+			sizes: "100vw",
 			// e.g. <img loading decoding> assigned on the HTML tag will override these values.
-			loading: "lazy",
-			decoding: "async",
+			// loading: "lazy",
+			// decoding: "async",
 		},
 	});
 
@@ -112,7 +113,7 @@ export default async function (eleventyConfig) {
 		// selector: "h1,h2,h3,h4,h5,h6", // default
 	});
 	// console.log("pluginFirstImage", pluginFirstImage);
-	eleventyConfig.addPlugin(pluginFirstImage);
+	// eleventyConfig.addPlugin(pluginFirstImage);
 
 	eleventyConfig.addShortcode("currentBuildDate", () => {
 		return new Date().toISOString();

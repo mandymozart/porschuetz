@@ -6,6 +6,7 @@ tags:
   - ux design
   - visual communication
   - bauhaus
+image: /blog/2011/nothing-to-sell/nothing-to-sell.jpg
 ---
 
 Tilman Porschuetz
@@ -216,7 +217,7 @@ Keywords: Fraktale, Rekursion, Preset-Familie
 
 ---
 
-![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXePBKSKr53nqFKi9L2KJd_cyOYjla07ijab2Bk3RX4oRANbQYTJzfBnZes-majUerD_NWvOpTVJdRZxNIdkeFpETnvk9ypDH46uUb2y_IoOZS2ag5Qm08afJr3kMMZpuCZ7sEs08MlYOavL?key=i2UCbwnp2mfJ99O83EnAIw)
+![Baumstammmodell](https://lh7-rt.googleusercontent.com/docsz/AD_4nXePBKSKr53nqFKi9L2KJd_cyOYjla07ijab2Bk3RX4oRANbQYTJzfBnZes-majUerD_NWvOpTVJdRZxNIdkeFpETnvk9ypDH46uUb2y_IoOZS2ag5Qm08afJr3kMMZpuCZ7sEs08MlYOavL?key=i2UCbwnp2mfJ99O83EnAIw)
 
 (Baumstammmodell)
 

@@ -30,7 +30,11 @@
 	align-items: center;
 	justify-content: center;
 }
-.release-content a:first-of-type img {
+.release-image {
+	justify-content: center;
+	display: flex;
+}
+.release-image img {
 	width: 320px;
 	height: 320px;
 	border-radius: 2rem;
