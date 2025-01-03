@@ -300,20 +300,17 @@ a.subscribe-button:hover {
 	border-color: var(--text-color-link-active);
 }
 
-button#theme-toggle {
-	background: none;
-	color: var(--text-color);
-	position: fixed;
-	top: 1rem;
-	right: 1rem;
+.close-btn {
+	width: 2rem;
+	height: 2rem;
+	background-image: url("/img/cross.svg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: transparent;
 	border: none;
 	cursor: pointer;
-}
-button#theme-toggle:hover {
-	background: none;
-	color: var(--text-color-link-active);
-	position: fixed;
-	top: 1rem;
-	right: 1rem;
-	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }

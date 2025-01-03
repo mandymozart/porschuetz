@@ -1,0 +1,15 @@
+{% css %}
+{% include "public/css/mirrors.css" %}
+{% endcss %}
+<div class="mirrors">
+    <ul class="mirrors-list">
+        {% for mirror in mirrors %}
+            <li class="mirrors-item">
+                <a href="{{ mirror.url }}" target="_blank">{{ mirror.title }}</a>
+            </li>
+        {% endfor %}
+        <li class="mirrors-item">
+            <a href="{{ post.url }}">Blog</a>
+        </li>
+    </ul>
+</div>

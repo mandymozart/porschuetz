@@ -1,0 +1,71 @@
+:root {
+	--medium-icon: url("/img/medium-icon.svg");
+	--substack-icon: url("/img/substack-icon.svg");
+}
+.mirrors {
+	position: relative;
+}
+.mirrors .mirrors-title {
+	font-size: 1.25rem;
+	margin: 0;
+	text-align: center;
+}
+.mirrors ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.mirrors ul li a {
+	display: block;
+	position: relative;
+	text-align: center;
+	margin-bottom: 0.5rem;
+	font-size: 1rem; /* 19px /16 */
+	font-weight: 700;
+	line-height: 3rem;
+	padding: 0rem 1rem;
+	text-decoration: none;
+	background: var(--background-color);
+	border-radius: 2rem;
+	border: 1px solid var(--border-color);
+}
+
+.mirrors ul li a:hover {
+	border: 1px solid var(--text-color-link-active);
+}
+
+.mirrors ul li a[target="_blank"]::after {
+	content: "";
+	position: absolute;
+	right: 1rem;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 16px;
+	height: 16px;
+	opacity: 0.5;
+	background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20class%3D%22ml-auto%20my-auto%20md%3Amr-4%20text-pebble%22%20role%3D%22img%22%20aria-hidden%3D%22false%22%20aria-labelledby%3D%22ltclid10_title%22%3E%3Ctitle%20id%3D%22ltclid10_title%22%3ERedirect%3C/title%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M8.5%200.998901H14.5H15V1.4989V7.4989H14V2.70601L7.35355%209.35246L6.64645%208.64535L13.2929%201.9989H8.5V0.998901ZM1%203H1.5H3.34615H5V4H3.34615H2V5.34615V12.6538V13.9991L3.34615%2014H3.34648H11.1534H11.1538L12%2013.9992V12.6538V11H13V12.6538V14.4988V14.9984L12.5004%2014.9988L11.1543%2015H11.1538H3.34615H3.34583L1.49968%2014.9988L1%2014.9985V14.4988V12.6538V5.34615V3.5V3Z%22%20fill%3D%22currentColor%22%3E%3C/path%3E%3C/svg%3E");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.mirrors ul li a::before {
+	content: "";
+	position: absolute;
+	left: 1rem;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 6rem;
+	opacity: 1;
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 2rem;
+}
+
+.mirrors ul li a[href*="medium"]::before {
+	background-image: var(--medium-icon);
+}
+
+.mirrors ul li a[href*="substack"]::before {
+	background-image: var(--substack-icon);
+}

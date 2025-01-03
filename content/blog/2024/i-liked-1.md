@@ -7,6 +7,11 @@ tags:
   - ux design
   - games
   - sustainability
+mirrors:
+  - title: Substack
+    url: https://substack.com/home/post/p-153795668
+  - title: Medium
+    url: https://medium.com/@shalomsalon/i-liked-1-1c778c423e77
 ---
 
 Hello everyone, every being,
