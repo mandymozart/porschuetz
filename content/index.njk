@@ -2,7 +2,8 @@
 eleventyNavigation:
     key: Home
     order: 1
-numberOfLatestPostsToShow: 7
+numberOfLatestPostsToShow: 2
+numberOfLatestReleasesToShow: 3
 --- 
 
 <p class="lead">Hyper toxic encyclopedia of
@@ -15,9 +16,21 @@ numberOfLatestPostsToShow: 7
 {% set morePosts = postsCount - numberOfLatestPostsToShow %}
 {% if morePosts > 0 %}
     <p class="more-posts-text">
-        {{ morePosts }} more post
-        {% if morePosts != 1 %}s{% endif %}can be found in
-        <a href="blog.njk">
+        {{ morePosts }} more post{% if morePosts != 1 %}s{% endif %}can be found in
+        <a href="/blog/">
+            the archive
+        </a>.</p>
+{% endif %}
+{% set releasesCount = collections.releases | length %}
+{% set latestPostsCount = releasesCount | min(numberOfLatestReleasesToShow) %}
+{% set releaseslist = collections.releases | head(-1 * numberOfLatestReleasesToShow) %}
+{% set releaseslistCounter = releasesCount %}
+{% include "releaseslist.njk" %}
+{% set moreReleases = releasesCount - numberOfLatestReleasesToShow %}
+{% if moreReleases > 0 %}
+    <p class="more-posts-text">
+        {{ moreReleases }} more release{% if moreReleases != 1 %}s{% endif %}can be found in
+        <a href="/blog/">
             the archive
         </a>.</p>
 {% endif %}
