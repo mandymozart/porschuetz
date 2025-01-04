@@ -1,6 +1,6 @@
 ---
 title: I liked Nº2
-description: The joy of failing forward, trans cars, regulating social media, coconut currencies, trans cars and more.
+description: The joy of failing forward, trans cars, regulating social media, coconut currencies and more.
 date: 2025-01-04
 tags:
   - ux design
