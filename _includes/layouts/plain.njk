@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="{{ metadata.language }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ title or metadata.title }}</title>
+        <meta name="description" content="{{ description or metadata.description }}">
+        <link
+        rel="alternate" href="feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}"> {#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
+        {%- css %} /* This is an arbitrary CSS string added to the bundle */ {% endcss %}
+        {%- css %}
+        {% include "public/css/interactive.css" %}
+        {% endcss %}
+        <style>
+            {% getBundle "css" %}</style>
+        {%- js %}{% endjs %}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+    <body>
+        <main id="skip">
+            {{ content | safe }}
+        </main>
+        <!-- This page `{{ page.url }}` was built on {% currentBuildDate %} -->
+        <script type="module" src="{% getBundleFileUrl "js" %}"></script>
+    </body>
+</html>

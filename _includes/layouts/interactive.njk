@@ -1,0 +1,15 @@
+---
+layout: layouts/plain.njk
+---
+
+{% css %}
+{% include "public/css/interactive.css" %}
+{% include "node_modules/prismjs/themes/prism-okaidia.css" %}
+{% include "public/css/prism-diff.css" %}
+{% endcss %}
+{% js %}
+{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}
+{% endjs %}
+{% js %}
+{% endjs %}
+{{ content | safe }}

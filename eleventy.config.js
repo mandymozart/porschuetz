@@ -23,6 +23,14 @@ export default async function (eleventyConfig) {
 		});
 		return releases.sort((a, b) => a.date - b.date);
 	});
+	// Define a 'releases' collection that gathers all files with the 'release' tag
+	eleventyConfig.addCollection("interactives", function (collectionApi) {
+		const releases = collectionApi.getFilteredByTag("interactive");
+		releases.forEach((release) => {
+			release.data.layout = "layouts/interactive.njk";
+		});
+		return releases.sort((a, b) => a.date - b.date);
+	});
 	// Drafts, see also _data/eleventyDataSchema.js
 	eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
 		if (

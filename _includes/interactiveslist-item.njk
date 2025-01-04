@@ -1,0 +1,27 @@
+<div data-href="{{ post.url }}" class="interactiveslist-item" data-is-active="{% if post.url == url %} interactiveslist-item-active{% endif %}" data-has-image="{% if post.data.image %}true{% else %}false{% endif %}" data-has-mirrors="{% if post.data.mirrors | length > 0 %}true{% else %}false{% endif %}">
+    <div class="interactiveslist-item-content">
+        {% if post.data.image %}
+            <div class="interactiveslist-image">
+                <img src="{{ post.data.image }}" alt="{{ post.data.title }}"></div>
+            {% endif %}
+            <div>
+                <div class="interactiveslist-title">
+                    {% if post.data.title %}
+                        {{ post.data.title }}
+                    {% else %}
+                        <code>{{ post.url }}</code>
+                    {% endif %}
+                </div>
+                {% if post.data.description %}
+                    <div class="interactiveslist-description">{{ post.data.description }}</div>
+                {% endif %}
+                <time class="interactiveslist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time>
+            </div>
+        </div>
+        {% if post.data.mirrors %}
+            <div class="interactiveslist-item-mirrors">
+                {% set mirrors = post.data.mirrors %}
+                {% include "mirrors.njk" %}
+            </div>
+        {% endif %}
+    </div>

@@ -1,12 +1,14 @@
-const PostsList = (() => {
-	// Initialize all post items
+const InteractivesList = (() => {
+	// Initialize all interactive items
 	function initialize() {
 		document.addEventListener("DOMContentLoaded", () => {
-			const posts = document.querySelectorAll(".postslist-item");
+			const interactives = document.querySelectorAll(".interactiveslist-item");
 
-			posts.forEach((item) => {
-				const mirrorsPanel = item.querySelector(".postslist-item-mirrors");
-				const content = item.querySelector(".postslist-item-content");
+			interactives.forEach((item) => {
+				const mirrorsPanel = item.querySelector(
+					".interactiveslist-item-mirrors"
+				);
+				const content = item.querySelector(".interactiveslist-item-content");
 
 				if (!mirrorsPanel) {
 					const redirectUrl = item.getAttribute("data-href");
@@ -31,12 +33,17 @@ const PostsList = (() => {
 
 	// Close all panels except the one currently interacting
 	function closeAllPanelsExcept(item) {
-		const allPosts = document.querySelectorAll(".postslist-item");
-		allPosts.forEach((post) => {
-			if (post !== item) {
-				const mirrorsPanel = post.querySelector(".postslist-item-mirrors");
-				if (mirrorsPanel && post.getAttribute("data-expanded") === "true") {
-					collapsePanel(post, mirrorsPanel);
+		const allInteractives = document.querySelectorAll(".interactiveslist-item");
+		allInteractives.forEach((interactive) => {
+			if (interactive !== item) {
+				const mirrorsPanel = interactive.querySelector(
+					".interactiveslist-item-mirrors"
+				);
+				if (
+					mirrorsPanel &&
+					interactive.getAttribute("data-expanded") === "true"
+				) {
+					collapsePanel(interactive, mirrorsPanel);
 				}
 			}
 		});
@@ -70,5 +77,5 @@ const PostsList = (() => {
 	};
 })();
 
-// Initialize PostsList
-PostsList.initialize();
+// Initialize InteractivesList
+InteractivesList.initialize();

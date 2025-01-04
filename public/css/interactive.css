@@ -1,0 +1,45 @@
+* {
+	transition: all 0.3s ease, color 0.3s ease;
+}
+
+HEREWEARE {
+}
+
+html {
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+body {
+	background-color: var(--background-color);
+	color: var(--text-color);
+	font-family: Times, Courier, sans-serif;
+	margin: 0;
+	font-size: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: Oswald;
+}
+blockquote {
+	margin: 0;
+	padding: 0;
+	font-family: Times, serif;
+	color: var(--color-gray-700);
+}
+
+h1 {
+	font-size: 6rem;
+	line-height: 7rem;
+}
+
+h2 {
+	font-size: 4rem;
+}
+
+h3 {
+	font-size: 2rem;
+}

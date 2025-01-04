@@ -1,0 +1,8 @@
+{%- css %}
+{% include "public/css/interactiveslist.css" %}
+{% endcss %}
+<div class="interactiveslist">
+    {%- for post in interactiveslist | reverse %}
+        {% include "interactiveslist-item.njk" %}
+    {%- endfor %}
+</div>
