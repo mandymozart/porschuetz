@@ -10,6 +10,8 @@ import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 
 import pluginFilters from "./_config/filters.js";
 import pluginFirstImage from "eleventy-first-image-plugin";
+import embedYoutube from "eleventy-plugin-youtube-embed";
+import { isScheduledPost } from "./plugins/darfts.js";
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function (eleventyConfig) {
@@ -23,7 +25,10 @@ export default async function (eleventyConfig) {
 	});
 	// Drafts, see also _data/eleventyDataSchema.js
 	eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
-		if (data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
+		if (
+			data.draft ||
+			(isScheduledPost(data) && process.env.ELEVENTY_RUN_MODE === "build")
+		) {
 			return false;
 		}
 	});
@@ -92,7 +97,7 @@ export default async function (eleventyConfig) {
 		extensions: "html",
 
 		// Output formats for each image.
-		formats: ["webp", "jpg"],
+		formats: ["webp", "jpg", "png"],
 
 		widths: ["auto", 88, 320, 600],
 
@@ -113,7 +118,8 @@ export default async function (eleventyConfig) {
 		// selector: "h1,h2,h3,h4,h5,h6", // default
 	});
 	// console.log("pluginFirstImage", pluginFirstImage);
-	// eleventyConfig.addPlugin(pluginFirstImage);
+	eleventyConfig.addPlugin(pluginFirstImage);
+	eleventyConfig.addPlugin(embedYoutube);
 
 	eleventyConfig.addShortcode("currentBuildDate", () => {
 		return new Date().toISOString();

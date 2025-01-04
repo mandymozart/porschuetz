@@ -10,7 +10,8 @@
 		"markdown-to-png": "./dist/index.esm.js"
 	},
 	"dependencies": {
-		"@zachleat/heading-anchors": "^1.0.1"
+		"@zachleat/heading-anchors": "^1.0.1",
+		"eleventy-plugin-youtube-embed": "^1.11.0"
 	},
 	"scripts": {
 		"build:images": "vite build",
@@ -39,12 +40,12 @@
 		"@11ty/eleventy-plugin-rss": "^2.0.2",
 		"@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
 		"cross-env": "^7.0.3",
-		"luxon": "^3.5.0",
-		"zod": "^3.23.8",
 		"eleventy-first-image-plugin": "^1.0.3",
-		"zod-validation-error": "^3.3.1",
+		"luxon": "^3.5.0",
 		"markdown-to-png": "^0.1.9",
-		"vite": "^6.0.6"
+		"vite": "^6.0.6",
+		"zod": "^3.23.8",
+		"zod-validation-error": "^3.3.1"
 	},
 	"keywords": [
 		"markdown",

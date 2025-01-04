@@ -33,6 +33,7 @@
 .release-image {
 	justify-content: center;
 	display: flex;
+	margin-bottom: 0.5rem;
 }
 .release-image img {
 	width: 320px;

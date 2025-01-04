@@ -1,5 +1,5 @@
 export default {
-	title: "Tilman M. Porschütz æsthetical Therapy",
+	title: "æsthetical Therapy",
 	url: "https://blog.porschuetz.de/",
 	language: "en",
 	description:
