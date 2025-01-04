@@ -1,6 +1,6 @@
 ---
 title: I liked Nº2
-description: New optimism, regulating social media, humanitarian designers, coconut currencies, design for deaf blindness and the joy of falling forward.
+description: The joy of failing forward, trans cars, regulating social media, coconut currencies, trans cars and more.
 date: 2025-01-04
 tags:
   - ux design
