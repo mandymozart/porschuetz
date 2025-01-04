@@ -1,6 +1,6 @@
 ---
 title: I liked Nº2
-description: A new era of optimism, regulating social media, humanitarian designers, coconut currencies, design for deaf blindness and the joy of falling forward.
+description: New optimism, regulating social media, humanitarian designers, coconut currencies, design for deaf blindness and the joy of falling forward.
 date: 2025-01-04
 tags:
   - ux design
