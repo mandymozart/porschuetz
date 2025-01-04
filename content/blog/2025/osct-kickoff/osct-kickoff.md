@@ -1,6 +1,6 @@
 ---
 title: Project Kickoff "Onion Skin & Crocodile Tears"
-description: Excited to join "buildingfictions" to create a WebXR app with artist Kevin Bray, bringing his intermedia artworks to life in an immersive hybrid book!
+description: Excited to join "buildingfictions" and artist Kevin Bray, bringing to life an WebXR book!
 date: 2025-01-03
 tags:
   - ux design
