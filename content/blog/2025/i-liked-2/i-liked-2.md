@@ -23,8 +23,11 @@ Optimism is back in my DNA, thanks to teaching myself to see the world from new 
 - Genderfluidity, matriarchy and coconuts as currency? The indigenous Cuna people off the coast of Panama 🇵🇦 are lived science fiction. Looking forward to what I can learn from this, both in story telling and social design. [Read more on BBC Travel](https://www.bbc.com/travel/article/20180813-guna-yala-the-islands-where-women-make-the-rules)
 - "Underwater with closed eyes"— a poetic short documentary by [Joe Bloom](https://www.joe-bloom.com/films) famous for _@aview.fromabridge_ made me truly reflect on _deaf blindness_. How could we simplify interfaces to deepen human interaction? Too often we tend to overload our experience rather than focus on the essence of life. [See clip on Instagram](https://www.instagram.com/tv/CfV-ZvAoOOM/?igsh=MWpkMDUzOGxqZXEzZQ==)
 - Cars in Baywatch are trans?
+
   > "She is a stallion, allright" (S01E12)
-  > Isn't hyper masculinity ironic? Why do the boys give their car a female gender but still call it a stallion?
+
+  Isn't hyper masculinity ironic? Why do the boys give their car a female gender but still call it a stallion?
+
 - ["Voranscheitern"](https://taz.de/Protest-in-der-Krise/!6055538/) beschreibt aus Fehlschlägen zu lernen, weil die Gegenseite eine neue Taktik gefunden hat. Lasst uns Strategien entwickeln langfristig an unseren Visionen dranzubleiben!
 - ["Failing forward"](https://taz.de/Protest-in-der-Krise/!6055538/) describes learning from setbacks when the opposition adopts new tactics. Let's develop resilience strategies to stick to our visions in the long term!
 
