@@ -1,6 +1,6 @@
 ---
 title: I liked Nº2
-description: The joy of failing forward, trans cars, regulating social media, coconut currencies and more.
+description: The joy of failing forward, trans cars, regulating social media, coconut currencies and Baywatch.
 date: 2025-01-04
 tags:
   - ux design
@@ -8,7 +8,7 @@ tags:
   - deaf blindness
   - baywatch
   - legislation
-image: /blog/2025/i-liked-2/falling-forward.jpg
+image: /blog/2025/i-liked-2/i-liked-2.png
 mirrors:
   - title: Substack
     url: https://open.substack.com/pub/porschuetz/p/i-liked-2?r=504kj1&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true
