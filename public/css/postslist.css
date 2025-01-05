@@ -52,9 +52,13 @@
 	text-overflow: ellipsis;
 	margin-bottom: 0.25rem;
 }
-.postslist-date {
+.postslist-meta {
 	font-size: 0.875rem;
 	font-weight: 300;
+}
+.postslist-date {
+}
+.postlist-reading-time {
 }
 .postslist-item-active {
 	font-weight: bold;

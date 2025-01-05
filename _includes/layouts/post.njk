@@ -11,14 +11,10 @@ layout: layouts/base.njk
     <h1 class="post-title">{{ title }}</h1>
     <div class="post-description">{{ description }}</div>
     <div class="post-metadata">
-        <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
-        <div class="post-taglist">
-            {%- for tag in tags | filterTagList %}
-                {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-                <a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>
-                {%- if not loop.last %},
-                {% endif %}
-            {%- endfor %}
+        <div class="post-temporals">
+            <span class="post-reading-time">{{ content | readingTime }} read</span>
+            ·
+            <time datetime="{{ page.date | htmlDateString }}">{{ page.date | postDate }}</time>
         </div>
     </div>
     {% if image %}
@@ -27,6 +23,14 @@ layout: layouts/base.njk
         {% endif %}
         <div class="post-content">
             {{ content | safe }}
+        </div>
+        <div class="post-taglist">
+            {%- for tag in tags | filterTagList %}
+                {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+                <a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>
+                {# {%- if not loop.last %},
+                                {% endif %} #}
+            {%- endfor %}
         </div>
         {%- if collections.posts %}
             {%- set previousPost = collections.posts | getPreviousCollectionItem %}

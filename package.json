@@ -11,6 +11,8 @@
 	},
 	"dependencies": {
 		"@zachleat/heading-anchors": "^1.0.1",
+		"dayjs": "^1.11.13",
+		"eleventy-plugin-reading-time": "^0.0.1",
 		"eleventy-plugin-youtube-embed": "^1.11.0"
 	},
 	"scripts": {
@@ -41,7 +43,6 @@
 		"@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
 		"cross-env": "^7.0.3",
 		"eleventy-first-image-plugin": "^1.0.3",
-		"luxon": "^3.5.0",
 		"markdown-to-png": "^0.1.9",
 		"vite": "^6.0.6",
 		"zod": "^3.23.8",

@@ -12,6 +12,8 @@ import pluginFilters from "./_config/filters.js";
 import pluginFirstImage from "eleventy-first-image-plugin";
 import embedYoutube from "eleventy-plugin-youtube-embed";
 import { isScheduledPost } from "./plugins/darfts.js";
+import readingTime from "eleventy-plugin-reading-time";
+import dayjs from "dayjs";
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function (eleventyConfig) {
@@ -125,10 +127,13 @@ export default async function (eleventyConfig) {
 		// slugify: eleventyConfig.getFilter("slugify"),
 		// selector: "h1,h2,h3,h4,h5,h6", // default
 	});
-	// console.log("pluginFirstImage", pluginFirstImage);
 	eleventyConfig.addPlugin(pluginFirstImage);
 	eleventyConfig.addPlugin(embedYoutube);
-
+	console.log(readingTime);
+	eleventyConfig.addPlugin(readingTime);
+	eleventyConfig.addFilter("postDate", (dateObj) => {
+		return dayjs(dateObj).format("MMM D, YYYY");
+	});
 	eleventyConfig.addShortcode("currentBuildDate", () => {
 		return new Date().toISOString();
 	});

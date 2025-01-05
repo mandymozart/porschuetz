@@ -15,7 +15,11 @@
                 {% if post.data.description %}
                     <div class="postslist-description">{{ post.data.description }}</div>
                 {% endif %}
-                <time class="postslist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time>
+                <div class="postslist-meta">
+                    <span class="postslist-reading-time">{{ post | readingTime }} read</span>
+                    ·
+                    <time class="postslist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time>
+                </div>
             </div>
         </div>
         {% if post.data.mirrors %}
