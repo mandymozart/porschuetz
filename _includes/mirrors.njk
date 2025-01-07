@@ -3,9 +3,11 @@
 {% endcss %}
 <div class="mirrors">
     <ul class="mirrors-list">
-        <li class="mirrors-item">
-            <a href="{{ post.url }}">Blog</a>
-        </li>
+        {% if localUrl != post.url %}
+            <li class="mirrors-item">
+                <a href="{{ localUrl }}">Blog</a>
+            </li>
+        {% endif %}
         {% for mirror in mirrors %}
             <li class="mirrors-item">
                 <a href="{{ mirror.url }}" target="_blank">{{ mirror.title }}</a>

@@ -1,0 +1,16 @@
+/* Mirrors Panel */
+[data-controller="ListItem"] .mirrors {
+	max-height: 0;
+	overflow: hidden;
+	transform: translateY(-10px);
+	opacity: 0;
+	transition: max-height 0.2s ease, transform 0.3s ease, opacity 0.1s ease;
+	padding: 0 1.25rem 1.25rem 1.25rem;
+}
+
+/* Expanded Mirrors Panel */
+[data-controller="ListItem"][data-expanded="true"] .mirrors {
+	max-height: 1000px;
+	transform: translateY(0);
+	opacity: 1;
+}

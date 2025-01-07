@@ -25,6 +25,7 @@
         {% if post.data.mirrors %}
             <div class="postslist-item-mirrors">
                 {% set mirrors = post.data.mirrors %}
+                {% set localUrl = post.url %}
                 {% include "mirrors.njk" %}
             </div>
         {% endif %}

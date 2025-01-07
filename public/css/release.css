@@ -1,13 +1,3 @@
-:root {
-	--spotify-icon: url("https://services.linkfire.com/logo_spotify_onlight.svg");
-	--amazon-music-icon: url("https://services.linkfire.com/logo_amazonmusic_onlight.svg");
-	--itunes-icon: url("https://services.linkfire.com/logo_itunes_onlight.svg");
-	--apple-music-icon: url("https://services.linkfire.com/logo_applemusic_onlight.svg");
-	--deezer-icon: url("https://services.linkfire.com/logo_deezer_onlight.svg");
-	--tidal-icon: url("https://services.linkfire.com/logo_tidal_onlight.svg");
-	--youtube-music-icon: url("https://services.linkfire.com/logo_youtubemusic_onlight.svg");
-}
-
 .release-title {
 	font-size: 1rem;
 	margin-bottom: 0;

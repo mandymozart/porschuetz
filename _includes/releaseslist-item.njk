@@ -1,11 +1,23 @@
-<a href="{{ release.url }}" class="releaseslist-item{% if release.url == url %} releaseslist-item-active{% endif %}">
-    <div class="releaseslist-image">
-        <img src="{{ release.data.image }}" alt="{{ release.data.title }}" width="88" height="88"></div>
-        <div class="releaseslist-title">
-            {% if release.data.title %}
-                {{ release.data.title }}
-            {% else %}
-                <code>{{ release.url }}</code>
-            {% endif %}
+<div
+    class="list-item releaseslist-item" data-controller="ListItem" data-href="{{ release.url }}" data-content=".list-item-content-slot" data-mirrors=".list-item-mirrors-slot" data-has-mirrors="{% if release.data.mirrors | length > 0 %}true{% else %}false{% endif %}" class="{% if release.url == url %}releaseslist-item-active{% endif %}" data-expanded="false">
+    <!-- Content Section -->
+    <div class="list-item-content-slot">
+        <div class="list-item-image">
+            <img src="{{ release.data.image }}" alt="{{ release.data.title }}" width="88" height="88"></div>
+            <div class="list-item-title">
+                {% if release.data.title %}
+                    {{ release.data.title }}
+                {% else %}
+                    <code>{{ release.url }}</code>
+                {% endif %}
+            </div>
         </div>
-    </a>
+        <!-- Mirrors Section -->
+        {% if release.data.mirrors %}
+            <div class="list-item-mirrors-slot">
+                {% set mirrors = release.data.mirrors %}
+                {% set localUrl = release.url %}
+                {% include "mirrors.njk" %}
+            </div>
+        {% endif %}
+    </div>

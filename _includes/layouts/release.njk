@@ -27,6 +27,9 @@ layout: layouts/base.njk
     <div class="release-content">
         {{ content | safe }}
     </div>
+    <div class="release-mirrors">
+        {% include "./../mirrors.njk" %}
+    </div>
     {%- if collections.releases %}
         {%- set previousRelease = collections.releases | getPreviousCollectionItem %}
         {%- set nextRelease = collections.releases | getNextCollectionItem %}

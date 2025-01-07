@@ -1,6 +1,13 @@
 :root {
 	--medium-icon: url("/img/medium-icon.svg");
 	--substack-icon: url("/img/substack-icon.svg");
+	--spotify-icon: url("https://services.linkfire.com/logo_spotify_onlight.svg");
+	--amazon-music-icon: url("https://services.linkfire.com/logo_amazonmusic_onlight.svg");
+	--itunes-icon: url("https://services.linkfire.com/logo_itunes_onlight.svg");
+	--apple-music-icon: url("https://services.linkfire.com/logo_applemusic_onlight.svg");
+	--deezer-icon: url("https://services.linkfire.com/logo_deezer_onlight.svg");
+	--tidal-icon: url("https://services.linkfire.com/logo_tidal_onlight.svg");
+	--youtube-music-icon: url("https://services.linkfire.com/logo_youtubemusic_onlight.svg");
 }
 .mirrors {
 	position: relative;
@@ -68,4 +75,32 @@
 
 .mirrors ul li a[href*="substack"]::before {
 	background-image: var(--substack-icon);
+}
+
+.mirrors ul li a[href*="spotify"]::before {
+	background-image: var(--spotify-icon); /* Using CSS variable */
+}
+
+.mirrors ul li a[href*="music.amazon"]::before {
+	background-image: var(--amazon-music-icon);
+}
+
+.mirrors ul li a[href*="itunes"]::before {
+	background-image: var(--itunes-icon);
+}
+
+.mirrors ul li a[href*="music.apple"]::before {
+	background-image: var(--apple-music-icon);
+}
+
+.mirrors ul li a[href*="deezer"]::before {
+	background-image: var(--deezer-icon);
+}
+
+.mirrors ul li a[href*="tidal"]::before {
+	background-image: var(--tidal-icon);
+}
+
+.mirrors ul li a[href*="youtube"]::before {
+	background-image: var(--youtube-music-icon);
 }
