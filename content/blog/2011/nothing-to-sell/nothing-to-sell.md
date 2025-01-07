@@ -217,7 +217,7 @@ Keywords: Fraktale, Rekursion, Preset-Familie
 
 ---
 
-![Baumstammmodell](https://lh7-rt.googleusercontent.com/docsz/AD_4nXePBKSKr53nqFKi9L2KJd_cyOYjla07ijab2Bk3RX4oRANbQYTJzfBnZes-majUerD_NWvOpTVJdRZxNIdkeFpETnvk9ypDH46uUb2y_IoOZS2ag5Qm08afJr3kMMZpuCZ7sEs08MlYOavL?key=i2UCbwnp2mfJ99O83EnAIw)
+Replaced
 
 (Baumstammmodell)
 
@@ -227,7 +227,7 @@ Taxonomie eines Preset-Zykluses
 
 ---
 
-![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXdReDDPZXHS3EbP3hXYywU_Lc8WMiViexC1moYeqJWK5-XgOa0AXjlGHE6tNL4Mcjkbfr8ttEvlOk9V6AYPTmpdqDAVCK45OSJd2JVmo54K6oKOffEgRBgbs4sHO9y4ow9YzS82cc6vT18?key=i2UCbwnp2mfJ99O83EnAIw)
+Replace
 
 vereinfachtes Preset-Zyklus Modell:
 
