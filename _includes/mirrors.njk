@@ -3,9 +3,9 @@
 {% endcss %}
 <div class="mirrors">
     <ul class="mirrors-list">
-        {% if localUrl != post.url %}
+        {% if localUrl == post.url %}
             <li class="mirrors-item">
-                <a href="{{ localUrl }}">Blog</a>
+                <a href="{{ localUrl }}">Read on blog</a>
             </li>
         {% endif %}
         {% for mirror in mirrors %}

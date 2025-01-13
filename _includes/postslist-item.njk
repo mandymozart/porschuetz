@@ -1,4 +1,4 @@
-<div data-href="{{ post.url }}" class="postslist-item" data-is-active="{% if post.url == url %} postslist-item-active{% endif %}" data-has-image="{% if post.data.image %}true{% else %}false{% endif %}" data-has-mirrors="{% if post.data.mirrors | length > 0 %}true{% else %}false{% endif %}">
+<div data-href="{{ post.url }}" class="postslist-item" {% if "podcast" in post.data.tags %}data-is-podcast="true"{% endif %} data-is-active="{% if post.url == url %} postslist-item-active{% endif %}" data-has-image="{% if post.data.image %}true{% else %}false{% endif %}" data-has-mirrors="{% if post.data.mirrors | length > 0 %}true{% else %}false{% endif %}">
     <div class="postslist-item-content">
         {% if post.data.image %}
             <div class="postslist-image">
@@ -16,7 +16,7 @@
                     <div class="postslist-description">{{ post.data.description }}</div>
                 {% endif %}
                 <div class="postslist-meta">
-                    <span class="postslist-reading-time">{{ post | readingTime }} read</span>
+                    <span class="postslist-reading-time">{% if post.data.length > 0 %}{{ post.data.length }} min listen{% else %}{{ post | readingTime }}{% endif %}</span>
                     ·
                     <time class="postslist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time>
                 </div>

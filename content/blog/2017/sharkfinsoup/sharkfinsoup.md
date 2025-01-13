@@ -7,8 +7,6 @@ tags:
 image: /blog/2017/sharkfinsoup/sharkfinsoup.webp
 ---
 
-<img src="sharkfinsoup.webp" alt="Kids looking at shark in fishtank">
-
 <img src="shark-guardian.webp" alt="The Guardian: Shark washing up on beach in Mallorca">
 
 The injured blue shark on Mallorca’s beach made me think. Is an increased global wealth a healthy motor for a functioning ecosystem? Affordable shark fins causes literally some sort of genocide. Are you kidding me, 100 million sharks killed each year? And that’s only sharks. About time that I seriously review my eating habits. Didn’t our mama tell us a less diverse ecosystem is unhealthy, and vulnerable to even the slightest changes in procedure?
