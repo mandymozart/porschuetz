@@ -8,11 +8,11 @@ language: de
 length: 9
 mirrors:
   - title: Substack
-    url: 
+    url: https://open.substack.com/pub/porschuetz/p/interview-mit-einem-mammutbaum?r=504kj1&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true
   - title: Medium
-    url: 
+    url: https://medium.com/p/04e474628096
   - title: Youtube
-    url: 
+    url: https://youtu.be/MVuy_8z84v4
   - title: Spotify
     url: https://open.spotify.com/show/6ZqASsQrSf2jKckmuvRyb1
 image: /blog/2025/mammutbaum/mammutbaum.png

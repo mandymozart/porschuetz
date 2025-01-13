@@ -10,7 +10,7 @@ mirrors:
   - title: Substack
     url: https://open.substack.com/pub/porschuetz/p/picknick-mit-einer-krahe?r=504kj1&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true
   - title: Medium
-    url: 
+    url: https://aestheticaltherapy.medium.com/picknick-mit-einer-kr%C3%A4he-cfb847a3ead2
   - title: Youtube
     url: https://youtu.be/mwqW8Ig7avA
   - title: Spotify
