@@ -36,4 +36,4 @@ WEDNESDAY, 15. 1. 2025 at 10 AM
 “Picknick für eine Krähe” (Picknick for a crow) 
 
 THURSDAY, 16. 1. 2025 at 10 AM
-"Interview mit einer Krähe" (Interview with a crow)
+"Interview mit einem Mammutbaum" (Interview with a sepoia)
