@@ -1,5 +1,5 @@
 ---
-title: Explorations into Inter-Species Habitats
+title: Explorations into Multi-Species Habitats
 description: Podcast about my works at "Habitat" Museum Graz /w Daniela Brasil, Caroline Böhme & Monique Fessl.
 date: 2025-01-14
 tags:
