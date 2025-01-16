@@ -1,6 +1,6 @@
 ---
 title: Picknick mit einer Krähe
-description: CherryLotti von Mystery CuisineXX: True Crime trifft auf feine Küche und Lifestyle.
+description: CherryLotti von Mystery CuisineXX - True Crime trifft auf feine Küche und Lifestyle.
 date: 2025-01-15
 tags:
   - podcast
