@@ -32,6 +32,12 @@ layout: layouts/base.njk
                                 {% endif %} #}
             {%- endfor %}
         </div>
+        {% if post.data.mirrors %}
+            <div class="postslist-item-mirrors">
+                {% set mirrors = mirrors %}
+                {% include "mirrors.njk" %}
+            </div>
+        {% endif %}
         {%- if collections.posts %}
             {%- set previousPost = collections.posts | getPreviousCollectionItem %}
             {%- set nextPost = collections.posts | getNextCollectionItem %}
