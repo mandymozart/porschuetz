@@ -27,19 +27,15 @@ Marketing is a bitch
 
 The group expects a direction, a vision. The agency wants to know what’s happening. Marketing wants to put a label on it. What are these people doing? What is their mission?
 
-www.kunsthalle.com
+[www.kunsthalle.com](kunsthalle.com)
 
 Marketing is a time consuming tedious procedure. If you don’t do marketing in todays world, you may have to rely on word of mouth inside elites. Options that you have to take into consideration:
 
-    self promotion — the most uncomfortable thing we are forced to appreciate nowadays. self promotion is spamming others conscious mind where ever possible with hopes and fantasies that you have about yourself.
-
-    paid promotion — facebook ads that once were the power of the media now become the norm. the trick played out well for facebook. attention has its value. my only reflection on this was, it makes absolute sense to paid for exposure on a facebook event. Instagram as well
-
-    mingle with elites — you will find your way around the media outlets, bloggers, writers, etc. the thing that surprised me most about this sort of thing, free press means nothing. unless you know people in the “industry” you have no chance at all to get anywhere.
-
-    invite VIP’s on the guestlist — we had a solid count of more than 50% of the audience on the guestlist, and we had nights with only very limited people on the guestlist. Ironically we usually cashed more at nights when there was people on the guestlist.
-
-    third party sponsors — we had a bunch more collaborations considered together with Platoon. on collab that sort of worked out was that we joined forces with a startup ticketing company that recently was trying to get a hold on Berlin. To be honest, it is tedious to maintain a second event page and I am not entirely sure if the featured on their page helped us to gain much attention.
+- **self promotion** — the most uncomfortable thing we are forced to appreciate nowadays. self promotion is spamming others conscious mind where ever possible with hopes and fantasies that you have about yourself.
+- **paid promotion** — facebook ads that once were the power of the media now become the norm. the trick played out well for facebook. attention has its value. my only reflection on this was, it makes absolute sense to paid for exposure on a facebook event. Instagram as well
+- **mingle with elites** — you will find your way around the media outlets, bloggers, writers, etc. the thing that surprised me most about this sort of thing, free press means nothing. unless you know people in the “industry” you have no chance at all to get anywhere.
+- **invite VIP’s on the guestlist** — we had a solid count of more than 50% of the audience on the guestlist, and we had nights with only very limited people on the guestlist. Ironically we usually cashed more at nights when there was people on the guestlist.
+- **third party sponsors** — we had a bunch more collaborations considered together with Platoon. on collab that sort of worked out was that we joined forces with a startup ticketing company that recently was trying to get a hold on Berlin. To be honest, it is tedious to maintain a second event page and I am not entirely sure if the featured on their page helped us to gain much attention.
 
 Biggest problem in an interdisciplinary event communication strategy is to first, promote your heros, so you get an audience, second credit everyone and make everyone feel at home and treated with the same respect.
 
@@ -48,10 +44,30 @@ It stays one of my hardest challenges during any project I do.
 Platoon for one has their priorities straight on that, (and I don’t wanna judge them too much about it, since it's their business model and gladly enough we were able to throw the event there), if you are a paying client the artists have to go and crawl under what ever desk they find. Rehearsing was tough at times, since unexpected business needs came up unannounced or last minute.
 
 That brings me to the next point:
-Artistic Freedom is a sacrament
+
+> Artistic Freedom is a sacrament
 
 If the location and setup was our piano temple, the way we were able to explore the space was a spiritual experience. Yes, despite all the challenges of the production, once we foged the room and started the first tunes, everything was clear.
 
 After a few editions we managed to handle sound gladly to the amazing work and learning from Wieland Jubelt and Ludwig Giersch.
 
 Due to the sudden end of Platoon and their move to Mexico, we were unfortunately we weren’t able to bind partnership with Teufel Audio. This alliance would have brought the sound to the audiophil and quality level need to make the event a lasting institution. That’s something to consider in future events for sure.
+
+_Reading this 10 years after the fact, I see why I slowly faded out of event promoting, as I was overwhelmed by all of these things that have so little to do with my artwork, but on the other I come to admire the relentsless work of promoters. In Vienna in peticular, I want to point out that most events I enjoy visiting are run by groups spearheaded by individuals who sort of have not nessecarily an artistic but a organisational vision. That they curate nice shit, I think is a side effect. Not being distracted by the content can also help._
+
+**_Would I do it again?_**
+
+_Most definitely at some point if I find the right environment to do so. ATM I am still looking for it._
+
+_What would be key requirements to do so?_
+
+- willingness to promote to beyond their peer group
+- great accoustics
+- ability to transform the space
+- in house team that is interested in the event
+- financially independence from funding
+- flexibility to move venues if conflicts arise
+- a fun communication idea
+- spare time ;)
+
+_Yes, I would not do it as primary project, again. Organising does not create. It's hard communication work, no matter with or without a group._
