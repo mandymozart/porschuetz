@@ -1,19 +1,19 @@
 import {
+	HtmlBasePlugin,
 	IdAttributePlugin,
 	InputPathToUrlTransformPlugin,
-	HtmlBasePlugin,
 } from "@11ty/eleventy";
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import pluginNavigation from "@11ty/eleventy-navigation";
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
-import pluginNavigation from "@11ty/eleventy-navigation";
-import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 
-import pluginFilters from "./_config/filters.js";
-import pluginFirstImage from "eleventy-first-image-plugin";
-import embedYoutube from "eleventy-plugin-youtube-embed";
-import { isScheduledPost } from "./plugins/darfts.js";
-import readingTime from "eleventy-plugin-reading-time";
 import dayjs from "dayjs";
+import pluginFirstImage from "eleventy-first-image-plugin";
+import readingTime from "eleventy-plugin-reading-time";
+import embedYoutube from "eleventy-plugin-youtube-embed";
+import pluginFilters from "./_config/filters.js";
+import { isScheduledPost } from "./plugins/darfts.js";
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function (eleventyConfig) {
@@ -49,6 +49,7 @@ export default async function (eleventyConfig) {
 		.addPassthroughCopy({
 			"./public/": "/",
 		})
+		.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' })
 		.addPassthroughCopy("./content/feed/pretty-atom-feed.xsl");
 
 	// Run Eleventy when these files change:
