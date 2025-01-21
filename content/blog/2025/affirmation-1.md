@@ -1,12 +1,12 @@
 ---
-title: Affirmation No1
+title: Affirmation Nº1 
 description: I Am Saying Yes to Being Rejected For Art Funding
 tags:
   - affirmation
 date: 2025-01-21
 mirrors:
   - title: Substack
-    url: https://porschuetz.substack.com
+    url: https://porschuetz.substack.com/p/affirmation-n1
   - title: Medium
     urk: https://medium.com/@porschuetz
 ---
