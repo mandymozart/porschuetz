@@ -4,9 +4,6 @@ description: What happened to sharing things that interest me? Time for good old
 date: 2024-12-22
 tags:
   - i liked
-  - ux design
-  - games
-  - sustainability
 mirrors:
   - title: Substack
     url: https://substack.com/home/post/p-153795668

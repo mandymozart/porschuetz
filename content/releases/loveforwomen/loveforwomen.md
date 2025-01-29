@@ -2,6 +2,7 @@
 title: Op. 42 - Love for Women
 description: Mandy Mozart
 date: 2022-02-08
+length: 47
 tags:
   - release
   - Mandy Mozart

@@ -2,12 +2,9 @@
 title: I liked Nº2
 description: The joy of failing forward, trans cars, regulating social media, coconut currencies and Baywatch.
 date: 2025-01-04
+language: en
 tags:
-  - ux design
-  - humanitarian designers
-  - deaf blindness
-  - baywatch
-  - legislation
+  - i liked
 image: /blog/2025/i-liked-2/i-liked-2.png
 mirrors:
   - title: Substack

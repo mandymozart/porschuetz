@@ -2,6 +2,7 @@
 title: Rumble In the Jumble
 description: Top Toy
 date: 2023-07-01
+length: 20
 tags:
   - release
   - top toy

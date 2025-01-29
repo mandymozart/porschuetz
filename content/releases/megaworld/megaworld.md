@@ -2,6 +2,7 @@
 title: Megaworld
 description: Top Toy
 date: 2024-03-01
+length: 7
 tags:
   - release
   - top toy

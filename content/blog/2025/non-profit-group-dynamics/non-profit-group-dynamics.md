@@ -2,6 +2,7 @@
 title: Thoughts on Non-Profit Group Dynamics — Piano Bass Drum
 description: 2015 we started a series of immersive events in Berlin in collaboration with Platoon Kunsthalle and the art collective Trigger Bang Bang.
 date: 2025-01-19
+lang: en
 tags:
   - music
   - essay
