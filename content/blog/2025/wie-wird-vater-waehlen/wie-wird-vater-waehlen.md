@@ -206,11 +206,9 @@ ENDE
 
 Geht wählen, wenn ihr Auslandsdeutsche seid!
 
-Bis 2. Februar rechtzeitig anmelden: **Antrag auf Eintragung in das Wählerverzeichnis** für im Ausland lebende Deutsche
+Bis 2. Februar rechtzeitig anmelden:
 
-4c43-adbc-9342dda468ad/bwo_anlage-2_ausfuellbar.pdf)
-
-"Link zur PDF-Datei: Antrag auf Eintragung in das Wählerverzeichnis für im Ausland lebende Deutsche (217,11 kB)"
+[Link zur PDF-Datei: Antrag auf Eintragung in das Wählerverzeichnis für im Ausland lebende Deutsche (217,11 kB)](https://bundeswahlleiterin.de/en/dam/jcr/56e4a94b-def6-4953-b97a-a9eec316e2b7/euwo_anlage-2_ausfuellbar.pdf)
 
 Meiner muss nach Neukölln.
 
