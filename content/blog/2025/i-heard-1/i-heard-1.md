@@ -8,7 +8,7 @@ tags:
 image: /blog/2025/i-heard-1/i-heard-1.jpg
 mirrors:
   - title: Substack
-    url: https://open.substack.com/pub/porschuetz/p/i-heard-n1?r=504kj1&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true
+    url: https://porschuetz.substack.com/p/i-heard-n1
   - title: Medium
     url: https://medium.com/@aestheticaltherapy/i-heard-n%C2%BA1-202022d31257
 ---
