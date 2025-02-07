@@ -9,10 +9,6 @@ image: /blog/2025/resradio-panel-talk/resradio-panel-talk.jpg
 mirrors:
   - title: Substack
     url: https://open.substack.com/pub/porschuetz/p/what-is-community-radio-about-why
-  - title: Medium
-    url:
-  - title: YouTube
-    url:
 ---
 
 It’s 2025. The internet is ruled by Romans... or is it?A niche of community-radio creators resists! In the age of A.I. and Spotify, why fight for independent radio? res.radio - an internet community radio station from Vienna is prepping and practicing community driven forms of resistance against the empires. I was an honored guest and shared the stage with Miyra Lim and Mena Huber in a beautiful talk about the history of res.radio, my experience with radio and future possibilities of a radio station in times of alienation.
