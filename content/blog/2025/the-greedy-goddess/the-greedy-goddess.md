@@ -3,7 +3,7 @@ title: The Greedy Goddess
 description: When disaster strikes, who really wins? In a basement beneath Gaza's ruins, two hacktivists uncover Nike's disturbing crisis strategy through social media patterns and stock movements.
 date: 2025-02-15
 lang: en
-length: 17
+length: 16
 tags: 
   - story
   - podcast
@@ -12,9 +12,9 @@ mirrors:
   - title: Substack
     url: https://porschuetz.substack.com/p/the-greedy-goddess
   - title: YouTube
-    url: 
+    url: https://youtu.be/Hc77_QjZtMU
   - title: Medium
-    url: 
+    url: https://medium.com/@mandymozart_50854/the-greedy-goddess-ae7adfd9d00a
 ---
 
 A basement office hidden somewhere in what used to be Gaza City, now a wasteland. Abandoned by the original inhabitants and declared an international no man's land from the river to the sea. In the first month after the war, left-wing preppers, driven by an international call started by @colonial.shield making themselves human shields to a potential third invasion, settled in what once was a vivid coastal community with bazaars, schools, and merchants from far and near. Through the irony of history, the initial shielders brought their gear and started settling themselves, finding the place to be essential to their cyber warfare against the rising global techno aristocracy. What started as a squatting venture turned into a multi-million bitcoin funded basecamp of the international resistance movement against neo-liberalism.
