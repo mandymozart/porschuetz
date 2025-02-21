@@ -1,6 +1,6 @@
 /* Posts list */
 :root {
-	--postslist-image-height: 5.5rem;
+	--postslist-image-height: 2.5rem;
 }
 .postslist-image {
 	display: block;
