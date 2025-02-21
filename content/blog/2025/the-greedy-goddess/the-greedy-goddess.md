@@ -137,8 +137,10 @@ Light hands Sael a tablet with sketches of equations. Sael begins to read.
 
 **Light:** I have no fucking idea.
 
-https://m.youtube.com/watch?v=-XvfD3TYzkg
+https://youtube.be/XvfD3TYzkg
+
 
 https://youtu.be/5gnlhmaM-dM?t=666 
+Why I got a Nike Tattoo
 
 [^1]: Sludge that is waste produced by AIs. Librarians call generic books they have to filter out from their subscription to bulk suppliers.
