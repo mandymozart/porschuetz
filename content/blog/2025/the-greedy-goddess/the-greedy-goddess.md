@@ -121,11 +121,11 @@ Light hands Sael a tablet with sketches of equations. Sael begins to read.
 
 **Light:** Exactly, this is 100 Instagram accounts of graphic designers and influencers that at some point started posting Nike content or worked on a campaign with them. The y-axis shows the mentions of Nike or artifacts, x is amounts of posts from account creation to date of crawl. I justified for date. So I can add events of global scale alongside it… hoping to prove my point of an interconnection.
 
-**Sael:** Well. So first things first. It's taking an average of 107,241 postings for all accounts you tracked, right?
+**Sael:** Well. So first things first. It's taking an average of 107.241 postings for all accounts you tracked, right?
 
-**Light:** Correct. But you see here? I split the accounts into ethnic groups… and classes, based on income. Please don't ask me how I obtained those details now, not my point. But clearly, the poorer, the faster the conversion goes. Some even closing in at 20 to 30 posts. Like here, this TikTok superstar… from him posting the first time from an Italian refugee camp to wearing Nike sneakers and pointing at them in just 27 posts. That's impressive.
+**Light:** Correct. But you see here? I split the accounts into ethnic groups… and classes, based on income. Please don't ask me how I obtained those details now, not my point. But clearly, the poorer, the faster the conversion goes. Some even closing in at 20 to 30 posts. Like here, this TikTok superstar Khaby [Lame] from him posting the first time from an Italian refugee camp to wearing Nike sneakers and pointing at them in just 27 posts. That's impressive.
 
-**Sael:** Good for him.
+**Sael:** Good for him
 
 **Light:** Good for Nike too. The center-left liberals on social media love their Nike, and they love to endorse their global crisis. Calling reposting "solidarity." Ever since punk rock, crisis is marketable. So these "kids" are functioning as dual carriers. They raise their own social value by being on the morally right side of whatever their peers believe is the morally right side at that moment, and they will eventually become deceptable for influencers that, after the crisis, start working freely or cheaply for those major brands. Because all they have learned is the language of economics too. On these platforms, everything has an economic purpose.
 
