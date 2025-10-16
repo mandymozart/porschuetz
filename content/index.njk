@@ -7,22 +7,8 @@ numberOfLatestReleasesToShow: 3
 --- 
 
 <p class="lead">
-    <i>Non-shortform content</i>
-    against hyper toxicity &mdash; to heal our wounds. We all need it!</p>
-{% set postsCount = collections.posts | length %}
-{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
-{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
-{% set postslistCounter = postsCount %}
-{% include "postslist.njk" %}
-{% set morePosts = postsCount - numberOfLatestPostsToShow %}
-{% if morePosts > 0 %}
-    <p class="more-posts-text">
-        {{ morePosts }} more post{% if morePosts != 1 %}s{% endif %}
-        can be found in
-        <a href="/blog/">
-            the archive
-        </a>.</p>
-{% endif %}
+    <i>Non-shortform content!</i>
+</p>
 {% set releasesCount = collections.releases | length %}
 {% set latestPostsCount = releasesCount | min(numberOfLatestReleasesToShow) %}
 {% set releaseslist = collections.releases | head(-1 * numberOfLatestReleasesToShow) %}
@@ -35,5 +21,19 @@ numberOfLatestReleasesToShow: 3
         can be found in
         <a href="/releases/">
             releases
+        </a>.</p>
+{% endif %}
+{% set postsCount = collections.posts | length %}
+{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
+{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
+{% set postslistCounter = postsCount %}
+{% include "postslist.njk" %}
+{% set morePosts = postsCount - numberOfLatestPostsToShow %}
+{% if morePosts > 0 %}
+    <p class="more-posts-text">
+        {{ morePosts }} more post{% if morePosts != 1 %}s{% endif %}
+        can be found in
+        <a href="/blog/">
+            the archive
         </a>.</p>
 {% endif %}
