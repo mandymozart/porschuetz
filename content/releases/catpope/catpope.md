@@ -9,5 +9,5 @@ tags:
 image: /releases/catpope/catpope.jpg
 mirrors:
   - title: Scutoons
-    url: https://scutoons.com
+    url: https://scutoons.com/catpope
 ---
